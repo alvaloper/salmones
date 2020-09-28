@@ -1,14 +1,14 @@
 @extends('layouts.auth')
 
 @section('htmlheader_title')
-    Log in
+    Inicio de Sesión
 @endsection
 
 @section('content')
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Inicio</b> Sistema 2016</a>
+            <a href="{{ url('/home') }}"><b>Sistema</b> De Gestión De Eventualidades</a>
         </div><!-- /.login-logo -->
 
     @if (count($errors) > 0)
@@ -38,12 +38,12 @@
             <div class="col-xs-8">
                 <div class="checkbox icheck">
                     <label>
-                        <input type="checkbox" name="remember"> {{ trans('adminlte_lang::message.remember') }}
+             
                     </label>
                 </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-                <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
+                <button type="submit" class="btn btn-primary btn-block btn-flat">Siguiente</button>
             </div><!-- /.col -->
         </div>
     </form>
