@@ -8,7 +8,8 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Sistema</b> De Gestión De Eventualidades</a>
+            <div><img src="{{ asset('/img/logocolor_transparent.png') }}" alt=""></div>
+            <a href="{{ url('/home') }}"><b>Gestión de Eventualidades</b></a>
         </div><!-- /.login-logo -->
 
     @if (count($errors) > 0)
