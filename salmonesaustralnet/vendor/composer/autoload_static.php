@@ -753,6 +753,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
         'PermissionRoleTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionRoleTableSeeder.php',
         'PermissionTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionTableSeeder.php',
         'PermissionUserTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionUserTableSeeder.php',
+        'PlantsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PlantsTableSeeder.php',
         'RoleUserTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RoleUserTableSeeder.php',
         'RolesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RolesTableSeeder.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',

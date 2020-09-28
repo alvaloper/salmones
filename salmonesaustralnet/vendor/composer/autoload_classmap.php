@@ -463,6 +463,7 @@ return array(
     'PermissionRoleTableSeeder' => $baseDir . '/database/seeds/PermissionRoleTableSeeder.php',
     'PermissionTableSeeder' => $baseDir . '/database/seeds/PermissionTableSeeder.php',
     'PermissionUserTableSeeder' => $baseDir . '/database/seeds/PermissionUserTableSeeder.php',
+    'PlantsTableSeeder' => $baseDir . '/database/seeds/PlantsTableSeeder.php',
     'RoleUserTableSeeder' => $baseDir . '/database/seeds/RoleUserTableSeeder.php',
     'RolesTableSeeder' => $baseDir . '/database/seeds/RolesTableSeeder.php',
     'SebastianBergmann\\CodeCoverage\\CodeCoverage' => $vendorDir . '/phpunit/php-code-coverage/src/CodeCoverage.php',

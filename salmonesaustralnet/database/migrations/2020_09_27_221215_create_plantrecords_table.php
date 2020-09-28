@@ -16,8 +16,11 @@ class CreatePlantrecordsTable extends Migration
         Schema::create('plantrecords', function (Blueprint $table) {
             $table->increments('idplantrecord');
             $table->string('titlerecord');
+            $table->date('dateplant');
+            $table->time('planthour');
             $table->string('plantevente');
             $table->string('actionsevent');
+            $table->boolean('plantactive')->default(true);
             $table->integer('plant_id')->unsigned()->index();
             $table->foreign('plant_id')->references('idplant')->on('plants')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();

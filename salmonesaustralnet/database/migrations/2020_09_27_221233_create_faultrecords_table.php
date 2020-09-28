@@ -15,9 +15,14 @@ class CreateFaultrecordsTable extends Migration
     {
         Schema::create('faultrecords', function (Blueprint $table) {
             $table->increments('idfault');
+            $table->date('faultdate');
+            $table->time('faulthour');
             $table->string('fault');
+            $table->date('enddate');
+            $table->time('endhour');
             $table->string('titlerecord');
             $table->string('solution');
+            $table->boolean('faultactive')->default(true);
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

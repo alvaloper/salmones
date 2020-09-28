@@ -15,7 +15,12 @@ class CreateMaritimerecordsTable extends Migration
     {
         Schema::create('maritimerecords', function (Blueprint $table) {
             $table->increments('idmarinerecord');
+            $table->enum('turn', ['Diurno', 'Nocturno']);
+            $table->date('datemarine');
+            $table->time('landfallhour');
+            $table->time('sailhour');
             $table->string('marineevent');
+            $table->boolean('marineactive')->default(true);
             $table->integer('center_id')->unsigned()->index();
             $table->foreign('center_id')->references('idcenter')->on('centers')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();
