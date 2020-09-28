@@ -6,10 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateCentersTable' => $baseDir . '/database/migrations/2020_09_27_221044_create_centers_table.php',
+    'CreateFaultrecordsTable' => $baseDir . '/database/migrations/2020_09_27_221233_create_faultrecords_table.php',
+    'CreateMaritimerecordsTable' => $baseDir . '/database/migrations/2020_09_27_221154_create_maritimerecords_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePermissionRoleTable' => $baseDir . '/database/migrations/2015_01_26_115523_create_permission_role_table.php',
     'CreatePermissionUserTable' => $baseDir . '/database/migrations/2015_02_09_132439_create_permission_user_table.php',
     'CreatePermissionsTable' => $baseDir . '/database/migrations/2015_01_26_115212_create_permissions_table.php',
+    'CreatePlantrecordsTable' => $baseDir . '/database/migrations/2020_09_27_221215_create_plantrecords_table.php',
+    'CreatePlantsTable' => $baseDir . '/database/migrations/2020_09_27_221130_create_plants_table.php',
     'CreateRoleUserTable' => $baseDir . '/database/migrations/2015_01_15_114412_create_role_user_table.php',
     'CreateRolesTable' => $baseDir . '/database/migrations/2015_01_15_105324_create_roles_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',

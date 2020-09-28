@@ -296,10 +296,15 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
     );
 
     public static $classMap = array (
+        'CreateCentersTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221044_create_centers_table.php',
+        'CreateFaultrecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221233_create_faultrecords_table.php',
+        'CreateMaritimerecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221154_create_maritimerecords_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePermissionRoleTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_26_115523_create_permission_role_table.php',
         'CreatePermissionUserTable' => __DIR__ . '/../..' . '/database/migrations/2015_02_09_132439_create_permission_user_table.php',
         'CreatePermissionsTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_26_115212_create_permissions_table.php',
+        'CreatePlantrecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221215_create_plantrecords_table.php',
+        'CreatePlantsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221130_create_plants_table.php',
         'CreateRoleUserTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_15_114412_create_role_user_table.php',
         'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_15_105324_create_roles_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
