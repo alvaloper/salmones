@@ -127,8 +127,8 @@ return [
     'password'                => 'Password',
     'retrypepassword'         => 'Retype password',
     'fullname'                => 'Full Name',
-    'permiso'                 => 'You do not have permission, ask your manager or telecom.com.ve@gmail.com',
+    'permiso'                 => 'You do not have permission, ask your manager.',
     'terminos'                => 'Terms and conditions',
-    'modificado'              => 'Tarsicio Carrizales',
+    'modificado'              => 'SalmonesAustral.Net',
 
 ];

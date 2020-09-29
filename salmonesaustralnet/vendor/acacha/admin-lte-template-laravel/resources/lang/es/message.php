@@ -125,7 +125,7 @@ return [
     'password'                => 'Contraseña',
     'retrypepassword'         => 'Vuelva a escribir la contraseña',
     'fullname'                => 'Nombre completo',
-    'permiso'                 => 'Usted no tiene permiso, consulte a su Administrador o ha telecom.com.ve@gmail.com',
+    'permiso'                 => 'Usted no tiene permiso, consulte a su Administrador.',
     'terminos'                => 'Terminos y Condiciones',
-    'modificado'              => 'Tarsicio Carrizales',
+    'modificado'              => 'SalmonesAustral.Net',
 ];
