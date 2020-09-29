@@ -6,7 +6,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Menú</b> Principal </span>
+        <span class="logo-lg"><img src="{{asset('/img/logowhite_transparent.png')}}"  height="50" width="180" alt="SalmonesAustral.Net"/></span>
     </a>
 
     <!-- Header Navbar -->
