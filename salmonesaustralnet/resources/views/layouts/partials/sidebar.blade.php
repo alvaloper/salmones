@@ -8,10 +8,11 @@
         @if (! Auth::guest())
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{asset('/img/avatar04.png')}}" class="img-circle" alt="User Image" />
+                    <p>.</p>
                 </div>
                 <div class="pull-left info">
-                    <p>{{ Auth::user()->name }}</p>
+                    <p></p>
+                    <p>Menú Principal</p>
                 </div>
             </div>
         @endif
