@@ -1,6 +1,6 @@
 <h1 class="text-primary">Usuarios</h1>
 
-<table class="table table-bordered" id="MyTable">
+<table class="table table-bordered table-hover" id="MyTable">
     <thead>
     <tr>
         <th class="text-center">ID</th>
@@ -20,7 +20,7 @@
             <td class="text-center"><img src="{{ asset('storage/'. $user->foto) }}" class="img-circle" height="45" width="31" alt="Usuario"></td>
             <td class="text-center">{{ $user->name }}</td>
             <td class="text-center">{{ $user->rol->slug }}</td>
-            <td class="text-center">{{ $user->login }}</td>
+            <td class="text-center">{{ $user->email }}</td>
             <td class="text-center">{{ $user->activo }}</td>
             {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'DELETE'] ) !!}
             <td class="text-center">
