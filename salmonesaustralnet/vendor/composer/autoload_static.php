@@ -296,6 +296,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
     );
 
     public static $classMap = array (
+        'CentersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CentersTableSeeder.php',
         'CreateCentersTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221044_create_centers_table.php',
         'CreateFaultrecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221233_create_faultrecords_table.php',
         'CreateMaritimerecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221154_create_maritimerecords_table.php',
@@ -309,6 +310,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
         'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_15_105324_create_roles_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
+        'FaultrecordsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/FaultrecordsTableSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -380,6 +382,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'MaritimerecordsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MaritimerecordsTableSeeder.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
@@ -753,6 +756,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
         'PermissionRoleTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionRoleTableSeeder.php',
         'PermissionTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionTableSeeder.php',
         'PermissionUserTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionUserTableSeeder.php',
+        'PlantrecordsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PlantrecordsTableSeeder.php',
         'PlantsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PlantsTableSeeder.php',
         'RoleUserTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RoleUserTableSeeder.php',
         'RolesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/RolesTableSeeder.php',

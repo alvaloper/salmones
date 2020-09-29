@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CentersTableSeeder' => $baseDir . '/database/seeds/CentersTableSeeder.php',
     'CreateCentersTable' => $baseDir . '/database/migrations/2020_09_27_221044_create_centers_table.php',
     'CreateFaultrecordsTable' => $baseDir . '/database/migrations/2020_09_27_221233_create_faultrecords_table.php',
     'CreateMaritimerecordsTable' => $baseDir . '/database/migrations/2020_09_27_221154_create_maritimerecords_table.php',
@@ -19,6 +20,7 @@ return array(
     'CreateRolesTable' => $baseDir . '/database/migrations/2015_01_15_105324_create_roles_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
+    'FaultrecordsTableSeeder' => $baseDir . '/database/seeds/FaultrecordsTableSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -90,6 +92,7 @@ return array(
     'Hamcrest\\Type\\IsString' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+    'MaritimerecordsTableSeeder' => $baseDir . '/database/seeds/MaritimerecordsTableSeeder.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit_Extensions_GroupTestSuite' => $vendorDir . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
@@ -463,6 +466,7 @@ return array(
     'PermissionRoleTableSeeder' => $baseDir . '/database/seeds/PermissionRoleTableSeeder.php',
     'PermissionTableSeeder' => $baseDir . '/database/seeds/PermissionTableSeeder.php',
     'PermissionUserTableSeeder' => $baseDir . '/database/seeds/PermissionUserTableSeeder.php',
+    'PlantrecordsTableSeeder' => $baseDir . '/database/seeds/PlantrecordsTableSeeder.php',
     'PlantsTableSeeder' => $baseDir . '/database/seeds/PlantsTableSeeder.php',
     'RoleUserTableSeeder' => $baseDir . '/database/seeds/RoleUserTableSeeder.php',
     'RolesTableSeeder' => $baseDir . '/database/seeds/RolesTableSeeder.php',
