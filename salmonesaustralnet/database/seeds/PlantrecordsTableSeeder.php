@@ -12,11 +12,11 @@ class PlantrecordsTableSeeder extends Seeder
     public function run()
     {
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro 1',
+          'titlerecord'  => 'Registro de Planta 1',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento 1',
-          'actionsevent' => 'Acciones 1',
+          'plantevente'  => 'Evento de Planta 1',
+          'actionsevent' => 'Acciones de Planta 1',
           'plantactive'  => '0',
           'plant_id'     => '1',
           'user_id'      => '1',
@@ -25,11 +25,11 @@ class PlantrecordsTableSeeder extends Seeder
         ]);
 
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro 2',
+          'titlerecord'  => 'Registro de Planta 2',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento 2',
-          'actionsevent' => 'Acciones 2',
+          'plantevente'  => 'Evento de Planta 2',
+          'actionsevent' => 'Acciones de Planta 2',
           'plantactive'  => '1',
           'plant_id'     => '2',
           'user_id'      => '1',
@@ -38,11 +38,11 @@ class PlantrecordsTableSeeder extends Seeder
         ]);
 
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro 3',
+          'titlerecord'  => 'Registro de Planta 3',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento 3',
-          'actionsevent' => 'Acciones 3',
+          'plantevente'  => 'Evento de Planta 3',
+          'actionsevent' => 'Acciones de Planta 3',
           'plantactive'  => '1',
           'plant_id'     => '1',
           'user_id'      => '1',
