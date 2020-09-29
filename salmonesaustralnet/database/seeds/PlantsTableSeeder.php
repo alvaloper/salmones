@@ -12,13 +12,13 @@ class PlantsTableSeeder extends Seeder
     public function run()
     {
 		DB::table('plants')->insert([
-          'nameplant' => 'Chamiza',
+          'nameplant'     => 'Chamiza',
           'created_at'    => \Carbon\Carbon::now(),
           'updated_at'    => \Carbon\Carbon::now(),
         ]);
 
         DB::table('plants')->insert([
-          'nameplant' => 'Quintoa',
+          'nameplant'     => 'Quintoa',
           'created_at'    => \Carbon\Carbon::now(),
           'updated_at'    => \Carbon\Carbon::now(),
         ]);
