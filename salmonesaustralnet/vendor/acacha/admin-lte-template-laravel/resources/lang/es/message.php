@@ -82,7 +82,7 @@ return [
     'sales'                   => 'Ventas',
     'friends'                 => 'Amigos',
     'profile'                 => 'Perfil',
-    'signout'                 => 'Salir',
+    'signout'                 => 'Cerrar Sesión',
     'landingdescription'      => 'Un laravel 5 paquete que cambia de forma predeterminada Laravel scaffolding/boilerplate a la plantilla AdminLTE con Bootstrap 3.0 y la página de destino Pratt',
     'landingdescriptionpratt' => 'Acacha AdminLTE laravel tema de paquet landing page - Uso de Pratt',
     'description'             => 'Descripción',

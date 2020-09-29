@@ -83,7 +83,7 @@ return [
     'sales'                   => 'Sales',
     'friends'                 => 'Friends',
     'profile'                 => 'Profile',
-    'signout'                 => 'Sign out',
+    'signout'                 => 'Sign Out',
     'landingdescription'      => 'Laravel 5 package that switchs default Laravel scaffolding/boilerplate to AdminLTE template with Bootstrap 3.0 and Pratt Landing page',
     'landingdescriptionpratt' => 'Acacha AdminLTE Laravel package template Landing page - Using Pratt',
     'description'             => 'Description',
