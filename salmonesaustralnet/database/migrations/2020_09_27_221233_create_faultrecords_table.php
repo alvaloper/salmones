@@ -22,7 +22,7 @@ class CreateFaultrecordsTable extends Migration
             $table->time('endhour');
             $table->string('titlerecord');
             $table->string('solution');
-            $table->boolean('faultactive')->default(true);
+            $table->integer('faultactive')->default(1);
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

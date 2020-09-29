@@ -27,5 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CentersTableSeeder::class);
         $this->call(PlantrecordsTableSeeder::class);
         $this->call(MaritimerecordsTableSeeder::class);
+        $this->call(FaultrecordsTableSeeder::class);
     }
 }
