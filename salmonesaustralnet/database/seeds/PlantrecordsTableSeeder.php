@@ -49,5 +49,18 @@ class PlantrecordsTableSeeder extends Seeder
           'created_at'   => \Carbon\Carbon::now(),
           'updated_at'   => \Carbon\Carbon::now(),
         ]); 
+
+        DB::table('plantrecords')->insert([
+          'titlerecord'  => 'Registro de Planta 4',
+          'dateplant'    => \Carbon\Carbon::now(),
+          'planthour'    => \Carbon\Carbon::now(),
+          'plantevente'  => 'Evento de Planta 4',
+          'actionsevent' => 'Acciones de Planta 4',
+          'plantactive'  => '0',
+          'plant_id'     => '1',
+          'user_id'      => '1',
+          'created_at'   => \Carbon\Carbon::now(),
+          'updated_at'   => \Carbon\Carbon::now(),
+        ]); 
     }
 }

@@ -49,5 +49,18 @@ class MaritimerecordsTableSeeder extends Seeder
           'created_at'   => \Carbon\Carbon::now(),
           'updated_at'   => \Carbon\Carbon::now(),
         ]);
+
+        DB::table('maritimerecords')->insert([
+          'turn'         => 'Diurno',
+          'datemarine'   => \Carbon\Carbon::now(),
+          'landfallhour' => \Carbon\Carbon::now(),
+          'sailhour'     => \Carbon\Carbon::now(),
+		  'marineevent'  => 'Evento Marino 4',
+		  'marineactive' => '0',
+		  'center_id'    => '2',
+		  'user_id'      => '1',
+          'created_at'   => \Carbon\Carbon::now(),
+          'updated_at'   => \Carbon\Carbon::now(),
+        ]);
     }
 }
