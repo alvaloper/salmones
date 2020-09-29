@@ -23,11 +23,19 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
             <li class="treeview">
+                <a href="#"><i class='fa fa-link'></i> <span>Consultas</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="#">Centros de Cultivos</a></li>
+                    <li><a href="#">Fallas Operacionales</a></li>
+                    <li><a href="#">Plantas de Procesos</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Eventualidades</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#">Centros de Cultivos</a></li>
-                    <li><a href="#">Plantas de Operaciones</a></li>
                     <li><a href="#">Fallas Operacionales</a></li>
+                    <li><a href="#">Plantas de Procesos</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -37,7 +45,6 @@
                     <li><a href="#">Otro link</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>Reportes</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
