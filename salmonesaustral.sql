@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-09-2020 a las 04:56:32
+-- Tiempo de generación: 29-09-2020 a las 20:31:11
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 7.0.9
 
@@ -41,8 +41,8 @@ CREATE TABLE `centers` (
 --
 
 INSERT INTO `centers` (`idcenter`, `namecenter`, `emergencyphone`, `boss`, `assistant`, `created_at`, `updated_at`) VALUES
-(1, 'Pichagua', '93456789', 'Daniel Dávila', 'Juan Pérez', '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(2, 'Santiago', '12345678', 'María Dugarte', 'Luis Shakespeare', '2020-09-29 02:41:31', '2020-09-29 02:41:31');
+(1, 'Pichagua', '93456789', 'Daniel Dávila', 'Juan Pérez', '2020-09-29 17:57:08', '2020-09-29 17:57:08'),
+(2, 'Santiago', '12345678', 'María Dugarte', 'Luis Shakespeare', '2020-09-29 17:57:08', '2020-09-29 17:57:08');
 
 -- --------------------------------------------------------
 
@@ -70,10 +70,10 @@ CREATE TABLE `faultrecords` (
 --
 
 INSERT INTO `faultrecords` (`idfault`, `faultdate`, `faulthour`, `fault`, `enddate`, `endhour`, `titlerecord`, `solution`, `faultactive`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, '2020-09-28', '22:41:32', 'Falla Operacional 1', '2020-09-28', '22:41:32', 'Falla Operacional 1', 'Solución Falla Operacional 1', 1, 1, '2020-09-29 02:41:32', '2020-09-29 02:41:32'),
-(2, '2020-09-28', '22:41:32', 'Falla Operacional 2', '2020-09-28', '22:41:32', 'Falla Operacional 2', 'Solución Falla Operacional 2', 1, 1, '2020-09-29 02:41:32', '2020-09-29 02:41:32'),
-(3, '2020-09-28', '22:41:32', 'Falla Operacional 3', '2020-09-28', '22:41:32', 'Falla Operacional 3', 'Solución Falla Operacional 3', 0, 1, '2020-09-29 02:41:32', '2020-09-29 02:41:32'),
-(4, '2020-09-28', '22:41:32', 'Falla Operacional 4', '2020-09-28', '22:41:32', 'Falla Operacional 4', 'Solución Falla Operacional 4', 0, 1, '2020-09-29 02:41:32', '2020-09-29 02:41:32');
+(1, '2020-09-29', '13:57:10', 'Falla Operacional 1', '2020-09-29', '13:57:10', 'Falla Operacional 1', 'Solución Falla Operacional 1', 1, 1, '2020-09-29 17:57:10', '2020-09-29 17:57:10'),
+(2, '2020-09-29', '13:57:11', 'Falla Operacional 2', '2020-09-29', '13:57:11', 'Falla Operacional 2', 'Solución Falla Operacional 2', 1, 1, '2020-09-29 17:57:11', '2020-09-29 17:57:11'),
+(3, '2020-09-29', '13:57:11', 'Falla Operacional 3', '2020-09-29', '13:57:11', 'Falla Operacional 3', 'Solución Falla Operacional 3', 0, 1, '2020-09-29 17:57:11', '2020-09-29 17:57:11'),
+(4, '2020-09-29', '13:57:11', 'Falla Operacional 4', '2020-09-29', '13:57:11', 'Falla Operacional 4', 'Solución Falla Operacional 4', 0, 1, '2020-09-29 17:57:11', '2020-09-29 17:57:11');
 
 -- --------------------------------------------------------
 
@@ -100,10 +100,10 @@ CREATE TABLE `maritimerecords` (
 --
 
 INSERT INTO `maritimerecords` (`idmarinerecord`, `turn`, `datemarine`, `landfallhour`, `sailhour`, `marineevent`, `marineactive`, `center_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Diurno', '2020-09-28', '22:41:31', '22:41:31', 'Evento Marino 1', 0, 1, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31'),
-(2, 'Nocturno', '2020-09-28', '22:41:31', '22:41:31', 'Evento Marino 2', 1, 1, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31'),
-(3, 'Diurno', '2020-09-28', '22:41:31', '22:41:31', 'Evento Marino 3', 1, 2, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31'),
-(4, 'Diurno', '2020-09-28', '22:41:31', '22:41:31', 'Evento Marino 4', 0, 2, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31');
+(1, 'Diurno', '2020-09-29', '13:57:10', '13:57:10', 'Evento Marino 1', 0, 1, 1, '2020-09-29 17:57:10', '2020-09-29 17:57:10'),
+(2, 'Nocturno', '2020-09-29', '13:57:10', '13:57:10', 'Evento Marino 2', 1, 1, 1, '2020-09-29 17:57:10', '2020-09-29 17:57:10'),
+(3, 'Diurno', '2020-09-29', '13:57:10', '13:57:10', 'Evento Marino 3', 1, 2, 1, '2020-09-29 17:57:10', '2020-09-29 17:57:10'),
+(4, 'Diurno', '2020-09-29', '13:57:10', '13:57:10', 'Evento Marino 4', 0, 2, 1, '2020-09-29 17:57:10', '2020-09-29 17:57:10');
 
 -- --------------------------------------------------------
 
@@ -165,18 +165,18 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `slug`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'crear.usuarios', 'Permiso Para Crear Usuario', '2020-09-29 02:41:26', '2020-09-29 02:41:26'),
-(2, 'eliminar.usuarios', 'Permiso Para Eliminar Usuario', '2020-09-29 02:41:26', '2020-09-29 02:41:26'),
-(3, 'ver.usuarios', 'Permiso Para Ver Usuario', '2020-09-29 02:41:26', '2020-09-29 02:41:26'),
-(4, 'modificar.usuarios', 'Permiso Para Modificar Usuario', '2020-09-29 02:41:26', '2020-09-29 02:41:26'),
-(5, 'crear.perfiles', 'Permiso Para Crear Perfiles', '2020-09-29 02:41:26', '2020-09-29 02:41:26'),
-(6, 'eliminar.perfiles', 'Permiso Para Eliminar Perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(7, 'ver.perfiles', 'Permiso Para Ver perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(8, 'modificar.perfiles', 'Permiso para Modificar perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(9, 'crear.permisos', 'Para Crear perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(10, 'eliminar.permisos', 'Para Eliminar Perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(11, 'ver.permisos', 'Para Ver Perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(12, 'modificar.permisos', 'Para Modificar Perfiles', '2020-09-29 02:41:27', '2020-09-29 02:41:27');
+(1, 'crear.usuarios', 'Permiso Para Crear Usuario', '2020-09-29 17:57:01', '2020-09-29 17:57:01'),
+(2, 'eliminar.usuarios', 'Permiso Para Eliminar Usuario', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(3, 'ver.usuarios', 'Permiso Para Ver Usuario', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(4, 'modificar.usuarios', 'Permiso Para Modificar Usuario', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(5, 'crear.perfiles', 'Permiso Para Crear Perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(6, 'eliminar.perfiles', 'Permiso Para Eliminar Perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(7, 'ver.perfiles', 'Permiso Para Ver perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(8, 'modificar.perfiles', 'Permiso para Modificar perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(9, 'crear.permisos', 'Para Crear perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(10, 'eliminar.permisos', 'Para Eliminar Perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(11, 'ver.permisos', 'Para Ver Perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(12, 'modificar.permisos', 'Para Modificar Perfiles', '2020-09-29 17:57:02', '2020-09-29 17:57:02');
 
 -- --------------------------------------------------------
 
@@ -197,18 +197,18 @@ CREATE TABLE `permission_role` (
 --
 
 INSERT INTO `permission_role` (`id`, `permission_id`, `role_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2020-09-29 02:41:28', '2020-09-29 02:41:28'),
-(2, 2, 1, '2020-09-29 02:41:28', '2020-09-29 02:41:28'),
-(3, 3, 1, '2020-09-29 02:41:28', '2020-09-29 02:41:28'),
-(4, 4, 1, '2020-09-29 02:41:28', '2020-09-29 02:41:28'),
-(5, 5, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(6, 6, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(7, 7, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(8, 8, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(9, 9, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(10, 10, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(11, 11, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(12, 12, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29');
+(1, 1, 1, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(2, 2, 1, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(3, 3, 1, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(4, 4, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(5, 5, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(6, 6, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(7, 7, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(8, 8, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(9, 9, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(10, 10, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(11, 11, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(12, 12, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06');
 
 -- --------------------------------------------------------
 
@@ -230,18 +230,18 @@ CREATE TABLE `permission_user` (
 --
 
 INSERT INTO `permission_user` (`id`, `permission_id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(2, 2, 1, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(3, 3, 1, 1, '2020-09-29 02:41:29', '2020-09-29 02:41:29'),
-(4, 4, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(5, 5, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(6, 6, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(7, 7, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(8, 8, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(9, 9, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(10, 10, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(11, 11, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(12, 12, 1, 1, '2020-09-29 02:41:30', '2020-09-29 02:41:30');
+(1, 1, 1, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(2, 2, 1, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(3, 3, 1, 1, '2020-09-29 17:57:06', '2020-09-29 17:57:06'),
+(4, 4, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(5, 5, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(6, 6, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(7, 7, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(8, 8, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(9, 9, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(10, 10, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(11, 11, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(12, 12, 1, 1, '2020-09-29 17:57:07', '2020-09-29 17:57:07');
 
 -- --------------------------------------------------------
 
@@ -268,10 +268,10 @@ CREATE TABLE `plantrecords` (
 --
 
 INSERT INTO `plantrecords` (`idplantrecord`, `titlerecord`, `dateplant`, `planthour`, `plantevente`, `actionsevent`, `plantactive`, `plant_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Registro de Planta 1', '2020-09-28', '22:41:31', 'Evento de Planta 1', 'Acciones de Planta 1', 0, 1, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31'),
-(2, 'Registro de Planta 2', '2020-09-28', '22:41:31', 'Evento de Planta 2', 'Acciones de Planta 2', 1, 2, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31'),
-(3, 'Registro de Planta 3', '2020-09-28', '22:41:31', 'Evento de Planta 3', 'Acciones de Planta 3', 1, 1, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31'),
-(4, 'Registro de Planta 4', '2020-09-28', '22:41:31', 'Evento de Planta 4', 'Acciones de Planta 4', 0, 1, 1, '2020-09-29 02:41:31', '2020-09-29 02:41:31');
+(1, 'Registro de Planta 1', '2020-09-29', '13:57:08', 'Evento de Planta 1', 'Acciones de Planta 1', 0, 1, 1, '2020-09-29 17:57:08', '2020-09-29 17:57:08'),
+(2, 'Registro de Planta 2', '2020-09-29', '13:57:09', 'Evento de Planta 2', 'Acciones de Planta 2', 1, 2, 1, '2020-09-29 17:57:09', '2020-09-29 17:57:09'),
+(3, 'Registro de Planta 3', '2020-09-29', '13:57:09', 'Evento de Planta 3', 'Acciones de Planta 3', 1, 1, 1, '2020-09-29 17:57:09', '2020-09-29 17:57:09'),
+(4, 'Registro de Planta 4', '2020-09-29', '13:57:09', 'Evento de Planta 4', 'Acciones de Planta 4', 0, 1, 1, '2020-09-29 17:57:09', '2020-09-29 17:57:09');
 
 -- --------------------------------------------------------
 
@@ -291,8 +291,8 @@ CREATE TABLE `plants` (
 --
 
 INSERT INTO `plants` (`idplant`, `nameplant`, `created_at`, `updated_at`) VALUES
-(1, 'Chamiza', '2020-09-29 02:41:30', '2020-09-29 02:41:30'),
-(2, 'Quintoa', '2020-09-29 02:41:30', '2020-09-29 02:41:30');
+(1, 'Chamiza', '2020-09-29 17:57:07', '2020-09-29 17:57:07'),
+(2, 'Quintoa', '2020-09-29 17:57:07', '2020-09-29 17:57:07');
 
 -- --------------------------------------------------------
 
@@ -314,8 +314,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `slug`, `description`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'root', 'Usuario Super Administrador', 1, '2020-09-29 02:41:27', '2020-09-29 02:41:27'),
-(2, 'admin', 'Usuario Administrador', 2, '2020-09-29 02:41:27', '2020-09-29 02:41:27');
+(1, 'root', 'Usuario Super Administrador', 1, '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(2, 'admin', 'Usuario Administrador', 2, '2020-09-29 17:57:02', '2020-09-29 17:57:02');
 
 -- --------------------------------------------------------
 
@@ -336,8 +336,17 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2020-09-29 02:41:28', '2020-09-29 02:41:28'),
-(2, 2, 2, '2020-09-29 02:41:28', '2020-09-29 02:41:28');
+(1, 1, 1, '2020-09-29 17:57:04', '2020-09-29 17:57:04'),
+(2, 2, 2, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(3, 1, 3, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(4, 1, 4, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(5, 2, 5, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(6, 2, 6, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(7, 2, 7, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(8, 2, 8, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(9, 2, 9, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(10, 2, 10, '2020-09-29 17:57:05', '2020-09-29 17:57:05'),
+(11, 2, 11, '2020-09-29 17:57:05', '2020-09-29 17:57:05');
 
 -- --------------------------------------------------------
 
@@ -365,8 +374,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `foto`, `login`, `email`, `password`, `activo`, `fechainicio`, `fechafin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Salmones Austral', 'avatar04.png', 'Salmones Austral CTO', 'administrador@salmonesaustral.net', '$2y$10$LTP3/ARzWaARysujJWmSouVuzpE2C/fA6Z6b2dXn.Ss3/0WlwWJJ6', 1, '2020-09-28', '2021-03-28', '38KyinQtzrJtqG24iL8kyPhPJBXbmPzh9uuRO6Yln3LpUMIIwPWxDYxxSyKa', '2020-09-29 02:41:27', '2020-09-29 02:53:35'),
-(2, 'María Morales', 'avatar04.png', 'Salmones Austral EDIT', 'editor@salmonesaustral.net', '$2y$10$r7G4p1FUKGRYRY/ULQXnKeJNfTthaA/Llnz67jLeYvoYWpe6hB99e', 1, '2020-09-28', '2021-03-28', 'DLQb4zAqm0llvqFeYr1hNdOs1xvmFVZUfGwSSDXA8yHrBeZh9Xlj80Rnkqmn', '2020-09-29 02:41:28', '2020-09-29 02:54:09');
+(1, 'Salmones Austral', 'avatar04.png', 'Salmones Austral CTO', 'administrador@salmonesaustral.net', '$2y$10$JdNQDmwvKajtdXjJzcq.n.FTIvLJaTOwSnMqrohiyoXXNmQUpYf7u', 1, '2020-09-29', '2021-03-29', 'kLYxHzVva6MnmtMfto8l6z5RnWAHKddiR0mU6WTPx3e6yzW3C9CS9inQHYvuDu3A63RG3jh7jnu89gzw8hMvdrxxO0IQOsBSkNba', '2020-09-29 17:57:02', '2020-09-29 17:57:02'),
+(2, 'María Morales', 'avatar04.png', 'Salmones Austral EDIT', 'editor@salmonesaustral.net', '$2y$10$ih7TBgaxdMIAVVtnZoiFoeX3Cu/fXV7xAWeJYOSQXhcdkhAmiHtea', 1, '2020-09-29', '2021-03-29', 'eIavTqEQLfBIRqVbnlNGlnS5MQ5NQ8dNPGdxqHbguVw3p1phz7fer3YiGisjhfnGIvSApJ0UBpUn1z6NNsq6QM4ZuNW1aAJAPuy0', '2020-09-29 17:57:03', '2020-09-29 17:57:03'),
+(3, 'Luis Espinoza', 'avatar04.png', 'Root 1', 'espinozalj@salmonesaustral.net', '$2y$10$N.O2wvLVHuN4musugjfuIuuUTIn7RkBUsIvtS9lAf7MG/KMlKliQq', 1, '2020-09-29', '2021-03-29', '1FXrEAnFUS4xZ3ag4tIGPg2uhXcbEgUrMs9b3VEDsU1XxfufxUfM5mZByuE07Rs2zE4UzUnsSEB9WBz4T7cIxcyZUm4r5riczArD', '2020-09-29 17:57:03', '2020-09-29 17:57:03'),
+(4, 'Leidy Espinoza', 'avatar04.png', 'Root 2', 'espinozalb@salmonesaustral.net', '$2y$10$I5../aXHNh/wnhzgnJAnreYrSA8hEwGEaR0V8PN0771y0JKfan7be', 1, '2020-09-29', '2021-03-29', '0oSwuReUlAlKfDuwyz9E6Gfk4wGYa7xGq0HDDAuOv2Go18uAPPRmUeEvTPzdGX7lQWEtWqU0gyplI86AggFgJLKxP3TyPOdbv0cG', '2020-09-29 17:57:03', '2020-09-29 17:57:03'),
+(5, 'Itala Espinoza', 'avatar04.png', 'Admin 1', 'espinozai@salmonesaustral.net', '$2y$10$qkxTL6PGcfI//H99wqCEpuLTcBGngygR0x42mxD6SQFwHKm8aFBx2', 1, '2020-09-29', '2021-03-29', 'kyBGpWmE4gRRTR5TP7N0FeW7N8kCWxKpjLEnxJfQvUUcwsIkDeWninFzVJQbBqfJezY3jCyycGUMKIcL53gEPm390D6xnp4cvVuK', '2020-09-29 17:57:03', '2020-09-29 17:57:03'),
+(6, 'Jose Espinoza', 'avatar04.png', 'Admin 2', 'espinozaj@salmonesaustral.net', '$2y$10$07vwiCjkT7G8wwZQTifhsO7tRo5cKcWYfspy/tsvKvb3GOI2juJ9W', 1, '2020-09-29', '2021-03-29', 'RmVU8zZGOc4al2wNaZqJyE7iHuLpEyx4pkonJ3RZII0ESgIUK5XCSIKDeT13rL9j2RPYtobrOQCOePx6ckfkk4jmbLHr0bgDbCe3', '2020-09-29 17:57:03', '2020-09-29 17:57:03'),
+(7, 'Leidy Alvarado', 'avatar04.png', 'Admin 3', 'alvaradol@salmonesaustral.net', '$2y$10$XIupg8202zaxYb9bUvP24uO2CrbyMIGMS1hEbgTKMlTmo13dTXK5y', 1, '2020-09-29', '2021-03-29', 'Etue3pmklzVw5l3R0hgP95h6sHYcIpiDpCnwwtsxA70PAsMFEGhyRV8QOj0qdonMHBoSzCzN1FE0q3TrrgX5QZdEGOj38DtofWin', '2020-09-29 17:57:04', '2020-09-29 17:57:04'),
+(8, 'Luis Alvarado', 'avatar04.png', 'Admin 4', 'alvaradolj@salmonesaustral.net', '$2y$10$w0aVXMyomyVV637SRjCGDOuHCC5mVnMAvOH1AkNPwzuOgRgjxASb6', 1, '2020-09-29', '2021-03-29', 'DwGO1x8JCozLUHW9Q7pIJrEGzNEZLzo8iqzaX6FLzM4lWmUtjk6OT8YD3hmmPZiZQ6HA8Rg6omsluulpoOOgpqfuzxTOQcaYvSN8', '2020-09-29 17:57:04', '2020-09-29 17:57:04'),
+(9, 'Itala Alvarado', 'avatar04.png', 'Admin 5', 'alvaradoi@salmonesaustral.net', '$2y$10$z11grzTr06Yid2LNQ34v.unnFQvziGJgFMy5vCzbTFb6nJ.BFhnRq', 1, '2020-09-29', '2021-03-29', 'ckWATam6Fu0pbkqOvgOy2fwMfO2Cy7OtSWv0MMTucpr3Qn061Crbh21NhqO928HCU3pBAYR74MjDHl31OsXNiK9UsEIXm419DbE3', '2020-09-29 17:57:04', '2020-09-29 17:57:04'),
+(10, 'Luis Pulido', 'avatar04.png', 'Admin 6', 'pulidol@salmonesaustral.net', '$2y$10$OcDGqxOACLqxxAcoaVSwbO7iiVoM9Oax1KFzUwDErts2NuCOWxZyW', 1, '2020-09-29', '2021-03-29', 'VZn1NNBWWdVDRasDYDvjl0UonNluOBAMxXXRBqlxGHbmEJWN04ZWdU8qJe37VeFR21l2ttFfR1XYGlEcglh89ClhDxNpe0DbXDZl', '2020-09-29 17:57:04', '2020-09-29 17:57:04'),
+(11, 'Jose Pulido', 'avatar04.png', 'Admin 7', 'pulidoj@salmonesaustral.net', '$2y$10$KogSu7n5TgYfuO3HLvd48eTxbgjiUyz2mhNBcwnTRTRC8SULZ8zem', 1, '2020-09-29', '2021-03-29', 'osSzqFbGTPrmuVsFdDefCDdaokhSdhPL2qqY2xkmpCV7aEFRRYQM0ePP884nuVo7zHJCOte22NNSp6aMG4g3748I9N9F0JyPZmzU', '2020-09-29 17:57:04', '2020-09-29 17:57:04');
 
 --
 -- Índices para tablas volcadas
@@ -514,12 +532,12 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- Restricciones para tablas volcadas
 --

@@ -15,7 +15,7 @@
                             <th class="text-center">Foto</th>
                             <th class="text-center">Nombre</th>
                             <th class="text-center">Perfil</th>
-                            <th class="text-center">Login</th>
+                            <th class="text-center">Email</th>
                             <th class="text-center">Activo</th>
                             <th class="text-center">Acciones</th>
                         </tr> 
