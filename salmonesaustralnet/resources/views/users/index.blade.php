@@ -7,8 +7,8 @@
 
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root'))
-        <a href="{{ url('admin/modulos') }}"><img src="/img/menu/boton-atras.jpg" height="33" width="100" alt="Botón"></a>
         <a class="btn btn-primary pull-right" href="{{ url('admin/users/create') }}" data-toggle="tooltip" title="Nuevo Usuario" role="button">Nuevo Usuario</a>
+        <br><br>
     @include('users.partials.table')
     @else
         <div class="panel-body">
