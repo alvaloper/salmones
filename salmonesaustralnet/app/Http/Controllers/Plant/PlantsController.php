@@ -32,9 +32,12 @@ class PlantsController extends Controller
 
     public function index()
     {
+        $plants = Plants::paginate(6);
         $users = User::paginate(6);
         $permisos = Permission::all();
-        return view('plants.index', array('users'=> $users, 'permisos' => $permisos));
+        $plants = Plants::all();
+        
+        return view('plants.index', array('users'=> $users, 'plants'=> $plants, 'permisos' => $permisos));
     }
 
     /**
@@ -85,11 +88,13 @@ class PlantsController extends Controller
 
     public function edit($idplant)
     {
-        $plant = Plant::find($idplant);
-        $userRole = $user->roles()->first();
-        $user['rol'] = $userRole;
-        $roles = Role::all()->pluck('slug','id');
-        return view('plants.edit', array('plant' => $plant, 'roles' => $roles ));
+        //$user = User::find($id);
+        $plant = Plants::find($idplant);
+        //$userRole = $user->roles()->first();
+        //$user['rol'] = $userRole;
+        //$roles = Role::all()->pluck('slug','id');
+        //return view('plants.edit', array('user' => $user, 'roles' => $roles, 'plants' => $plant ));
+        return view('plants.edit', array('plant' => $plant ));
     }
 
     /**
@@ -159,19 +164,11 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($id)
+    public function destroy($idplant)
     {
-        $user = User::find($id);
-        $imagenName = $user->foto;
-        /**
-         * Borramos el archivo de imagen de la carpeta storage, si el usuario
-         * no tiene foto, no permitimos que se borre la imagen sin-foto.png
-         * ya que esa es la imagen base para los que no tienen fotos
-         */
-        if(!is_null($imagenName) and $imagenName <> 'sin-foto.png') {
-            File::delete(public_path('storage/').$imagenName);
-        }
-        User::destroy($id);
+        $plant = Plants::find($idplant);
+        //$plant -> delete();
+        Plants::destroy($idplant);
         return redirect()->route('plants.index');
     }
 }

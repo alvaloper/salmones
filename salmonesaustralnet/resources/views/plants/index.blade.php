@@ -1,13 +1,13 @@
 @extends('plants.app')
 
 @section('htmlheader_title')
-    Permisos
+    Configuración - Gestión de Plantas de Procesos
 @endsection
 
 
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root'))
-        <a class="btn btn-primary pull-right" href="{{ url('admin/plants/create') }}" data-toggle="tooltip" title="Agregar Planta" role="button">Agregar Planta</a>
+        <a class="btn btn-primary pull-right" href="{{ url('admin/plants/create') }}" data-toggle="tooltip" title="Agregar Planta" role="button">Nueva Planta de Procesos</a>
         <br><br>
     @include('plants.partials.table')
     @else
