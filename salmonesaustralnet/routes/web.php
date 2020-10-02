@@ -51,8 +51,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Modulos'], function () {
     Route::get('modulos', 'ModulosController@seguridad');
 });
 
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Plant'], function () {
+
+    Route::resource('plants', 'PlantsController');
+});
+
 Route::group(['prefix' => 'admin', 'namespace' => 'User'], function () {
 
     Route::resource('users', 'UsersController');
 });
+
 
