@@ -24,7 +24,7 @@ class PlantNewRequest extends FormRequest
     public function rules()
     {
         return [
-            'Nombre' => 'min:5|max:30|required|string',
+            'name' => 'min:5|max:50|required|string',
         ];
     }
 }

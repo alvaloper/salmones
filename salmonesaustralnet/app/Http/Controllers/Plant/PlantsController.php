@@ -19,7 +19,7 @@ use App\Http\Requests;
 
 class PlantsController extends Controller
 {
-    public function __construct()
+public function __construct()
     {
         $this->middleware('auth');
     }
@@ -32,12 +32,9 @@ class PlantsController extends Controller
 
     public function index()
     {
-        $plants = Plants::paginate(6);
         $users = User::paginate(6);
         $permisos = Permission::all();
-        $plants = Plants::all();
-        
-        return view('plants.index', array('users'=> $users, 'plants'=> $plants, 'permisos' => $permisos));
+        return view('users.index', array('users'=> $users, 'permisos' => $permisos));
     }
 
     /**
@@ -50,7 +47,7 @@ class PlantsController extends Controller
     {
         $roles = Role::all()->pluck('slug','id');
 ;
-        return view('plants.create')->with('roles', $roles);
+        return view('users.create')->with('roles', $roles);
     }
 
     /**
@@ -60,12 +57,45 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(PlantNewRequest $request)
+    public function store(UserNuevoRequest $request)
     {
-        $plant = new Plants();
-        $plant->nameplant = $request->input('nameplant');
-        $plant->save();
-        return redirect()->route('plants.index');
+        $user = new User();
+        //obtenemos el campo file definido en el formulario
+        $file = $request->file('foto');
+        if(!is_null($file)){
+            /**
+             * Se le puso un prefijo corto, pero si usted desea
+             * puede colocar un prfijo mas largo, descomente la linea de abajo
+             * y vera los resultados.
+             */
+            //$nombre = 've-'.uniqid(uniqid(),true).'.'.$file->getClientOriginalName();
+            $nombre = 've-'.$file->getClientOriginalName();
+        }else{
+            $nombre = 'sin-foto.png';
+        }
+        $user->name = $request->input('name');
+        $user->login  = $request->input('login');
+        $user->foto  = $nombre;
+        $user->email  = $request->input('email');
+        $user->password  = Hash::make($request->input('password'));
+        $user->fechainicio = $request->input('fechainicio');
+        $user->fechafin    = $request->input('fechafin');
+        $user->remember_token = str_random(100);
+        $user->save();
+        /**
+         * El Metodo attachRole Guarda el Rol_id en la tabla role_user con el user_id
+         */
+        $user->attachRole(Role::find(Input::get('rol')));
+
+        /**
+         * indicamos que queremos guardar el archivo imagen
+         * del empleado en el disco local de la carpeta
+         * pública storage
+         */
+        if(!is_null($file)) {
+            $file->move('storage',$nombre);
+        }
+        return redirect()->route('users.index');
     }
 
     /**
@@ -86,15 +116,13 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($idplant)
+    public function edit($id)
     {
-        //$user = User::find($id);
-        $plant = Plants::find($idplant);
-        //$userRole = $user->roles()->first();
-        //$user['rol'] = $userRole;
-        //$roles = Role::all()->pluck('slug','id');
-        //return view('plants.edit', array('user' => $user, 'roles' => $roles, 'plants' => $plant ));
-        return view('plants.edit', array('plant' => $plant ));
+        $user = User::find($id);
+        $userRole = $user->roles()->first();
+        $user['rol'] = $userRole;
+        $roles = Role::all()->pluck('slug','id');
+        return view('users.edit', array('user' => $user, 'roles' => $roles ));
     }
 
     /**
@@ -154,7 +182,7 @@ class PlantsController extends Controller
         if(!is_null($file)) {
             $file->move('storage',$nombre);
         }
-        return redirect()->route('plants.index');
+        return redirect()->route('users.index');
     }
 
     /**
@@ -164,11 +192,19 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($idplant)
+    public function destroy($id)
     {
-        $plant = Plants::find($idplant);
-        //$plant -> delete();
-        Plants::destroy($idplant);
-        return redirect()->route('plants.index');
+        $user = User::find($id);
+        $imagenName = $user->foto;
+        /**
+         * Borramos el archivo de imagen de la carpeta storage, si el usuario
+         * no tiene foto, no permitimos que se borre la imagen sin-foto.png
+         * ya que esa es la imagen base para los que no tienen fotos
+         */
+        if(!is_null($imagenName) and $imagenName <> 'sin-foto.png') {
+            File::delete(public_path('storage/').$imagenName);
+        }
+        User::destroy($id);
+        return redirect()->route('users.index');
     }
 }
