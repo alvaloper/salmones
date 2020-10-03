@@ -34,7 +34,7 @@ public function __construct()
     {
         $users = User::paginate(6);
         $permisos = Permission::all();
-        return view('users.index', array('users'=> $users, 'permisos' => $permisos));
+        return view('plants.index', array('users'=> $users, 'permisos' => $permisos));
     }
 
     /**

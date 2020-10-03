@@ -4,14 +4,14 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Usuarios</b></h3>
+              <h3 class="box-title"><b>Plantas de Procesos</b></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">ID</th>
+                            <th class="text-center">IdddD</th>
                             <th class="text-center">Foto</th>
                             <th class="text-center">Nombre</th>
                             <th class="text-center">Perfil</th>
@@ -73,36 +73,3 @@
           </div>
           <!-- /.box -->
 
-<!-- Aquí inicia código importado -->
-<div class="container">
-    <div class="user">
-        <div class="modal" id="permisos">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" style="text-align: center">Gestionar permisos del ID:{{$user->id}}  Usuario:{{$user->name}}  </h4>
-                    </div>
-                    <div class="modal-body">
-                        <a href='#' id='select-all'>Select all (No implementado) / </a>
-                        <a href='#' id='deselect-all'>Deselect all (No implementado)</a>
-                        <select id="select-permisos" multiple="multiple">
-                            @if(isset($permisos))
-                                @foreach($permisos as $permiso)
-                                    <option value="{{ $permiso->id }}">{{ $permiso->slug }}</option>
-                                @endforeach
-                            @endif
-                        </select>
-                    </div>
-                    <div id="datos"></div>
-                    <div class="modal-footer">
-                        <a href="#" onclick="javascript:location.reload();" data-dismiss="modal" class="btn">Cerrar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Aquí Finaliza código importado -->
-{!! $users->render() !!}
