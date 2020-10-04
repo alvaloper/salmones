@@ -11,3 +11,5 @@ https://github.com/romanbican/roles
 
 https://laravel.mx/
 
+https://github.com/laracasts/flash
+
