@@ -8,3 +8,5 @@ https://adminlte.io/
 https://adminlte.io/themes/AdminLTE/pages/tables/data.html
 
 https://laravel.mx/
+
+https://github.com/romanbican/roles
