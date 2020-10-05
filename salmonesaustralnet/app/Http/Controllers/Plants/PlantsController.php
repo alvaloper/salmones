@@ -20,7 +20,9 @@ class PlantsController extends Controller
 {
     public function __construct()
     {
+
         $this->middleware('auth');
+
     }
 
     /**
@@ -31,12 +33,12 @@ class PlantsController extends Controller
 
     public function index()
     {
+
         $plants = Plants::paginate(6);
         $users = User::paginate(6);
-        //$permisos = Permission::all();
         $plants = Plants::all();
-        
         return view('plants.index', array('users'=> $users, 'plants'=> $plants));
+
     }
 
     /**
@@ -47,9 +49,10 @@ class PlantsController extends Controller
 
     public function create()
     {
+
         $roles = Role::all()->pluck('slug','id');
-;
         return view('plants.create')->with('roles', $roles);
+
     }
 
     /**
@@ -61,10 +64,13 @@ class PlantsController extends Controller
 
     public function store(PlantsNewRequest $request)
     {
+
         $plants = new Plants();
         $plants->nameplant = $request->input('nameplant');
         $plants->save();
+        flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('plants.index');
+        
     }
 
     /**
@@ -87,12 +93,8 @@ class PlantsController extends Controller
 
     public function edit($idplant)
     {
-        //$user = User::find($id);
+
         $plants = Plants::find($idplant);
-        //$userRole = $user->roles()->first();
-        //$user['rol'] = $userRole;
-        //$roles = Role::all()->pluck('slug','id');
-        //return view('plants.edit', array('user' => $user, 'roles' => $roles, 'plants' => $plant ));
         return view('plants.edit', array('plants' => $plants ));
 
     }
@@ -111,7 +113,9 @@ class PlantsController extends Controller
         $plants = Plants::find($idplant);
         $plants->nameplant = $request->input('nameplant');
         $plants->save();
+        flash('El registro ha sido modificado.')->success()->important();
         return redirect()->route('plants.index');
+
     }
 
     /**
@@ -123,9 +127,11 @@ class PlantsController extends Controller
 
     public function destroy($idplant)
     {
+
         $plants = Plants::find($idplant);
-        flash('Ha sido eliminado')->success();
+        flash('El registro ha sido eliminado')->success()->important();
         Plants::destroy($idplant);
         return redirect()->route('plants.index');
+
     }
 }

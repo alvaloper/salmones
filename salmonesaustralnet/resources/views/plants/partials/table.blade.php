@@ -94,5 +94,4 @@
     </div>
 </div>
 
-<!-- Aquí Finaliza código importado -->
 {!! $users->render() !!}
