@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Plants;
+namespace App\Http\Controllers\Centers;
 
 use App\Models\Seguridad\Permission;
 use App\Models\Seguridad\PermissionRole;
 use App\Models\Seguridad\Role;
 use App\User;
-use App\plants;
+use App\centers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation;
-use App\Http\Requests\Plants\PlantsNewRequest;
-use App\Http\Requests\Plants\PlantsUpdateRequest;
+use App\Http\Requests\Centers\CentersNewRequest;
+use App\Http\Requests\Centers\CentersUpdateRequest;
 use App\Http\Requests;
 
-class PlantsController extends Controller
+class CentersController extends Controller
 {
     public function __construct()
     {
@@ -34,10 +34,8 @@ class PlantsController extends Controller
     public function index()
     {
 
-        $plants = plants::Paginate(5);
-        
-        //return view('plants.index');
-        return view('plants.index', array('plants'=> $plants));
+        $centers = centers::Paginate(5);
+        return view('centers.index', array('centers'=> $centers));
 
     }
 
@@ -51,7 +49,7 @@ class PlantsController extends Controller
     {
 
         $roles = Role::all()->pluck('slug','id');
-        return view('plants.create')->with('roles', $roles);
+        return view('centers.create')->with('roles', $roles);
 
     }
 
@@ -62,14 +60,17 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(PlantsNewRequest $request)
+    public function store(CentersNewRequest $request)
     {
 
-        $plants = new Plants();
-        $plants->nameplant = $request->input('nameplant');
-        $plants->save();
+        $centers = new Centers();
+        $centers->namecenter = $request->input('namecenter');
+        $centers->emergencyphone = $request->input('emergencyphone');
+        $centers->boss = $request->input('boss');
+        $centers->assistant = $request->input('assistant');
+        $centers->save();
         flash('El registro ha sido agregado')->success()->important();
-        return redirect()->route('plants.index');
+        return redirect()->route('centers.index');
         
     }
 
@@ -91,11 +92,11 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($idplant)
+    public function edit($idcenter)
     {
 
-        $plants = Plants::find($idplant);
-        return view('plants.edit', array('plants' => $plants ));
+        $centers = Centers::find($idcenter);
+        return view('centers.edit', array('centers' => $centers ));
 
     }
 
@@ -107,14 +108,17 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(PlantsUpdateRequest $request, $idplant)
+    public function update(CentersUpdateRequest $request, $idcenter)
     {
 
-        $plants = Plants::find($idplant);
-        $plants->nameplant = $request->input('nameplant');
-        $plants->save();
+        $centers = Centers::find($idcenter);
+        $centers->namecenter = $request->input('namecenter');
+        $centers->emergencyphone = $request->input('emergencyphone');
+        $centers->boss = $request->input('boss');
+        $centers->assistant = $request->input('assistant');
+        $centers->save();
         flash('El registro ha sido modificado.')->success()->important();
-        return redirect()->route('plants.index');
+        return redirect()->route('centers.index');
 
     }
 
@@ -125,13 +129,13 @@ class PlantsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($idplant)
+    public function destroy($idcenter)
     {
 
-        $plants = Plants::find($idplant);
+        $centers = Centers::find($idcenter);
         flash('El registro ha sido eliminado')->success()->important();
-        Plants::destroy($idplant);
-        return redirect()->route('plants.index');
+        Centers::destroy($idcenter);
+        return redirect()->route('centers.index');
 
     }
 }

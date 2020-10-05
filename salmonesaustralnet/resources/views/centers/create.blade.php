@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-    Crear Nueva Planta de Procesos
+    Crear Nuevo Centro de Cultivo
 @endsection
 
 
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
-        <h2 class="text-center">Nueva Planta de Procesos</h2>
-        {!! Form::open(['route' => 'plants.store', 'method' => 'POST', 'files' => true]) !!}
-        @include('plants.partials.fields')
+        <h2 class="text-center">Nuevo Centro de Cultivo</h2>
+        {!! Form::open(['route' => 'centers.store', 'method' => 'POST', 'files' => true]) !!}
+        @include('centers.partials.fields')
         <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar</button>
         {!! Form::close() !!}
     @else

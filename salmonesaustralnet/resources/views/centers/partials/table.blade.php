@@ -4,7 +4,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Plantas de Procesos</b></h3>
+              <h3 class="box-title"><b>Centros de Cultivo</b></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -13,19 +13,25 @@
                         <tr>
                             <th class="text-center">ID</th>
                             <th class="text-center">Nombre</th>
+                            <th class="text-center">Número de Emergencia</th>
+                            <th class="text-center">Jefe del Centro</th>
+                            <th class="text-center">Asistente del Centro</th>
                             <th class="text-center">Acciones</th>
                         </tr> 
                     </thead>
                     <tbody>
-                       @foreach ($plants as $plant)
+                       @foreach ($centers as $center)
 
                         <tr>
-                            <td>{{ $plant->idplant }}</td>
-                            <td>{{ $plant->nameplant }}</td> 
-                                {!! Form::open(['route' => ['plants.destroy', $plant->idplant], 'method' => 'DELETE'] ) !!}
+                            <td>{{ $center->idcenter }}</td>
+                            <td>{{ $center->namecenter }}</td> 
+                            <td>{{ $center->emergencyphone}}</td>
+                            <td>{{ $center->boss}}</td>
+                            <td>{{ $center->assistant}}</td>
+                                {!! Form::open(['route' => ['centers.destroy', $center->idcenter], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                     <!-- Boton para modificar al usuario seleccionado-->
-                                <a href="{{ url('admin/plants/'.$plant->idplant.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
+                                <a href="{{ url('admin/centers/'.$center->idcenter.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
                                 
@@ -35,7 +41,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plant->idplant, Nombre: $plant->nameplant ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $center->idcenter, Nombre: $center->namecenter ?')"
                                     ]) !!}
                                 
                                 
@@ -49,6 +55,9 @@
                          <tr>
                             <th class="text-center">ID</th>
                             <th class="text-center">Nombre</th>
+                            <th class="text-center">Número de Emergencia</th>
+                            <th class="text-center">Jefe del Centro</th>
+                            <th class="text-center">Asistente del Centro</th>
                             <th class="text-center">Acciones</th>
                         </tr>
                     </tfoot>
@@ -58,6 +67,4 @@
           </div>
           <!-- /.box -->
 
-
-
-{{ $plants->links() }}
+{{ $centers->links() }}

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class centers extends Model
 {
-    //
+    protected $primaryKey = 'idcenter';
 }

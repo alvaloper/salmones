@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Plants;
+namespace App\Http\Requests\Centers;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PlantsNewRequest extends FormRequest
+class CentersNewRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,10 @@ class PlantsNewRequest extends FormRequest
     public function rules()
     {
         return [
-            'nameplant' => 'min:5|max:50|required|string',
+            'namecenter' => 'min:5|max:50|required|string',
+            'emergencyphone' => 'min:5|max:50|required|string',
+            'boss' => 'min:5|max:50|required|string',
+            'assistant' => 'min:5|max:50|required|string',
         ];
     }
 }
