@@ -20,13 +20,61 @@ class CentersTableSeeder extends Seeder
           'updated_at'     => \Carbon\Carbon::now(),
         ]);
 
+
+        DB::table('centers')->insert([
+          'namecenter'     => 'Medellin',
+          'emergencyphone' => '12345678',
+          'boss'           => 'Junior Brillant',
+          'assistant'      => 'Linda Graykat',
+          'created_at'     => \Carbon\Carbon::now(),
+          'updated_at'     => \Carbon\Carbon::now(),
+        ]);
+
         DB::table('centers')->insert([
           'namecenter'     => 'Santiago',
-          'emergencyphone' => '12345678',
+          'emergencyphone' => '87654321',
           'boss'           => 'María Dugarte',
           'assistant'      => 'Luis Shakespeare',
           'created_at'     => \Carbon\Carbon::now(),
           'updated_at'     => \Carbon\Carbon::now(),
         ]);
+
+        DB::table('centers')->insert([
+          'namecenter'     => 'Venecia',
+          'emergencyphone' => '12345678',
+          'boss'           => 'Jonas Bertolli',
+          'assistant'      => 'Luis Campagnin',
+          'created_at'     => \Carbon\Carbon::now(),
+          'updated_at'     => \Carbon\Carbon::now(),
+        ]);
+
+        DB::table('centers')->insert([
+          'namecenter'     => 'London',
+          'emergencyphone' => '876543211',
+          'boss'           => 'Joseph Lord',
+          'assistant'      => 'Mary Shakespeare',
+          'created_at'     => \Carbon\Carbon::now(),
+          'updated_at'     => \Carbon\Carbon::now(),
+        ]);
+
+        DB::table('centers')->insert([
+          'namecenter'     => 'Madrid',
+          'emergencyphone' => '876543211',
+          'boss'           => 'María Spanic',
+          'assistant'      => 'Juan Pérez',
+          'created_at'     => \Carbon\Carbon::now(),
+          'updated_at'     => \Carbon\Carbon::now(),
+        ]);
+
+        DB::table('centers')->insert([
+          'namecenter'     => 'Montevideo',
+          'emergencyphone' => '876543210',
+          'boss'           => 'Eduard Lick',
+          'assistant'      => 'Leidy Alva',
+          'created_at'     => \Carbon\Carbon::now(),
+          'updated_at'     => \Carbon\Carbon::now(),
+        ]);
+
+
     }
 }

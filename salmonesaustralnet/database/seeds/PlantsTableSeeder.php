@@ -24,19 +24,19 @@ class PlantsTableSeeder extends Seeder
         ]);
 
         DB::table('plants')->insert([
-          'nameplant'     => 'Mérida',
+          'nameplant'     => 'England',
           'created_at'    => \Carbon\Carbon::now(),
           'updated_at'    => \Carbon\Carbon::now(),
         ]);
 
         DB::table('plants')->insert([
-          'nameplant'     => 'Táchira',
+          'nameplant'     => 'Argentina',
           'created_at'    => \Carbon\Carbon::now(),
           'updated_at'    => \Carbon\Carbon::now(),
         ]);
 
         DB::table('plants')->insert([
-          'nameplant'     => 'Venecia',
+          'nameplant'     => 'Uruguay',
           'created_at'    => \Carbon\Carbon::now(),
           'updated_at'    => \Carbon\Carbon::now(),
         ]);
