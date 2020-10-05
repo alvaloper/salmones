@@ -34,10 +34,10 @@ class PlantsController extends Controller
     public function index()
     {
 
-        $plants = Plants::paginate(6);
-        $users = User::paginate(6);
-        $plants = Plants::all();
-        return view('plants.index', array('users'=> $users, 'plants'=> $plants));
+        $plants = plants::Paginate(5);
+        
+        //return view('plants.index');
+        return view('plants.index', array('plants'=> $plants));
 
     }
 
