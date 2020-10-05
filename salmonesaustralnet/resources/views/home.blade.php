@@ -23,7 +23,7 @@
 								<td class="text-center"><a href="{{ url('admin/modulos') }}" ><img src="img/menu/inicio/soldado.png" alt="Roles y Permiso" width="32" height="32"><p><div style="text-align: center;">Seguridad</div></a></td>
 								<div style="text-align: center;">A través de esta plataforma se puede registrar todas las eventualidades....</div>
 								@else
-									<td class="text-center"><a href="" ><img src="img/avatar.png" alt="Roles y Permiso" width="32" height="32"><p><div style="text-align: center;">Inicio</td>
+									<div style="text-align: center;">A través de esta plataforma se puede registrar todas las eventualidades....</div>
 								@endrole
 							</tr>
 						</table>
