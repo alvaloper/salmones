@@ -30,7 +30,7 @@ class UsersController extends Controller
 
     public function index()
     {
-        $users = User::paginate(7);
+        $users = User::paginate(6);
         $permisos = Permission::all();
         return view('users.index', array('users'=> $users, 'permisos' => $permisos));
     }
