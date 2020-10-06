@@ -46,12 +46,6 @@ Route::group(['prefix' => 'admin2', 'namespace' => 'Seguridad'], function () {
     Route::get('roles/desasignar','PermissionsRolesController@desasignar');
 });
 
-Route::group(['prefix' => 'admin3', 'namespace' => 'Seguridad'], function () {
-    Route::get('permisousuario','PermissionsUsersController@index');
-    Route::get('permisousuario/asignar','PermissionsUsersController@asignar');
-    Route::get('permisousuario/desasignar','PermissionsUsersController@desasignar');
-});
-
 Route::group(['prefix' => 'admin', 'namespace' => 'Modulos'], function () {
 
     Route::get('modulos', 'ModulosController@seguridad');
