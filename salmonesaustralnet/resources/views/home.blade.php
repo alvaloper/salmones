@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="panel panel-default">
-					<div class="panel-heading">Bienvenido(a) {{ Auth::user()->name }}</div>
+					<div class="panel-heading">Bienvenido(a) {{ Auth::user()->name }} {{ Auth::user()->lastname }}</div>
 					@permission('crear.usuarios')
 					 <!-- Aqui lo que quiera mostrar -->						
 					@endpermission

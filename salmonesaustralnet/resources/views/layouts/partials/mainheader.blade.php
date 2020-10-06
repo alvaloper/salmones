@@ -30,14 +30,14 @@
                             <!-- The user image in the navbar-->
                             <img src="{{asset('img/logoavatar.png')}}" class="user-image" alt="User Image"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs">{{ Auth::user()->name }}</span>
+                            <span class="hidden-xs">{{ Auth::user()->name }} {{ Auth::user()->lastname }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
                                 <img src="{{asset('img/logoavatar.png')}}" class="img-circle" alt="User Image" />
                                 <p>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }} {{ Auth::user()->lastname }}
                                 </p>
                             </li>
 
