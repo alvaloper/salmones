@@ -35,7 +35,7 @@
                                     ?>
                                 </td>
                                 <td class="text-center">{{ $user->name }}</td>
-                                <td class="text-center">{{ $user->login }}</td>
+                                <td class="text-center">{{ $user->lastname }}</td>
                                 <td class="text-center">{{ $user->rol->slug }}</td>
                                 <td class="text-center">{{ $user->email }}</td>
                                 {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'DELETE'] ) !!}

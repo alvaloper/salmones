@@ -59,7 +59,7 @@ class UsersController extends Controller
     {
         $user = new User();
         $user->name = $request->input('name');
-        $user->login  = $request->input('login');
+        $user->lastname  = $request->input('lastname');
         $user->email  = $request->input('email');
         $user->password  = Hash::make($request->input('password'));
         $user->remember_token = str_random(100);
@@ -68,6 +68,7 @@ class UsersController extends Controller
          * El Metodo attachRole Guarda el Rol_id en la tabla role_user con el user_id
          */
         $user->attachRole(Role::find(Input::get('rol')));
+        flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('users.index');
     }
 
@@ -111,7 +112,7 @@ class UsersController extends Controller
 
         $user = User::find($id);
         $user->name = $request->input('name');
-        $user->login  = $request->input('login');
+        $user->lastname  = $request->input('lastname');
         $user->password  =  Hash::make($request->input('password'));
         $user->remember_token = str_random(100);
         $user->save();
@@ -127,6 +128,7 @@ class UsersController extends Controller
          * El Metodo attachRole Guarda el Rol_id en la tabla role_user con el user_id
          */
         $user->attachRole(Role::find(Input::get('rol')));
+        flash('El registro ha sido modificado.')->success()->important();
         return redirect()->route('users.index');
     }
 
@@ -141,6 +143,7 @@ class UsersController extends Controller
     {
         $user = User::find($id);
         User::destroy($id);
+        flash('El registro ha sido eliminado')->success()->important();
         return redirect()->route('users.index');
     }
 }

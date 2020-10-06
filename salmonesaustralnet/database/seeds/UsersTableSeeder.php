@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         User::create(array(
             'name'           => 'Salmones Austral',
-            'login'          => 'Salmones Austral CTO',
+            'lastname'       => 'Salmones Austral CTO',
             'email'          => 'administrador@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'María Morales',
-            'login'          => 'Salmones Austral EDIT',
+            'lastname'       => 'Salmones Austral EDIT',
             'email'          => 'editor@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Luis Espinoza',
-            'login'          => 'Root 1',
+            'lastname'       => 'Root 1',
             'email'          => 'espinozalj@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -38,7 +38,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Leidy Espinoza',
-            'login'          => 'Root 2',
+            'lastname'       => 'Root 2',
             'email'          => 'espinozalb@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -46,7 +46,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Itala Espinoza',
-            'login'          => 'Admin 1',
+            'lastname'       => 'Admin 1',
             'email'          => 'espinozai@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -54,7 +54,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Jose Espinoza',
-            'login'          => 'Admin 2',
+            'lastname'       => 'Admin 2',
             'email'          => 'espinozaj@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -62,7 +62,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Leidy Alvarado',
-            'login'          => 'Admin 3',
+            'lastname'       => 'Admin 3',
             'email'          => 'alvaradol@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -70,7 +70,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Luis Alvarado',
-            'login'          => 'Admin 4',
+            'lastname'       => 'Admin 4',
             'email'          => 'alvaradolj@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -78,7 +78,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Itala Alvarado',
-            'login'          => 'Admin 5',
+            'lastname'       => 'Admin 5',
             'email'          => 'alvaradoi@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -86,7 +86,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Luis Pulido',
-            'login'          => 'Admin 6',
+            'lastname'       => 'Admin 6',
             'email'          => 'pulidol@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)
@@ -94,7 +94,7 @@ class UsersTableSeeder extends Seeder
 
         User::create(array(
             'name'           => 'Jose Pulido',
-            'login'          => 'Admin 7',
+            'lastname'       => 'Admin 7',
             'email'          => 'pulidoj@salmonesaustral.net',
             'password'       => Hash::make('123456'),
             'remember_token' => str_random(100)

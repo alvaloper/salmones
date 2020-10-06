@@ -24,8 +24,8 @@ class UserNuevoRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'min:5|max:50|required|string',
-            'login' => 'min:5|max:60|required|unique:users',
+            'name' => 'min:4|max:50|required|string',
+            'lastname' => 'min:5|max:60|required|unique:users',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ];

@@ -2,7 +2,7 @@
     <table class="table table-bordered" id="MyTable">
         <tr>
             <td>
-                {!! Form::label('name', 'Nombre usuario', ['for' => 'name'] ) !!}
+                {!! Form::label('name', 'Nombres del Usuario', ['for' => 'name'] ) !!}
                 {!! Form::text('name', null , ['class' => 'form-control',
                  'id' => 'name',
                  'placeholder' => 'name...Eje carlos Garcia' ]  ) !!}
@@ -10,9 +10,9 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('login', 'Login', ['for' => 'login'] ) !!}
-                {!! Form::text('login', null , ['class' => 'form-control',
-                 'id' => 'login', 'readonly',
+                {!! Form::label('lastname', 'Apellidos del Usuario', ['for' => 'lastname'] ) !!}
+                {!! Form::text('lastname', null , ['class' => 'form-control',
+                 'id' => 'lastname',
                   'placeholder' => 'Eje... Administrador' ]  ) !!}
             </td>
         </tr>
@@ -26,15 +26,11 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('password', 'Indique la Clave', ['for' => 'password'] ) !!}
+                {!! Form::label('password', 'Contraseña', ['for' => 'password'] ) !!}
                 {!! Form::password('password', null , ['class' => 'form-control',
                  'id' => 'password',
                   'placeholder' => 'Password...Eje 123456' ]  ) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('password_confirmation', 'Confirme Clave', ['for' => 'password'] ) !!}
+                {!! Form::label('password_confirmation', 'Confirme la Contraseña', ['for' => 'password'] ) !!}
                 {!! Form::password('password_confirmation', null , ['class' => 'form-control',
                  'id' => 'password_confirmation',
                   'placeholder' => 'Password...Eje 123456' ]  ) !!}
