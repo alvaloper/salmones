@@ -12,11 +12,9 @@
                     <thead>
                         <tr>
                             <th class="text-center">ID</th>
-                            <th class="text-center">Foto</th>
                             <th class="text-center">Nombre</th>
                             <th class="text-center">Perfil</th>
                             <th class="text-center">Email</th>
-                            <th class="text-center">Activo</th>
                             <th class="text-center">Acciones</th>
                         </tr> 
                     </thead>
@@ -25,11 +23,9 @@
                             <?php $user['rol'] = $user->roles()->first();?>
                             <tr>
                                 <td class="text-center">{{ $user->id }}</td>
-                                <td class="text-center"><img src="{{ asset('storage/'. $user->foto) }}" class="img-circle" height="45" width="31" alt="Usuario"></td>
                                 <td class="text-center">{{ $user->name }}</td>
                                 <td class="text-center">{{ $user->rol->slug }}</td>
                                 <td class="text-center">{{ $user->email }}</td>
-                                <td class="text-center">{{ $user->activo }}</td>
                                 {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                 @if($user->rol->slug <> "root")
@@ -59,11 +55,9 @@
                     <tfoot>
                          <tr>
                             <th class="text-center">ID</th>
-                            <th class="text-center">Foto</th>
                             <th class="text-center">Nombre</th>
                             <th class="text-center">Perfil</th>
                             <th class="text-center">Login</th>
-                            <th class="text-center">Activo</th>
                             <th class="text-center">Acciones</th>
                         </tr>
                     </tfoot>

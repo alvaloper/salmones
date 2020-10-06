@@ -25,12 +25,9 @@ class UserNuevoRequest extends FormRequest
     {
         return [
             'name' => 'min:5|max:50|required|string',
-            //'foto' => 'required|size:3145728',
             'login' => 'min:5|max:60|required|unique:users',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
-            'fechainicio' => 'required|date|after:yesterday',
-            'fechafin'   => 'required|date|after:fechainicio'
         ];
     }
 }

@@ -2,14 +2,6 @@
     <table class="table table-bordered" id="MyTable">
         <tr>
             <td>
-                {!! Form::label('foto', 'Foto Usuario', ['for' => 'foto'] ) !!}
-
-                <img src="{{ asset('storage/'. $user->foto) }}" class="img-circle" height="45" width="31" alt="Usuario"> Archivo Nombre: {{ $user->foto}}
-                {!! Form::file('foto', null , ['class' => 'form-control', 'id' => 'foto']  ) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
                 {!! Form::label('name', 'Nombre usuario', ['for' => 'name'] ) !!}
                 {!! Form::text('name', null , ['class' => 'form-control',
                  'id' => 'name',
@@ -52,24 +44,6 @@
             <td>
                 {!! Form::label('role', 'Perfil', ['for' => 'role']) !!}
                 {!! Form::select('rol', $roles , $user->rol->id, array('class' => 'form-control')) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('activo', 'Cuenta Usuario Activa ?', ['for' => 'activo'] ) !!}
-                {!! Form::select('activo', array('T' => 1, 'F' => 0), 'T') !!} <div>1 = Cuenta Activada; 0 = Cuenta Desactivada</div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('fechainicio', 'Fecha Inicio Cuenta Activa', ['for' => 'fechainicio'] ) !!}
-                {!!Form::date('fechainicio', \Carbon\Carbon::parse($user->fechainicio))!!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('fechafin', 'Fecha Fin de Cuenta Activa', ['for' => 'fechafin'] ) !!}
-                {!!Form::date('fechafin', \Carbon\Carbon::parse($user->fechafin))!!}
             </td>
         </tr>
     </table>
