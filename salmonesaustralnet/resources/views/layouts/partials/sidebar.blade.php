@@ -35,7 +35,7 @@
                 <ul class="treeview-menu">
                     <li><a href="#">Centros de Cultivos</a></li>
                     <li><a href="#">Fallas Operacionales</a></li>
-                    <li><a href="#">Plantas de Procesos</a></li>
+                    <li><a href="{{ url('admin/plantrecords') }}">Plantas de Procesos</a></li>
                 </ul>
             </li>
             <li class="treeview">

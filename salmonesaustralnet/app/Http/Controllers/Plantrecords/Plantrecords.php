@@ -67,6 +67,7 @@ class PlantrecordsController extends Controller
         $plantrecords->titlerecord = $request->input('titlerecord');
         $plantrecords->dateplant = $request->input('dateplant');
         $plantrecords->planthour = $request->input('planthour');
+        $plantrecords->plantevente = $request->input('plantevente');
         $plantrecords->actionsevent = $request->input('actionsevent');
         $plantrecords->plant_id = $request->input('plant_id');
         $plantrecords->user_id = $request->input('user_id');
@@ -117,6 +118,7 @@ class PlantrecordsController extends Controller
         $plantrecords->titlerecord = $request->input('titlerecord');
         $plantrecords->dateplant = $request->input('dateplant');
         $plantrecords->planthour = $request->input('planthour');
+        $plantrecords->plantevente = $request->input('plantevente');
         $plantrecords->actionsevent = $request->input('actionsevent');
         $plantrecords->plant_id = $request->input('plant_id');
         $plantrecords->user_id = $request->input('user_id');
