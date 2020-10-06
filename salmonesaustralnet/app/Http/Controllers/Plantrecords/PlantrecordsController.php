@@ -63,7 +63,7 @@ class PlantrecordsController extends Controller
     public function store(PlantrecordsNewRequest $request)
     {
 
-        $plantrecords = new Plantsrecord();
+        $plantrecords = new Plantrecords();
         $plantrecords->titlerecord = $request->input('titlerecord');
         $plantrecords->dateplant = $request->input('dateplant');
         $plantrecords->planthour = $request->input('planthour');
@@ -114,7 +114,7 @@ class PlantrecordsController extends Controller
     public function update(PlantrecordsUpdateRequest $request, $idplantrecord)
     {
 
-        $plantrecords = Plantrecord::find($idplantrecord);
+        $plantrecords = Plantrecords::find($idplantrecord);
         $plantrecords->titlerecord = $request->input('titlerecord');
         $plantrecords->dateplant = $request->input('dateplant');
         $plantrecords->planthour = $request->input('planthour');

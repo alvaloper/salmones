@@ -11,6 +11,7 @@
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
+                            <th class="text-center">IDPLANTRECORD</th>
                             <th class="text-center">TITLERECORD</th>
                             <th class="text-center">DATEPLANT</th>
                             <th class="text-center">PLANTHOUR</th>
@@ -35,7 +36,7 @@
                                 {!! Form::open(['route' => ['plantrecords.destroy', $plantr->idplantrecord], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                     <!-- Boton para modificar al usuario seleccionado-->
-                                <a href="{{ url('admin/plantrecords/'.$$plantr->idplantrecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
+                                <a href="{{ url('admin/plantrecords/'.$plantr->idplantrecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
                                 
@@ -45,7 +46,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plantr->idplantrecord, Nombre: $plant->nameplant ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plantr->idplantrecord, Nombre: $plantr->titlerecord ?')"
                                     ]) !!}
                                 
                                 
@@ -57,6 +58,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
+                            <th class="text-center">IDPLANTRECORD</th>
                             <th class="text-center">TITLERECORD</th>
                             <th class="text-center">DATEPLANT</th>
                             <th class="text-center">PLANTHOUR</th>

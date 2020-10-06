@@ -29,8 +29,8 @@ class PlantrecordsNewRequest extends FormRequest
             'planthour' => 'min:5|max:50|required|string',
             'plantevente' => 'min:5|max:50|required|string',
             'actionsevent' => 'min:5|max:50|required|string',
-            'plan_id' => 'min:5|max:50|required|string',
-            'user_id' => 'min:5|max:50|required|string',
+            'plant_id' => 'min:1|max:50|required|string',
+            'user_id' => 'min:1|max:50|required|string',
         ];
     }
 }
