@@ -6,7 +6,7 @@
 
 
 @section('main-content')
-    @if(Auth::check() && Auth::user()->isRole('root'))
+    @if(Auth::check() && (Auth::user()->isRole('root') || Auth::user()->isRole('admin')))
        @include('flash::message')
         <a class="btn btn-primary pull-right" href="{{ url('admin/plantrecords/create') }}" data-toggle="tooltip" title="Nueva Eventualidad" role="button">Nueva Eventualidad</a>
         <br><br>

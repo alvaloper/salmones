@@ -33,6 +33,9 @@
                             <td>{{ $plantr->actionsevent }}</td>
                             <td>{{ $plantr->plant_id }}</td>
                             <td>{{ $plantr->user_id }}</td>     
+
+                            @if(Auth::check() && Auth::user()->isRole('root'))
+
                                 {!! Form::open(['route' => ['plantrecords.destroy', $plantr->idplantrecord], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                     <!-- Boton para modificar al usuario seleccionado-->
@@ -53,6 +56,8 @@
 
                                 </td> 
                                 {!! Form::close() !!}
+
+                            @endif
                         </tr>
                     @endforeach
                     </tbody>
