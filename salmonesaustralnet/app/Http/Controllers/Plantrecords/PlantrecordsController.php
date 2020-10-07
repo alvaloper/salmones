@@ -104,7 +104,10 @@ class PlantrecordsController extends Controller
     {
 
         $plantrecords = Plantrecords::find($idplantrecord);
-        return view('plantrecords.edit', array('plantrecords' => $plantrecords ));
+
+        $plantx = plants::pluck('nameplant','idplant');
+
+        return view('plantrecords.edit', compact('plantx'), array('plantrecords' => $plantrecords ));
 
     }
 
