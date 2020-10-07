@@ -42,10 +42,8 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('plant_id', 'Titulo de plant_id', ['for' => 'plant_id'] ) !!}
-                {!! Form::text('plant_id', null , ['class' => 'form-control',
-                 'id' => 'plant_id',
-                 'placeholder' => 'Ingrese la plant_id' ]  ) !!}
+                {!! Form::label('plant_id', 'Titulo de plant_id', ['for' => 'plant_id']) !!}
+                {!! Form::select('plant_id', $plantx) !!}
             </td>
         </tr>
         <tr>

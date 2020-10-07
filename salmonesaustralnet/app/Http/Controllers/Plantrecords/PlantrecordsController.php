@@ -7,6 +7,7 @@ use App\Models\Seguridad\PermissionRole;
 use App\Models\Seguridad\Role;
 use App\User;
 use App\plantrecords;
+use App\plants;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
@@ -49,7 +50,11 @@ class PlantrecordsController extends Controller
     {
 
         $roles = Role::all()->pluck('slug','id');
-        return view('plantrecords.create')->with('roles', $roles);
+
+        $plantx = plants::pluck('nameplant','idplant');
+
+        //SIRVE  return view('plantrecords.create', ['plantx', $plantx])->with('roles', $roles);
+        return view('plantrecords.create', compact('plantx'))->with('roles', $roles);
 
     }
 
