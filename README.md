@@ -13,3 +13,4 @@ https://laravel.mx/
 
 https://github.com/laracasts/flash
 
+https://rimorsoft.com/rutas-necesarias-en-un-api
