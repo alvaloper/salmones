@@ -2,10 +2,10 @@
     <table class="table table-bordered" id="MyTable">
         <tr>
             <td>
-                {!! Form::label('titlerecord', 'Titulo del campo', ['for' => 'titlerecord'] ) !!}
+                {!! Form::label('titlerecord', 'Título de la Eventualidad', ['for' => 'titlerecord'] ) !!}
                 {!! Form::text('titlerecord', null , ['class' => 'form-control',
                  'id' => 'titlerecord',
-                 'placeholder' => 'Ingrese el titulo del campo' ]  ) !!}
+                 'placeholder' => 'Ingrese el título' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -27,29 +27,29 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('plantevente', 'Titulo de plantevente', ['for' => 'plantevente'] ) !!}
+                {!! Form::label('plantevente', 'Evento en la Planta', ['for' => 'plantevente'] ) !!}
                 {!! Form::text('plantevente', null , ['class' => 'form-control',
                  'id' => 'plantevente',
-                 'placeholder' => 'Ingrese la plantevente' ]  ) !!}
+                 'placeholder' => 'Ingrese la eventualidad en planta' ]  ) !!}
             </td>
         </tr>
         <tr>
             <td>
-                {!! Form::label('actionsevent', 'Titulo de actionsevent', ['for' => 'actionsevent'] ) !!}
+                {!! Form::label('actionsevent', 'Acciones', ['for' => 'actionsevent'] ) !!}
                 {!! Form::text('actionsevent', null , ['class' => 'form-control',
                  'id' => 'actionsevent',
-                 'placeholder' => 'Ingrese la actionsevent' ]  ) !!}
+                 'placeholder' => 'Ingrese las acciones' ]  ) !!}
             </td>
         </tr>
         <tr>
             <td>
-                {!! Form::label('plant_id', 'Titulo de plant_id', ['for' => 'plant_id']) !!}
+                {!! Form::label('plant_id', 'Nombre de la Planta ', ['for' => 'plant_id']) !!}
                 {!! Form::select('plant_id', $plantx) !!}
             </td>
         </tr>
         <tr>
             <td>
-                {!! Form::label('user_id', 'Titulo de user_id', ['for' => 'user_id'] ) !!}
+                {!! Form::label('user_id', 'Usuario que registra la Eventualidad', ['for' => 'user_id'] ) !!}
                 {!! Form::text('user_id', null , ['class' => 'form-control',
                  'id' => 'user_id',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
