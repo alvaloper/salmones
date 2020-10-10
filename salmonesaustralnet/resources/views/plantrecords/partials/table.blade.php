@@ -7,6 +7,9 @@
               <h3 class="box-title"><b>Registro de Eventualidades de Plantas de Procesos</b></h3>
             </div>
             <!-- /.box-header -->
+            <?php         
+                $cont=0;
+            ?>
             <div class="box-body">
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
@@ -24,15 +27,26 @@
                     </thead>
                     <tbody>
                        @foreach ($plantrecords as $plantr)
-
+                        @foreach ($plants as $plant)
+                            <?php 
+                                if ($plant->idplant == $plantr['plant_id']){
+                                    $plantr['nameplant'] = $plant->nameplant;
+                                }
+                            ?>
+                        @endforeach
                         <tr>
-                            <td>{{ $plantr->idplantrecord }}</td>
+                            <td>
+                                <?php
+                                    $cont=$cont+1;                              
+                                    echo $cont;
+                                ?>
+                            </td>
                             <td>{{ $plantr->titlerecord }}</td> 
                             <td>{{ $plantr->dateplant }}</td>
                             <td>{{ $plantr->planthour }}</td> 
                             <td>{{ $plantr->plantevente }}</td>
                             <td>{{ $plantr->actionsevent }}</td>
-                            <td>{{ $plantr->plant_id }}</td>
+                            <td>{{ $plantr->nameplant }}</td>
                             <td>{{ $plantr->user_id }}</td>     
 
                             @if(Auth::check() && Auth::user()->isRole('root'))

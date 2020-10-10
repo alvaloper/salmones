@@ -15,6 +15,7 @@
                  'id' => 'dateplant',
                  'placeholder' => 'Ingrese la fecha' ]  ) !!}
             </td>
+            
         </tr>
         <tr>
             <td>

@@ -36,7 +36,8 @@ class PlantrecordsController extends Controller
     {
 
         $plantrecords = plantrecords::Paginate(5);
-        return view('plantrecords.index', array('plantrecords'=> $plantrecords));
+        $plants = plants::all();
+        return view('plantrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants));
 
     }
 
