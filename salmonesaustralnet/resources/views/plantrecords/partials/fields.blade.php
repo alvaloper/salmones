@@ -11,7 +11,7 @@
         <tr>
             <td>
                 {!! Form::label('dateplant', 'Fecha', ['for' => 'dateplant'] ) !!}
-                {!! Form::text('dateplant', null , ['class' => 'form-control',
+                {!! Form::date('dateplant', null , ['class' => 'form-control',
                  'id' => 'dateplant',
                  'placeholder' => 'Ingrese la fecha' ]  ) !!}
             </td>
@@ -19,7 +19,7 @@
         <tr>
             <td>
                 {!! Form::label('planthour', 'Hora', ['for' => 'planthour'] ) !!}
-                {!! Form::text('planthour', null , ['class' => 'form-control',
+                {!! Form::time('planthour', null , ['class' => 'form-control',
                  'id' => 'planthour',
                  'placeholder' => 'Ingrese la hora' ]  ) !!}
             </td>

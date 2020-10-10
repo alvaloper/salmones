@@ -11,15 +11,16 @@
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">IDPLANTRECORD</th>
-                            <th class="text-center">TITLERECORD</th>
-                            <th class="text-center">DATEPLANT</th>
-                            <th class="text-center">PLANTHOUR</th>
-                            <th class="text-center">PLANTEVENTE</th>
-                            <th class="text-center">ACTIONSEVENT</th>
-                            <th class="text-center">PLANT_ID</th>
-                            <th class="text-center">USER_ID</th>
-                        </tr> 
+                            <th class="text-center">N°</th>
+                            <th class="text-center">Título</th>
+                            <th class="text-center">Fecha</th>
+                            <th class="text-center">Hora</th>
+                            <th class="text-center">Eventualidad</th>
+                            <th class="text-center">Acciones Efectuadas</th>
+                            <th class="text-center">Nombre de la Planta</th>
+                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
                     </thead>
                     <tbody>
                        @foreach ($plantrecords as $plantr)
@@ -63,14 +64,15 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th class="text-center">IDPLANTRECORD</th>
-                            <th class="text-center">TITLERECORD</th>
-                            <th class="text-center">DATEPLANT</th>
-                            <th class="text-center">PLANTHOUR</th>
-                            <th class="text-center">PLANTEVENTE</th>
-                            <th class="text-center">ACTIONSEVENT</th>
-                            <th class="text-center">PLANT_ID</th>
-                            <th class="text-center">USER_ID</th>
+                            <th class="text-center">N°</th>
+                            <th class="text-center">Título</th>
+                            <th class="text-center">Fecha</th>
+                            <th class="text-center">Hora</th>
+                            <th class="text-center">Eventualidad</th>
+                            <th class="text-center">Acciones Efectuadas</th>
+                            <th class="text-center">Nombre de la Planta</th>
+                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">Acciones</th>
                         </tr> 
                     </tfoot>
                 </table>
@@ -78,7 +80,4 @@
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-
-
-
-{{ $plantrecords->links() }}
+          {{ $plantrecords->links() }}
