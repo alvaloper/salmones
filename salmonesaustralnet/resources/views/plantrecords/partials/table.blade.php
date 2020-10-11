@@ -26,6 +26,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <?php 
+                        $userx0 =Auth::user()->name;
+                        $userx1 =Auth::user()->lastname;
+                        $userx2 =$userx0.' '.$userx1;
+                    ?>
                        @foreach ($plantrecords as $plantr)
                         @foreach ($plants as $plant)
                             <?php 
@@ -41,13 +46,15 @@
                                     echo $cont;
                                 ?>
                             </td>
+
                             <td>{{ $plantr->titlerecord }}</td> 
                             <td>{{ $plantr->dateplant }}</td>
                             <td>{{ $plantr->planthour }}</td> 
                             <td>{{ $plantr->plantevente }}</td>
                             <td>{{ $plantr->actionsevent }}</td>
                             <td>{{ $plantr->nameplant }}</td>
-                            <td>{{ $plantr->user_id }}</td>     
+                            <td>{{ $plantr->user_id }}</td>  
+                               
 
                             @if(Auth::check() && Auth::user()->isRole('root'))
 

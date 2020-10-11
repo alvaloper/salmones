@@ -1,3 +1,11 @@
+                    <?php 
+                        $userx =Auth::user()->id;
+
+                        $userx0 =Auth::user()->name;
+                        $userx1 =Auth::user()->lastname;
+                        $userx2 =$userx0.' '.$userx1;
+                    ?>
+
 <div class="form-group">
     <table class="table table-bordered" id="MyTable">
 <tr>
@@ -48,9 +56,13 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('user_id', 'Titulo de user_id', ['for' => 'user_id'] ) !!}
-                {!! Form::text('user_id', null , ['class' => 'form-control',
-                 'id' => 'user_id',
+                {!! Form::label('user_id', 'Usuario que modifica la Eventualidad', ['for' => 'user_id'] ) !!}
+                {!! Form::text('user_id', $userx  , ['class' => 'form-control',
+                 'id' => 'user_id', 'readonly',
+                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
+                
+                {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
+                 'id' => 'userx2', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
             </td>
         </tr>
