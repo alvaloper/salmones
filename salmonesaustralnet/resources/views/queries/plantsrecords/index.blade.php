@@ -7,9 +7,9 @@
 
 @section('main-content')
     @if(Auth::check() && (Auth::user()->isRole('root') || Auth::user()->isRole('admin')))
-       @include('flash::message')
+        @include('flash::message')
         <br><br>
-    @include('queries.plantsrecords.partials.table')
+        @include('queries.plantsrecords.partials.table')
     @else
         <div class="panel-body">
             {{ trans('adminlte_lang::message.permiso') }}
