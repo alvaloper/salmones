@@ -129,9 +129,9 @@ class FaultrecordsController extends Controller
         $faultrecords->endhour = $request->input('endhour');
         $faultrecords->solution = $request->input('solution');
         $faultrecords->user_id = $request->input('user_id');
-        $plantrecords->save();
+        $faultrecords->save();
         flash('El registro ha sido modificado.')->success()->important();
-        return redirect()->route('faultrecordss.index');
+        return redirect()->route('faultrecords.index');
 
     }
 
