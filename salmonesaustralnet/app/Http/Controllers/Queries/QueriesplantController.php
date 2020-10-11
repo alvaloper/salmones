@@ -38,8 +38,10 @@ class QueriesplantController extends Controller
     {
 
         $plantrecords = plantrecords::Paginate(5);
-        return view('queries.plantsrecords.index', compact('plantrecords'));
-
+        $plants = plants::all();
+        $userc = User::all();
+        return view('queries.plantsrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
+        
     }
 
     /**
@@ -51,9 +53,10 @@ class QueriesplantController extends Controller
     public function search(Request $request){
 
         $plantrecords = plantrecords::where('dateplant', 'LIKE', '%'.$request->get('search').'%')
-            ->orWhere('plantevente', 'LIKE', '%'.$request->get('search').'%')
-            ->paginate(2);
-
-        return view('queries.plantsrecords.index', compact('plantrecords'));
+            ->Where('plant_id', 'LIKE', '%'.$request->get('search1').'%')
+            ->paginate(5);
+        $plants = plants::all();
+        $userc = User::all();
+        return view('queries.plantsrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
     }
 }

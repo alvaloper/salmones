@@ -1,9 +1,8 @@
 @extends('queries.plantsrecords.app')
 
 @section('htmlheader_title')
-    Registro de Eventualidades de Planta
+    Consulta de Eventualidades de Planta
 @endsection
-
 
 @section('main-content')
     @if(Auth::check() && (Auth::user()->isRole('root') || Auth::user()->isRole('admin')))

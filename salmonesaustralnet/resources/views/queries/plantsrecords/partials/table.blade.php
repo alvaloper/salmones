@@ -2,7 +2,7 @@
     {!! Form::open(['method' => 'GET', 'route' => 'queries.plantsrecords.search', 'class'=>'form-group']) !!}
     {!! Form::label('search', 'Ingrese los datos para realizar la búsqueda:', ['for' => 'search'] ) !!}
     <div class="input-group">
-        {!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
+   {!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
         <span class="input-group-btn">
             <button class="btn btn-default" type="submit">
                 <i class="fa fa-search"></i>
@@ -13,13 +13,17 @@
 </div>
 <!-- /input-group -->
 
-<!-- Main content -->
-    <section class="content">
-      <div class="row">
+ <!-- Main content -->
+<section class="content">
+    <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title"><b>Eventualidades Registradas en las Plantas de Procesos</b></h3>
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">
+                        <b>
+                            Eventualidades Registradas en las Plantas de Procesos
+                        </b>
+                    </h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -40,21 +44,52 @@
                         </tr>
                     </thead>
                     <tbody>
-                                @foreach($plantrecords as $plantrecord)
-                                    <tr>
-                                        <td>
-                                            <?php
-                                                $cont=$cont+1;
-                                                echo $cont;
-                                            ?>
-                                        </td>
-                                        <td>{{$plantrecord->titlerecord?$plantrecord->titlerecord:''}}</td>
-                                        <td>{{$plantrecord->dateplant?$plantrecord->dateplant:''}}</td>
-                                        <td>{{$plantrecord->planthour?$plantrecord->planthour:''}}</td>
-                                        <td>{{$plantrecord->plantevente?$plantrecord->plantevente:''}}</td>
-                                        <td>{{$plantrecord->actionsevent?$plantrecord->actionsevent:''}}</td>
-                                    </tr>
-                                @endforeach
+                        @foreach ($plantrecords as $plantr)
+                            @foreach ($plants as $plant)
+                                <?php 
+                                    if ($plant->idplant == $plantr['plant_id']){
+                                        $plantr['nameplant'] = $plant->nameplant;
+                                    }
+                                ?>
+                            @endforeach
+                            @foreach ($userc as $userx)
+                                <?php 
+                                    if ($userx->id == $plantr['user_id']){
+                                        $plantr['name'] = $userx->name;
+                                        $plantr['lastname'] = $userx->lastname;
+                                    }
+                                ?>
+                            @endforeach
+                            <tr>
+                                <td>
+                                    <?php
+                                        $cont=$cont+1;
+                                        echo $cont;
+                                    ?>
+                                </td>
+                                <td>
+                                    {{$plantr->titlerecord?$plantr->titlerecord:''}}
+                                </td>
+                                <td>
+                                    {{$plantr->dateplant?$plantr->dateplant:''}}
+                                </td>
+                                <td>
+                                    {{$plantr->planthour?$plantr->planthour:''}}
+                                </td>
+                                <td>
+                                    {{$plantr->plantevente?$plantr->plantevente:''}}
+                                </td>
+                                <td>
+                                    {{$plantr->actionsevent?$plantr->actionsevent:''}}
+                                </td>
+                                <td>
+                                    {{$plantr->nameplant?$plantr->nameplant:''}}
+                                </td>
+                                <td>
+                                    {{$plantr->name?$plantr->name:''}} {{$plantr->name?$plantr->lastname:''}}
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
@@ -71,11 +106,14 @@
                 </table>
             </div>
             <!-- /.box-body -->
-                                <div class="row">
-                        <div class="col-xs-12">
-                            Mostrando {{ $plantrecords->firstItem() }} de {{ $plantrecords->lastItem() }} registros. Total de registros encontrados: {{ $plantrecords->total() }}.
-                            <span class="pull-right">{!! $plantrecords->setPath('')->appends(Input::query())->render() !!}</span>
-                        </div>
-                    </div>
-          </div>
-          <!-- /.box -->
+            <div class="row">
+                <div class="col-xs-12">
+                    Mostrando {{ $plantrecords->firstItem() }} de {{ $plantrecords->lastItem() }} registros. Total de registros encontrados: {{ $plantrecords->total() }}.
+                    <span class="pull-right">
+                        {!! $plantrecords->setPath('')->appends(Input::query())->render() !!}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
