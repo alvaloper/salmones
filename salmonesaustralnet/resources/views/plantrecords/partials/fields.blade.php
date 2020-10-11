@@ -58,7 +58,7 @@
         <tr>
             <td>
                 {!! Form::label('user_id', 'Usuario que registra la Eventualidad', ['for' => 'user_id'] ) !!}
-                {!! Form::text('user_id', $userx  , ['class' => 'form-control',
+                {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
                  'id' => 'user_id', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
                 

@@ -12,6 +12,12 @@ class plantrecords extends Model
     {
     return $this->belongsToMany('App\plants');
     }
+
+
+    public function Users()
+    {
+    return $this->belongsToMany('App\User');
+    }
 }
 
 

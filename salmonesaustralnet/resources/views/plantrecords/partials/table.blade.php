@@ -26,11 +26,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php 
-                        $userx0 =Auth::user()->name;
-                        $userx1 =Auth::user()->lastname;
-                        $userx2 =$userx0.' '.$userx1;
-                    ?>
+
                        @foreach ($plantrecords as $plantr)
                         @foreach ($plants as $plant)
                             <?php 
@@ -39,6 +35,15 @@
                                 }
                             ?>
                         @endforeach
+
+                         @foreach ($userc as $userx)
+                            <?php 
+                                if ($userx->id == $plantr['user_id']){
+                                    $plantr['name'] = $userx->name;
+                                    $plantr['lastname'] = $userx->lastname;
+                                }
+                            ?>
+                         @endforeach
                         <tr>
                             <td>
                                 <?php
@@ -53,7 +58,8 @@
                             <td>{{ $plantr->plantevente }}</td>
                             <td>{{ $plantr->actionsevent }}</td>
                             <td>{{ $plantr->nameplant }}</td>
-                            <td>{{ $plantr->user_id }}</td>  
+                            <td>{{ $plantr->name }} {{ $plantr->lastname }}</td>  
+
                                
 
                             @if(Auth::check() && Auth::user()->isRole('root'))

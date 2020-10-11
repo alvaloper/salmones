@@ -37,7 +37,8 @@ class PlantrecordsController extends Controller
 
         $plantrecords = plantrecords::Paginate(5);
         $plants = plants::all();
-        return view('plantrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants));
+        $userc = User::all();
+        return view('plantrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
 
     }
 
