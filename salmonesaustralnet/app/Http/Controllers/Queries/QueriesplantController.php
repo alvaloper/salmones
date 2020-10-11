@@ -40,8 +40,9 @@ class QueriesplantController extends Controller
         $plantrecords = plantrecords::Paginate(5);
         $plants = plants::all();
         $userc = User::all();
-        return view('queries.plantsrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
-        
+        $plantx = plants::pluck('nameplant','idplant');
+        return view('queries.plantsrecords.index', compact('plantx'), array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
+
     }
 
     /**
@@ -50,6 +51,7 @@ class QueriesplantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function search(Request $request){
 
         $plantrecords = plantrecords::where('dateplant', 'LIKE', '%'.$request->get('search').'%')
@@ -57,6 +59,7 @@ class QueriesplantController extends Controller
             ->paginate(5);
         $plants = plants::all();
         $userc = User::all();
-        return view('queries.plantsrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
+         $plantx = plants::pluck('nameplant','idplant');
+        return view('queries.plantsrecords.index', compact('plantx'), array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
     }
 }
