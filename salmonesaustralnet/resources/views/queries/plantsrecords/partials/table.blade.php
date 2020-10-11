@@ -1,5 +1,6 @@
 <div class="input-group custom-search-form">
     {!! Form::open(['method' => 'GET', 'route' => 'queries.plantsrecords.search', 'class'=>'form-group']) !!}
+    {!! Form::label('search', 'Ingrese los datos para realizar la búsqueda:', ['for' => 'search'] ) !!}
     <div class="input-group">
         {!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
         <span class="input-group-btn">
