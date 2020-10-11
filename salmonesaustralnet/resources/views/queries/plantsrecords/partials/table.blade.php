@@ -1,17 +1,34 @@
-<div class="input-group custom-search-form">
-    {!! Form::open(['method' => 'GET', 'route' => 'queries.plantsrecords.search', 'class'=>'form-group']) !!}
-    {!! Form::label('search', 'BÚSQUEDA AVANZADA', ['for' => 'search'] ) !!}
-    <div class="input-group">
-    {!! Form::label('plant_id', 'Nombre de la Planta:  ', ['for' => 'plant_id']) !!}
-                {!! Form::select('search1', $plantx) !!}
-   {!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
-        <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </span>
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">
+            <b>
+                Búsqueda Avanzada
+            </b>
+        </h3>
     </div>
-    {!! Form::close() !!}
+    <div class="box-body">
+        <table id="TableUser" class="table table-bordered table-hover">
+            <thead>
+                {!! Form::open(['method' => 'GET', 'route' => 'queries.plantsrecords.search', 'class'=>'form-group']) !!}
+                <tr>
+                    <th class="text-center">
+                        {!! Form::label('plant_id', 'Seleccione la planta de procesos:  ', ['for' => 'plant_id']) !!} {!! Form::select('search1', $plantx) !!}
+                    </th>
+                    <th class="text-center">
+                        {!! Form::label('plant_id', 'Seleccione la fecha para la búsqueda:  ', ['for' => 'plant_id']) !!}{!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
+                    </th>
+                    <th class="text-center">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        {!! Form::close() !!}
+    </div>
 </div>
 <!-- /input-group -->
 

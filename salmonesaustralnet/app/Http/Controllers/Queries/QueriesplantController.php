@@ -59,7 +59,8 @@ class QueriesplantController extends Controller
             ->paginate(5);
         $plants = plants::all();
         $userc = User::all();
-         $plantx = plants::pluck('nameplant','idplant');
+        $plantx = plants::pluck('nameplant','idplant');
         return view('queries.plantsrecords.index', compact('plantx'), array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
+        
     }
 }
