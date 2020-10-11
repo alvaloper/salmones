@@ -66,6 +66,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Plantrecords'], function () {
     Route::resource('plantrecords', 'PlantrecordsController');
 });
 
+Route::group(['prefix' => 'admin', 'namespace' => 'Faultrecords'], function () {
+
+    Route::resource('faultrecords', 'FaultrecordsController');
+});
+
 Route::group(['prefix' => 'admin', 'namespace' => 'User'], function () {
 
     Route::resource('users', 'UsersController');
