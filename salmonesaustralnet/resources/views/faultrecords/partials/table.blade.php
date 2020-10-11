@@ -20,7 +20,7 @@
                             <th class="text-center">Falla</th>
                             <th class="text-center">Fecha Fin</th>
                             <th class="text-center">Hora Fin</th>
-                            <th class="text-center">Solucion</th>
+                            <th class="text-center">Solución</th>
                             <th class="text-center">Nombre del Usuario</th>
                             <th class="text-center">Acciones</th>
                         </tr>
@@ -46,22 +46,22 @@
                                 ?>
                             </td>
 
-                            <td>{{ $faultr->titlerecord }}</td> 
-                            <td>{{ $faultr->dateplant }}</td>
-                            <td>{{ $faultr->planthour }}</td> 
-                            <td>{{ $faultr->plantevente }}</td>
-                            <td>{{ $faultr->actionsevent }}</td>
-                            <td>{{ $faultr->nameplant }}</td>
-                            <td>{{ $faultr->name }} {{ $plantr->lastname }}</td>  
+                            <td>{{ $faultr->faultdate }}</td> 
+                            <td>{{ $faultr->faulthour }}</td>
+                            <td>{{ $faultr->fault }}</td> 
+                            <td>{{ $faultr->enddate }}</td>
+                            <td>{{ $faultr->endhour }}</td>
+                            <td>{{ $faultr->solution }}</td>
+                            <td>{{ $faultr->name }} {{ $faultr->lastname }}</td>  
 
                                
 
                             @if(Auth::check() && Auth::user()->isRole('root'))
 
-                                {!! Form::open(['route' => ['plantrecords.destroy', $plantr->idplantrecord], 'method' => 'DELETE'] ) !!}
+                                {!! Form::open(['route' => ['faultrecords.destroy', $faultr->idfault], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                     <!-- Boton para modificar al usuario seleccionado-->
-                                <a href="{{ url('admin/plantrecords/'.$plantr->idplantrecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
+                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
                                 
@@ -71,7 +71,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plantr->idplantrecord, Nombre: $plantr->titlerecord ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $faultr->idfault, Nombre: $faultr->fault ?')"
                                     ]) !!}
                                 
                                 
@@ -91,7 +91,7 @@
                             <th class="text-center">Falla</th>
                             <th class="text-center">Fecha Fin</th>
                             <th class="text-center">Hora Fin</th>
-                            <th class="text-center">Solucion</th>
+                            <th class="text-center">Solución</th>
                             <th class="text-center">Nombre del Usuario</th>
                             <th class="text-center">Acciones</th>
                         </tr> 
@@ -101,4 +101,4 @@
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          {{ $plantrecords->links() }}
+          {{ $faultrecords->links() }}
