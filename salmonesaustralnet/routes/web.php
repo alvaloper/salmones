@@ -15,12 +15,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-
-Route::get('/plants', function () {
-    //return view('plants.index','PlantsController@index');
-    return view('users.index');
-});
-
 Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
@@ -41,7 +35,16 @@ Route::group(['prefix' => 'user', 'namespace' => 'Queries'], function () {
 
     Route::get('/queries/plants/search',['as' => 'queries.plantsrecords.search','uses' => 'QueriesplantController@search']);
 
+    Route::get('/queries/centers', ['as' => 'queries.plantsrecords.index','uses' => 'QueriescenterController@index']);
+
+    Route::get('/queries/centers/search',['as' => 'queries.plantsrecords.search','uses' => 'QueriescenterController@search']);
+
+    Route::get('/queries/faults', ['as' => 'queries.plantsrecords.index','uses' => 'QueriesfaultController@index']);
+
+    Route::get('/queries/faults/search',['as' => 'queries.plantsrecords.search','uses' => 'QueriesfaultController@search']);
+
 });
+
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Seguridad'], function () {
 
