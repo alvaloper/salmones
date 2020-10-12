@@ -3,18 +3,20 @@
 namespace App\Http\Controllers\Queries;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Validation;
 
 use App\Http\Controllers\Controller;
 use App\Models\Seguridad\Permission;
 use App\Models\Seguridad\PermissionRole;
 use App\Models\Seguridad\Role;
+
 use App\User;
 use App\plantrecords;
 use App\plants;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Input;
-use Illuminate\Validation;
+
 use App\Http\Requests\Plantrecords\PlantrecordsNewRequest;
 use App\Http\Requests\Plantrecords\PlantrecordsUpdateRequest;
 use App\Http\Requests;
@@ -61,6 +63,6 @@ class QueriesplantController extends Controller
         $userc = User::all();
         $plantx = plants::pluck('nameplant','idplant');
         return view('queries.plantsrecords.index', compact('plantx'), array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
-        
+
     }
 }
