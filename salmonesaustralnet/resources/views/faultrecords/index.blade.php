@@ -10,6 +10,7 @@
        @include('flash::message')
         <a class="btn btn-primary pull-right" href="{{ url('admin/faultrecords/create') }}" data-toggle="tooltip" title="Nueva Eventualidad" role="button">Nueva Eventualidad</a>
         <br><br>
+        <br><br>
     @include('faultrecords.partials.table')
     @else
         <div class="panel-body">

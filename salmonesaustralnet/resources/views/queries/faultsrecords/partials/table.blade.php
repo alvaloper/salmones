@@ -22,7 +22,6 @@
                             <th class="text-center">Hora Fin</th>
                             <th class="text-center">Solución</th>
                             <th class="text-center">Nombre del Usuario</th>
-                            <th class="text-center">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -53,33 +52,6 @@
                             <td>{{ $faultr->endhour }}</td>
                             <td>{{ $faultr->solution }}</td>
                             <td>{{ $faultr->name }} {{ $faultr->lastname }}</td>  
-
-                               
-
-                            @if(Auth::check() && Auth::user()->isRole('root'))
-
-                                {!! Form::open(['route' => ['faultrecords.destroy', $faultr->idfault], 'method' => 'DELETE'] ) !!}
-                                <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
-                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
-                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
-                                </a>
-                                
-                                    {!! Form::button('<i class="fa fa-trash"></i>', [
-                                        'type' => 'submit',
-                                        'class' => 'btn btn-danger btn-xs',
-                                        'data-toggle'=>'tooltip',
-                                        'data-title'=>'Eliminar',
-                                        'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $faultr->idfault, Nombre: $faultr->fault ?')"
-                                    ]) !!}
-                                
-                                
-
-                                </td> 
-                                {!! Form::close() !!}
-
-                            @endif
                         </tr>
                     @endforeach
                     </tbody>
@@ -93,7 +65,6 @@
                             <th class="text-center">Hora Fin</th>
                             <th class="text-center">Solución</th>
                             <th class="text-center">Nombre del Usuario</th>
-                            <th class="text-center">Acciones</th>
                         </tr> 
                     </tfoot>
                 </table>

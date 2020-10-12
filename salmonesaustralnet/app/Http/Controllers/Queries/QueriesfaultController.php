@@ -40,7 +40,7 @@ class QueriesfaultController extends Controller
         $faultrecords = faultrecords::Paginate(5);
 
         $userc = User::all();
-        return view('faultrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
+        return view('queries.faultsrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
 
     }
 

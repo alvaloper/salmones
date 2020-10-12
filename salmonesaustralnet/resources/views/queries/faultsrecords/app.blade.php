@@ -6,7 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 
 @section('htmlheader')
-    @include('faultrecords.partials.htmlheader')
+    @include('queries.faultsrecords.partials.htmlheader')
 @show
 
 <!--
@@ -55,7 +55,7 @@ desired effect
 </div><!-- ./wrapper -->
 
 @section('scripts')
-    @include('faultrecords.partials.scripts')
+    @include('queries.faultsrecords.partials.scripts')
 @show
 
 </body>
