@@ -21,14 +21,6 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index');
 
-/**
- * Ruta con el prefijo admin para el controlador RolesController, se mostraran las rutas como el siguiente
- * Ejemplo: el prefijo admin se refiere que solo tienen acceso los difinidos en el grupo Admin
- * http://aplicacion.app/admin/roles
- * http://aplicacion.app/admin/roles/{role}/edit donde {role} es una variable numerica 1,2,3.... n
- *
- */
-
 Route::group(['prefix' => 'user', 'namespace' => 'Queries'], function () {
 
     Route::get('/queries/plants', ['as' => 'queries.plantsrecords.index','uses' => 'QueriesplantController@index']);
@@ -45,27 +37,6 @@ Route::group(['prefix' => 'user', 'namespace' => 'Queries'], function () {
 
 });
 
-
-Route::group(['prefix' => 'admin', 'namespace' => 'Seguridad'], function () {
-
-    Route::resource('roles', 'RolesController');
-    Route::resource('permisos', 'PermissionsController');
-
-});
-
-Route::group(['prefix' => 'admin2', 'namespace' => 'Seguridad'], function () {
-
-    Route::get('roles','PermissionsRolesController@index');
-    Route::get('roles/asignar','PermissionsRolesController@asignar');
-    Route::get('roles/desasignar','PermissionsRolesController@desasignar');
-
-});
-
-Route::group(['prefix' => 'admin', 'namespace' => 'Modulos'], function () {
-
-    Route::get('modulos', 'ModulosController@seguridad');
-
-});
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Plants'], function () {
 
