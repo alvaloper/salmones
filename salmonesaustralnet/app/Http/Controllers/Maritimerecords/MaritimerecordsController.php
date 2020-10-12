@@ -38,7 +38,7 @@ class MaritimerecordsController extends Controller
         $maritimerecords = maritimerecords::Paginate(5);
         $centersx = centers::all();
         $userc = User::all();
-        return view('maritimerecords.index', array('maritimerecords'=> $maritimerecords, 'centers' => $centersx, 'userc'=> $userc));
+        return view('maritimerecords.index', array('maritimerecords'=> $maritimerecords, 'centersx' => $centersx, 'userc'=> $userc));
 
     }
 
