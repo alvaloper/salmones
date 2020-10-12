@@ -1,70 +1,127 @@
+ <div class="box">
+    <div class="box-header">
+        <h3 class="box-title">
+            <b>
+                Búsqueda Avanzada
+            </b>
+        </h3>
+    </div>
+    <div class="box-body">
+        <table id="TableUser" class="table table-bordered table-hover">
+            <thead>
+                {!! Form::open(['method' => 'GET', 'route' => 'queries.centersrecords.search', 'class'=>'form-group']) !!}
+                <tr>
+                    <th class="text-center">
+                        {!! Form::label('center_id', 'Nombre del centro de cultivo ', ['for' => 'center_id']) !!}
+                        {!! Form::select('search1', $centers) !!}
+                    </th>
+                    <th class="text-center">
+                        {!! Form::label('plant_id', 'Seleccione la fecha para la búsqueda:  ', ['for' => 'plant_id']) !!}{!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
+                    </th>
+                    <th class="text-center">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        {!! Form::close() !!}
+    </div>
+</div>
+<!-- /input-group -->
+
+
  <!-- Main content -->
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Centros de Cultivo</b></h3>
+              <h3 class="box-title"><b>Eventualidades Registradas en los Centros de Cultivos</b></h3>
             </div>
             <!-- /.box-header -->
+            <?php         
+                $cont=0;
+            ?>
             <div class="box-body">
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">ID</th>
-                            <th class="text-center">Nombre</th>
-                            <th class="text-center">Número de Emergencia</th>
-                            <th class="text-center">Jefe del Centro</th>
-                            <th class="text-center">Asistente del Centro</th>
-                            <th class="text-center">Acciones</th>
-                        </tr> 
+                            <th class="text-center">N°</th>
+                            <th class="text-center">Turno</th>
+                            <th class="text-center">Fecha</th>
+                            <th class="text-center">Hora Recalada</th>
+                            <th class="text-center">Hora de Zarpe</th>
+                            <th class="text-center">Evento</th>
+                            <th class="text-center">Centro de Cultivo</th>
+                            <th class="text-center">Nombre del Usuario</th>
+                        </tr>
                     </thead>
                     <tbody>
-                       @foreach ($centers as $center)
 
+                       @foreach ($maritimerecords as $maritimex)
+                        
+                        @foreach ($centersx as $center)
+                            <?php 
+                                if ($center->idcenter == $maritimex['center_id']){
+                                    $maritimex['namecenter'] = $center->namecenter;
+                                }
+                            ?>
+                        @endforeach
+
+                         @foreach ($userc as $userx)
+                            <?php 
+                                if ($userx->id == $maritimex['user_id']){
+                                    $maritimex['name'] = $userx->name;
+                                    $maritimex['lastname'] = $userx->lastname;
+                                }
+                            ?>
+                         @endforeach
                         <tr>
-                            <td>{{ $center->idcenter }}</td>
-                            <td>{{ $center->namecenter }}</td> 
-                            <td>{{ $center->emergencyphone}}</td>
-                            <td>{{ $center->boss}}</td>
-                            <td>{{ $center->assistant}}</td>
-                                {!! Form::open(['route' => ['centers.destroy', $center->idcenter], 'method' => 'DELETE'] ) !!}
-                                <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
-                                <a href="{{ url('admin/centers/'.$center->idcenter.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
-                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
-                                </a>
-                                
-                                    {!! Form::button('<i class="fa fa-trash"></i>', [
-                                        'type' => 'submit',
-                                        'class' => 'btn btn-danger btn-xs',
-                                        'data-toggle'=>'tooltip',
-                                        'data-title'=>'Eliminar',
-                                        'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $center->idcenter, Nombre: $center->namecenter ?')"
-                                    ]) !!}
-                                
-                                
+                            <td>
+                                <?php
+                                    $cont=$cont+1;                              
+                                    echo $cont;
+                                ?>
+                            </td>
 
-                                </td> 
-                                {!! Form::close() !!}
+                            <td>{{$maritimex->turn?$maritimex->turn:''}}</td> 
+                            <td>{{$maritimex->datemarine?$maritimex->datemarine:''}}</td>
+                            <td>{{$maritimex->landfallhour?$maritimex->landfallhour:''}}</td> 
+                            <td>{{$maritimex->sailhour?$maritimex->sailhour:''}}</td> 
+                            <td>{{$maritimex->marineevent?$maritimex->marineevent:''}}</td> 
+                            <td>{{$maritimex->namecenter?$maritimex->namecenter:''}}</td> 
+                            <td>{{$maritimex->name?$maritimex->name:''}} {{$maritimex->lastname?$maritimex->lastname:''}}</td> 
                         </tr>
                     @endforeach
                     </tbody>
                     <tfoot>
-                         <tr>
-                            <th class="text-center">ID</th>
-                            <th class="text-center">Nombre</th>
-                            <th class="text-center">Número de Emergencia</th>
-                            <th class="text-center">Jefe del Centro</th>
-                            <th class="text-center">Asistente del Centro</th>
-                            <th class="text-center">Acciones</th>
-                        </tr>
+                        <tr>
+                            <th class="text-center">N°</th>
+                            <th class="text-center">Turno</th>
+                            <th class="text-center">Fecha</th>
+                            <th class="text-center">Hora Recalada</th>
+                            <th class="text-center">Hora de Zarpe</th>
+                            <th class="text-center">Evento</th>
+                            <th class="text-center">Centro de Cultivo</th>
+                            <th class="text-center">Nombre del Usuario</th>
+                        </tr> 
                     </tfoot>
                 </table>
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-
-{{ $centers->links() }}
+           <!-- /.box-body -->
+            <div class="row">
+                <div class="col-xs-12">
+                    Mostrando {{ $maritimerecords->firstItem() }} de {{ $maritimerecords->lastItem() }} registros. Total de registros encontrados: {{ $maritimerecords->total() }}.
+                    <span class="pull-right">
+                        {!! $maritimerecords->setPath('')->appends(Input::query())->render() !!}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+          {{ $maritimerecords->links() }}

@@ -40,12 +40,20 @@ class QueriescenterController extends Controller
         $maritimerecords = maritimerecords::Paginate(5);
         $centersx = centers::all();
         $userc = User::all();
-        return view('maritimerecords.index', array('maritimerecords'=> $maritimerecords, 'centersx' => $centersx, 'userc'=> $userc));
+        $centers = centers::pluck('namecenter','idcenter');
+        return view('queries.centersrecords.index', compact ('centers'), array('maritimerecords'=> $maritimerecords, 'centersx' => $centersx, 'userc'=> $userc));
 
     }
 
     public function search(Request $request){
 
+        $maritimerecords = maritimerecords::where('datemarine', 'LIKE', '%'.$request->get('search').'%')
+            ->Where('center_id', 'LIKE', '%'.$request->get('search1').'%')
+            ->paginate(5);
+        $centersx = centers::all();
+        $userc = User::all();
+        $centers = centers::pluck('namecenter','idcenter');
+        return view('queries.centersrecords.index', compact ('centers'), array('maritimerecords'=> $maritimerecords, 'centersx' => $centersx, 'userc'=> $userc));
 
     }
 }
