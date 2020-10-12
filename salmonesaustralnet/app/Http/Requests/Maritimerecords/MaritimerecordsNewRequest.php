@@ -4,7 +4,7 @@ namespace App\Http\Requests\Maritimerecords;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Maritimerecords extends FormRequest
+class MaritimerecordsNewRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

@@ -68,7 +68,7 @@
                                 {!! Form::open(['route' => ['maritimerecords.destroy', $maritimex->idmarinerecord], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                     <!-- Boton para modificar al usuario seleccionado-->
-                                <a href="{{ url('admin/marinerecords/'.$maritimex->idmarinerecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
+                                <a href="{{ url('admin/maritimerecords/'.$maritimex->idmarinerecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
                                 
