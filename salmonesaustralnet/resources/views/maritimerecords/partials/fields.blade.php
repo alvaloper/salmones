@@ -10,10 +10,8 @@
     <table class="table table-bordered" id="MyTable">
         <tr>
             <td>
-                {!! Form::label('titlerecord', 'Título de la Eventualidad', ['for' => 'titlerecord'] ) !!}
-                {!! Form::text('titlerecord', null , ['class' => 'form-control',
-                 'id' => 'titlerecord',
-                 'placeholder' => 'Ingrese el título' ]  ) !!}
+                {!! Form::label('turn', 'Turno', ['for' => 'turn'] ) !!}
+                {!! Form::select('turn', ['Diurno' => 'Diurno', 'Nocturno' => 'Nocturno']) !!}
             </td>
         </tr>
 

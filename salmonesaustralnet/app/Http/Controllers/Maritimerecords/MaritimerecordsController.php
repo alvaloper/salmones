@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation;
-use App\Http\Requests\Plantrecords\MaritimerecordsNewRequest;
-use App\Http\Requests\Plantrecords\MaritimerecordsUpdateRequest;
+use App\Http\Requests\Maritimerecords\MaritimerecordsNewRequest;
+use App\Http\Requests\Maritimerecords\MaritimerecordsUpdateRequest;
 use App\Http\Requests;
 
 class MaritimerecordsController extends Controller
@@ -121,7 +121,7 @@ class MaritimerecordsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(MarinerecordsUpdateRequest $request, $idmarinerecord)
+    public function update(MaritimerecordsUpdateRequest $request, $idmarinerecord)
     {
 
         $maritimerecords = Maritimerecords::find($idmarinerecord);
@@ -145,7 +145,7 @@ class MaritimerecordsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function destroy($idplantrecord)
+    public function destroy($idmarinerecord)
     {
 
         $maritimerecords = Maritimerecords::find($idmarinerecord);
