@@ -20,7 +20,6 @@ class CreateFaultrecordsTable extends Migration
             $table->string('fault');
             $table->date('enddate');
             $table->time('endhour');
-            $table->string('titlerecord');
             $table->string('solution');
             $table->integer('faultactive')->default(1);
             $table->integer('user_id')->unsigned()->index();

@@ -15,7 +15,7 @@ class CreateMaritimerecordsTable extends Migration
     {
         Schema::create('maritimerecords', function (Blueprint $table) {
             $table->increments('idmarinerecord');
-            $table->enum('turn', ['Diurno', 'Nocturno']);
+            $table->string('turn');
             $table->date('datemarine');
             $table->time('landfallhour');
             $table->time('sailhour');
