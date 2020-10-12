@@ -5,7 +5,7 @@
                 {!! Form::label('name', 'Nombres del Usuario', ['for' => 'name'] ) !!}
                 {!! Form::text('name', null , ['class' => 'form-control',
                  'id' => 'name',
-                 'placeholder' => 'name...Eje carlos Garcia' ]  ) !!}
+                 'placeholder' => 'name...' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -21,7 +21,7 @@
                 {!! Form::label('email', 'E-Mail', ['for' => 'email'] ) !!}
                 {!! Form::text('email', null , ['class' => 'form-control',
                  'id' => 'mail', 'readonly',
-                  'placeholder' => 'Email...Eje telecom.com.ve@gamil.com' ]  ) !!}
+                  'placeholder' => 'Email...' ]  ) !!}
             </td>
         </tr>
         <tr>
