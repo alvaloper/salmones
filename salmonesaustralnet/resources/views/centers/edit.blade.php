@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-    Gestión de Centros de Cultivo - Editar
+    Gestión de Centros de Cultivos - Editar
 @endsection
 
 

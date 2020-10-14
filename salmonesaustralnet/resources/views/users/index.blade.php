@@ -10,7 +10,7 @@
         @include('flash::message')
         <a class="btn btn-primary pull-right" href="{{ url('admin/users/create') }}" data-toggle="tooltip" title="Nuevo Usuario" role="button">Nuevo Usuario</a>
         <br><br>
-    @include('users.partials.table')
+        @include('users.partials.table')
     @else
         <div class="panel-body">
             {{ trans('adminlte_lang::message.permiso') }}

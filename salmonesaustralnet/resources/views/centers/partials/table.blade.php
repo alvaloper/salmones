@@ -4,24 +4,23 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Centros de Cultivo</b></h3>
+              <h3 class="box-title"><b>CENTROS DE CULTIVOS</b></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">ID</th>
-                            <th class="text-center">Nombre</th>
-                            <th class="text-center">Número de Emergencia</th>
-                            <th class="text-center">Jefe del Centro</th>
-                            <th class="text-center">Asistente del Centro</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">N°</th>
+                            <th class="text-center">NOMBRE DEL CENTRO DE CULTIVO</th>
+                            <th class="text-center">NÚMERO DE EMERGENCIA</th>
+                            <th class="text-center">JEFE DEL CENTRO DE CULTIVO</th>
+                            <th class="text-center">ASISTENTE DEL CENTRO DE CULTIVO</th>
+                            <th class="text-center">ACCIONES</th>
                         </tr> 
                     </thead>
                     <tbody>
                        @foreach ($centers as $center)
-
                         <tr>
                             <td>{{ $center->idcenter }}</td>
                             <td>{{ $center->namecenter }}</td> 
@@ -53,18 +52,18 @@
                     </tbody>
                     <tfoot>
                          <tr>
-                            <th class="text-center">ID</th>
-                            <th class="text-center">Nombre</th>
-                            <th class="text-center">Número de Emergencia</th>
-                            <th class="text-center">Jefe del Centro</th>
-                            <th class="text-center">Asistente del Centro</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">N°</th>
+                            <th class="text-center">NOMBRE DEL CENTRO DE CULTIVO</th>
+                            <th class="text-center">NÚMERO DE EMERGENCIA</th>
+                            <th class="text-center">JEFE DEL CENTRO DE CULTIVO</th>
+                            <th class="text-center">ASISTENTE DEL CENTRO DE CULTIVO</th>
+                            <th class="text-center">ACCIONES</th>
                         </tr>
                     </tfoot>
                 </table>
+                {{ $centers->links() }}
             </div>
+
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-
-{{ $centers->links() }}

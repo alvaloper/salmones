@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-    Crear Nueva Planta de Procesos
+    Gestión de Plantas de Procesos - Agregar
 @endsection
 
 

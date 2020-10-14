@@ -8,7 +8,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <div><img src="{{ asset('/img/logocolor_transparent.png') }}" alt=""></div>
+            <div><img src="{{ asset('/img/logocolor_transparent.png') }}" alt="SalmonesAustral"></div>
             <a href="{{ url('/home') }}"><b>Gestión de Eventualidades</b></a>
         </div><!-- /.login-logo -->
 

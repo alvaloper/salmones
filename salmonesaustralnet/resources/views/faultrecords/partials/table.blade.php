@@ -95,7 +95,8 @@
                     </tfoot>
                 </table>
             </div>
+            {{ $faultrecords->links() }}
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          {{ $faultrecords->links() }}
+          

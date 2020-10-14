@@ -4,7 +4,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Usuarios</b></h3>
+              <h3 class="box-title"><b>USUARIOS</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -15,11 +15,11 @@
                     <thead>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Nombres</th>
-                            <th class="text-center">Apellidos</th>
-                            <th class="text-center">Perfil</th>
-                            <th class="text-center">Email</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">NOMBRES</th>
+                            <th class="text-center">APELLIDOS</th>
+                            <th class="text-center">PERFIL</th>
+                            <th class="text-center">EMAIL</th>
+                            <th class="text-center">ACCIONES</th>
                         </tr> 
                     </thead>
                     <tbody>
@@ -62,16 +62,17 @@
                     <tfoot>
                          <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Nombres</th>
-                            <th class="text-center">Apellidos</th>
-                            <th class="text-center">Perfil</th>
-                            <th class="text-center">Email</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">NOMBRES</th>
+                            <th class="text-center">APELLIDOS</th>
+                            <th class="text-center">PERFIL</th>
+                            <th class="text-center">EMAIL</th>
+                            <th class="text-center">ACCIONES</th>
                         </tr>
                     </tfoot>
                 </table>
+                {!! $users->render() !!}
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-{!! $users->render() !!}
+

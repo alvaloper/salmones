@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('htmlheader_title')
-    Seguridad Roles
+    Gestión de Usuarios - Editar
 @endsection
 
 
