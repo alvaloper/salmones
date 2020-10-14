@@ -28,7 +28,6 @@
                     <tbody>
 
                        @foreach ($maritimerecords as $maritimex)
-                        
                         @foreach ($centersx as $center)
                             <?php 
                                 if ($center->idcenter == $maritimex['center_id']){
@@ -102,8 +101,9 @@
                         </tr> 
                     </tfoot>
                 </table>
+                {{ $maritimerecords->links() }}
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          {{ $maritimerecords->links() }}
+          

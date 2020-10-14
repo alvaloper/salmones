@@ -1,10 +1,44 @@
- <!-- Main content -->
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title">
+            <b>
+                BÚSQUEDA AVANZADA DE FALLAS EN EL ÁREA DE CONTROL DE MONITOREO
+            </b>
+        </h3>
+    </div>
+    <div class="box-body">
+        <table id="TableUser" class="table table-bordered table-hover">
+            <thead>
+                {!! Form::open(['method' => 'GET', 'route' => 'queries.faultsrecords.search', 'class'=>'form-group']) !!}
+                <tr>
+                    <th class="text-right">
+                        {!! Form::label('idfault', 'Seleccione la fecha para la búsqueda:  ', ['for' => 'idfault']) !!}
+                    </th>
+                    <th class="text-center">
+                        {!! Form::date('search', null, ['class' => 'form-control', 'placeholder' => 'Search...']) !!}
+                    </th>
+                    <th class="text-center">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        {!! Form::close() !!}
+    </div>
+</div>
+<!-- /input-group -->
+
+<!-- Main content -->
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>FALLAS PRESENTADAS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
+              <h3 class="box-title"><b>RESULTADOS DE LA BÚSQUEDA - FALLAS PRESENTADAS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -43,13 +77,27 @@
                                     echo $cont;
                                 ?>
                             </td>
-                            <td>{{ $faultr->faultdate }}</td> 
-                            <td>{{ $faultr->faulthour }}</td>
-                            <td>{{ $faultr->fault }}</td> 
-                            <td>{{ $faultr->name }} {{ $faultr->lastname }}</td>  
-                            <td>{{ $faultr->enddate }}</td>
-                            <td>{{ $faultr->endhour }}</td>
-                            <td>{{ $faultr->solution }}</td>
+                            <td>
+                                {{$faultr->faultdate?$faultr->faultdate:''}}
+                            </td>
+                            <td>
+                                {{$faultr->faulthour?$faultr->faulthour:''}}
+                            </td>
+                            <td>
+                                {{$faultr->fault?$faultr->fault:''}}
+                            </td>
+                            <td>
+                                {{$faultr->name?$faultr->name:''}} {{$faultr->lastname?$faultr->lastname:''}}
+                            </td>
+                            <td>
+                                {{$faultr->enddate?$faultr->enddate:''}}
+                            </td>
+                            <td>
+                                {{$faultr->endhour?$faultr->endhour:''}}
+                            </td>
+                            <td>
+                                {{$faultr->solution?$faultr->solution:''}}
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -68,6 +116,14 @@
                 </table>
             </div>
             <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-{{ $faultrecords->links() }}
+            <div class="row">
+                <div class="col-xs-12">
+                    Mostrando {{ $faultrecords->firstItem() }} de {{ $faultrecords->lastItem() }} registros. Total de registros encontrados: {{ $faultrecords->total() }}.
+                    <span class="pull-right">
+                        {!! $faultrecords->setPath('')->appends(Input::query())->render() !!}
+                    </span>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>

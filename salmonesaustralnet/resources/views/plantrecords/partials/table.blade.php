@@ -102,8 +102,9 @@
                         </tr> 
                     </tfoot>
                 </table>
+                {{ $plantrecords->links() }}
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          {{ $plantrecords->links() }}
+          

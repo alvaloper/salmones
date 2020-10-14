@@ -12,55 +12,101 @@ class PlantrecordsTableSeeder extends Seeder
     public function run()
     {
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro de Planta 1',
+          'titlerecord'  => 'Carga en Anden 3',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento de Planta 1',
-          'actionsevent' => 'Acciones de Planta 1',
-          'plantactive'  => '0',
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
           'plant_id'     => '1',
-          'user_id'      => '1',
+          'user_id'      => '2',
           'created_at'   => \Carbon\Carbon::now(),
           'updated_at'   => \Carbon\Carbon::now(),
         ]);
 
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro de Planta 2',
+          'titlerecord'  => 'Descarga de materia Prima (1ra. Batea)',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento de Planta 2',
-          'actionsevent' => 'Acciones de Planta 2',
-          'plantactive'  => '1',
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
+          'plant_id'     => '1',
+          'user_id'      => '2',
+          'created_at'   => \Carbon\Carbon::now(),
+          'updated_at'   => \Carbon\Carbon::now(),
+        ]);
+
+        DB::table('plantrecords')->insert([
+          'titlerecord'  => 'Carga en Andenes (Anden 2)',
+          'dateplant'    => \Carbon\Carbon::now(),
+          'planthour'    => \Carbon\Carbon::now(),
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
+          'plant_id'     => '1',
+          'user_id'      => '2',
+          'created_at'   => \Carbon\Carbon::now(),
+          'updated_at'   => \Carbon\Carbon::now(),
+        ]);
+
+        DB::table('plantrecords')->insert([
+          'titlerecord'  => 'Personal realiza lavado de piso de  patio',
+          'dateplant'    => \Carbon\Carbon::now(),
+          'planthour'    => \Carbon\Carbon::now(),
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
+          'plant_id'     => '1',
+          'user_id'      => '2',
+          'created_at'   => \Carbon\Carbon::now(),
+          'updated_at'   => \Carbon\Carbon::now(),
+        ]);
+
+        //
+        
+        DB::table('plantrecords')->insert([
+          'titlerecord'  => 'Inicio de carga en Andenes (Anden 2 y Anden 3)',
+          'dateplant'    => \Carbon\Carbon::now(),
+          'planthour'    => \Carbon\Carbon::now(),
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
           'plant_id'     => '2',
-          'user_id'      => '1',
+          'user_id'      => '2',
           'created_at'   => \Carbon\Carbon::now(),
           'updated_at'   => \Carbon\Carbon::now(),
         ]);
 
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro de Planta 3',
+          'titlerecord'  => 'Descarga de materia Prima (1ra. Batea)',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento de Planta 3',
-          'actionsevent' => 'Acciones de Planta 3',
-          'plantactive'  => '1',
-          'plant_id'     => '1',
-          'user_id'      => '1',
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
+          'plant_id'     => '2',
+          'user_id'      => '2',
           'created_at'   => \Carbon\Carbon::now(),
           'updated_at'   => \Carbon\Carbon::now(),
-        ]); 
+        ]);
 
         DB::table('plantrecords')->insert([
-          'titlerecord'  => 'Registro de Planta 4',
+          'titlerecord'  => 'Descarga  de Bins en Patio',
           'dateplant'    => \Carbon\Carbon::now(),
           'planthour'    => \Carbon\Carbon::now(),
-          'plantevente'  => 'Evento de Planta 4',
-          'actionsevent' => 'Acciones de Planta 4',
-          'plantactive'  => '0',
-          'plant_id'     => '1',
-          'user_id'      => '1',
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
+          'plant_id'     => '2',
+          'user_id'      => '2',
           'created_at'   => \Carbon\Carbon::now(),
           'updated_at'   => \Carbon\Carbon::now(),
-        ]); 
+        ]);
+
+        DB::table('plantrecords')->insert([
+          'titlerecord'  => 'Descarga de materia Prima (3ra. Batea)',
+          'dateplant'    => \Carbon\Carbon::now(),
+          'planthour'    => \Carbon\Carbon::now(),
+          'plantevente'  => 'Se mantuvo visualizada dicha maniobra no encontrando observaciones',
+          'actionsevent' => 'No se detallan',
+          'plant_id'     => '2',
+          'user_id'      => '2',
+          'created_at'   => \Carbon\Carbon::now(),
+          'updated_at'   => \Carbon\Carbon::now(),
+        ]);
     }
 }

@@ -15,12 +15,25 @@ class FaultrecordsTableSeeder extends Seeder
 
 			'faultdate'   => \Carbon\Carbon::now(),
 			'faulthour'   => \Carbon\Carbon::now(),
-			'fault'       => 'Falla Operacional 1',
+			'fault'       => 'Centro de Cultivo Errazuriz no emite señal de vídeo',
 			'enddate'     => \Carbon\Carbon::now(),
 			'endhour'     => \Carbon\Carbon::now(),
-			'solution'    => 'Solución Falla Operacional 1',
-			'faultactive' => '1',
+			'solution'    => 'No se detalla',
 			'user_id'     => '1',
+			'created_at'  => \Carbon\Carbon::now(),
+			'updated_at'  => \Carbon\Carbon::now(),
+        ]);
+
+
+        DB::table('faultrecords')->insert([
+
+			'faultdate'   => \Carbon\Carbon::now(),
+			'faulthour'   => \Carbon\Carbon::now(),
+			'fault'       => 'Centro de Cultivo Errazuriz no emite señal de vídeo',
+			'enddate'     => \Carbon\Carbon::now(),
+			'endhour'     => \Carbon\Carbon::now(),
+			'solution'    => 'No se detalla',
+			'user_id'     => '2',
 			'created_at'  => \Carbon\Carbon::now(),
 			'updated_at'  => \Carbon\Carbon::now(),
         ]);
@@ -29,12 +42,11 @@ class FaultrecordsTableSeeder extends Seeder
 
 			'faultdate'   => \Carbon\Carbon::now(),
 			'faulthour'   => \Carbon\Carbon::now(),
-			'fault'       => 'Falla Operacional 2',
+			'fault'       => 'Caída de señal del DVR Exterior',
 			'enddate'     => \Carbon\Carbon::now(),
 			'endhour'     => \Carbon\Carbon::now(),
-			'solution'    => 'Solución Falla Operacional 2',
-			'faultactive' => '1',
-			'user_id'     => '1',
+			'solution'    => 'No se detalla',
+			'user_id'     => '3',
 			'created_at'  => \Carbon\Carbon::now(),
 			'updated_at'  => \Carbon\Carbon::now(),
         ]);
@@ -43,12 +55,25 @@ class FaultrecordsTableSeeder extends Seeder
 
 			'faultdate'   => \Carbon\Carbon::now(),
 			'faulthour'   => \Carbon\Carbon::now(),
-			'fault'       => 'Falla Operacional 3',
+			'fault'       => 'Señal intermitente Planta Quellón',
 			'enddate'     => \Carbon\Carbon::now(),
 			'endhour'     => \Carbon\Carbon::now(),
-			'solution'    => 'Solución Falla Operacional 3',
-			'faultactive' => '0',
+			'solution'    => 'No se detalla',
 			'user_id'     => '1',
+			'created_at'  => \Carbon\Carbon::now(),
+			'updated_at'  => \Carbon\Carbon::now(),
+        ]);
+
+
+        DB::table('faultrecords')->insert([
+
+			'faultdate'   => \Carbon\Carbon::now(),
+			'faulthour'   => \Carbon\Carbon::now(),
+			'fault'       => 'Se pierde visualización de las cámaras exterior planta',
+			'enddate'     => \Carbon\Carbon::now(),
+			'endhour'     => \Carbon\Carbon::now(),
+			'solution'    => 'No se detalla',
+			'user_id'     => '2',
 			'created_at'  => \Carbon\Carbon::now(),
 			'updated_at'  => \Carbon\Carbon::now(),
         ]);
@@ -57,12 +82,11 @@ class FaultrecordsTableSeeder extends Seeder
 
 			'faultdate'   => \Carbon\Carbon::now(),
 			'faulthour'   => \Carbon\Carbon::now(),
-			'fault'       => 'Falla Operacional 4',
+			'fault'       => 'Se pierde visualización del DVR de Bodega de Operaciones',
 			'enddate'     => \Carbon\Carbon::now(),
 			'endhour'     => \Carbon\Carbon::now(),
-			'solution'    => 'Solución Falla Operacional 4',
-			'faultactive' => '0',
-			'user_id'     => '1',
+			'solution'    => 'No se detalla',
+			'user_id'     => '3',
 			'created_at'  => \Carbon\Carbon::now(),
 			'updated_at'  => \Carbon\Carbon::now(),
         ]);

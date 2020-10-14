@@ -39,7 +39,7 @@ class QueriesplantController extends Controller
     public function index()
     {
 
-        $plantrecords = plantrecords::Paginate(5);
+        $plantrecords = plantrecords::Paginate(10);
         $plants = plants::all();
         $userc = User::all();
         $plantx = plants::pluck('nameplant','idplant');
@@ -58,7 +58,7 @@ class QueriesplantController extends Controller
 
         $plantrecords = plantrecords::where('dateplant', 'LIKE', '%'.$request->get('search').'%')
             ->Where('plant_id', 'LIKE', '%'.$request->get('search1').'%')
-            ->paginate(5);
+            ->paginate(10);
         $plants = plants::all();
         $userc = User::all();
         $plantx = plants::pluck('nameplant','idplant');

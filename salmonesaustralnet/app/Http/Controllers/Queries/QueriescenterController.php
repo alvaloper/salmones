@@ -37,7 +37,7 @@ class QueriescenterController extends Controller
     public function index()
     {
 
-        $maritimerecords = maritimerecords::Paginate(5);
+        $maritimerecords = maritimerecords::Paginate(10);
         $centersx = centers::all();
         $userc = User::all();
         $centers = centers::pluck('namecenter','idcenter');
@@ -49,7 +49,7 @@ class QueriescenterController extends Controller
 
         $maritimerecords = maritimerecords::where('datemarine', 'LIKE', '%'.$request->get('search').'%')
             ->Where('center_id', 'LIKE', '%'.$request->get('search1').'%')
-            ->paginate(5);
+            ->paginate(10);
         $centersx = centers::all();
         $userc = User::all();
         $centers = centers::pluck('namecenter','idcenter');

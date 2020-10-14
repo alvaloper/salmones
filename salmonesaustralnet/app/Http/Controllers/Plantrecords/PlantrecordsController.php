@@ -35,7 +35,7 @@ class PlantrecordsController extends Controller
     public function index()
     {
 
-        $plantrecords = plantrecords::Paginate(5);
+        $plantrecords = plantrecords::Paginate(10);
         $plants = plants::all();
         $userc = User::all();
         return view('plantrecords.index', array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));

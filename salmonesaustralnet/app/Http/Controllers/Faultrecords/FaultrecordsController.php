@@ -34,7 +34,7 @@ class FaultrecordsController extends Controller
     public function index()
     {
 
-        $faultrecords = faultrecords::Paginate(5);
+        $faultrecords = faultrecords::Paginate(10);
 
         $userc = User::all();
         return view('faultrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
