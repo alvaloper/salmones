@@ -78,7 +78,12 @@
                                     ]) !!}
                                 </td> 
                                 {!! Form::close() !!}
-
+                            @else
+                                <td class="text-center">
+                                <a href="#" class="btn btn-info btn-xs disabled" data-toggle="tooltip" title="Modificar">
+                                    <span class="glyphicon" aria-hidden="true">Registro No Editable</span>
+                                </a>
+                                </td>
                             @endif
                         </tr>
                     @endforeach

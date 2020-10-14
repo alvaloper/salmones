@@ -64,7 +64,6 @@
 
                                 {!! Form::open(['route' => ['plantrecords.destroy', $plantr->idplantrecord], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
                                 <a href="{{ url('admin/plantrecords/'.$plantr->idplantrecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
@@ -77,12 +76,14 @@
                                         'data-container'=>'body',
                                         'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plantr->idplantrecord, Nombre: $plantr->titlerecord ?')"
                                     ]) !!}
-                                
-                                
-
                                 </td> 
                                 {!! Form::close() !!}
-
+                            @else
+                                <td class="text-center">
+                                <a href="#" class="btn btn-info btn-xs disabled" data-toggle="tooltip" title="Modificar">
+                                    <span class="glyphicon" aria-hidden="true">Registro No Editable</span>
+                                </a>
+                                </td> 
                             @endif
                         </tr>
                     @endforeach

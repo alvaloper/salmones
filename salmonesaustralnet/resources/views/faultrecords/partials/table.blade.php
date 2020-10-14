@@ -45,7 +45,6 @@
                                     echo $cont;
                                 ?>
                             </td>
-
                             <td>{{ $faultr->faultdate }}</td> 
                             <td>{{ $faultr->faulthour }}</td>
                             <td>{{ $faultr->fault }}</td> 
@@ -70,12 +69,14 @@
                                         'data-container'=>'body',
                                         'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $faultr->idfault, Nombre: $faultr->fault ?')"
                                     ]) !!}
-                                
-                                
-
                                 </td> 
                                 {!! Form::close() !!}
-
+                            @else
+                                <td class="text-center">
+                                <a href="#" class="btn btn-info btn-xs disabled" data-toggle="tooltip" title="Modificar">
+                                    <span class="glyphicon" aria-hidden="true">Registro No Editable</span>
+                                </a>
+                                </td>
                             @endif
                         </tr>
                     @endforeach
