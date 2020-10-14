@@ -2,7 +2,7 @@
     <div class="box-header">
         <h3 class="box-title">
             <b>
-                Búsqueda Avanzada
+                BÚSQUEDA AVANZADA EN CENTROS DE CULTIVOS
             </b>
         </h3>
     </div>
@@ -33,14 +33,13 @@
 </div>
 <!-- /input-group -->
 
-
- <!-- Main content -->
+<!-- Main content -->
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Eventualidades Registradas en los Centros de Cultivos</b></h3>
+              <h3 class="box-title"><b>RESULTADOS DE LA BÚSQUEDA - EVENTUALIDADES REGISTRADAS EN LOS CENTROS DE CULTIVOS</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -51,13 +50,13 @@
                     <thead>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Turno</th>
-                            <th class="text-center">Fecha</th>
-                            <th class="text-center">Hora Recalada</th>
-                            <th class="text-center">Hora de Zarpe</th>
-                            <th class="text-center">Evento</th>
-                            <th class="text-center">Centro de Cultivo</th>
-                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">TURNO</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
+                            <th class="text-center">HORA DE ZARPE</th>
+                            <th class="text-center">CENTRO DE CULTIVO</th>
+                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -91,8 +90,8 @@
                             <td>{{$maritimex->turn?$maritimex->turn:''}}</td> 
                             <td>{{$maritimex->datemarine?$maritimex->datemarine:''}}</td>
                             <td>{{$maritimex->landfallhour?$maritimex->landfallhour:''}}</td> 
-                            <td>{{$maritimex->sailhour?$maritimex->sailhour:''}}</td> 
                             <td>{{$maritimex->marineevent?$maritimex->marineevent:''}}</td> 
+                            <td>{{$maritimex->sailhour?$maritimex->sailhour:''}}</td> 
                             <td>{{$maritimex->namecenter?$maritimex->namecenter:''}}</td> 
                             <td>{{$maritimex->name?$maritimex->name:''}} {{$maritimex->lastname?$maritimex->lastname:''}}</td> 
                         </tr>
@@ -101,13 +100,13 @@
                     <tfoot>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Turno</th>
-                            <th class="text-center">Fecha</th>
-                            <th class="text-center">Hora Recalada</th>
-                            <th class="text-center">Hora de Zarpe</th>
-                            <th class="text-center">Evento</th>
-                            <th class="text-center">Centro de Cultivo</th>
-                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">TURNO</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
+                            <th class="text-center">HORA DE ZARPE</th>
+                            <th class="text-center">CENTRO DE CULTIVO</th>
+                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
                         </tr> 
                     </tfoot>
                 </table>
@@ -124,4 +123,4 @@
         </div>
     </div>
 </div>
-          {{ $maritimerecords->links() }}
+{{ $maritimerecords->links() }}

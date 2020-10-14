@@ -4,7 +4,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Fallas presentadas en el area de Control de Monitoreo</b></h3>
+              <h3 class="box-title"><b>FALLAS PRESENTADAS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -15,17 +15,16 @@
                     <thead>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Fecha de Inicio</th>
-                            <th class="text-center">Hora de Inicio</th>
-                            <th class="text-center">Falla</th>
-                            <th class="text-center">Fecha Fin</th>
-                            <th class="text-center">Hora Fin</th>
-                            <th class="text-center">Solución</th>
-                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA</th>
+                            <th class="text-center">FALLA QUE PRESENTA</th>
+                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
+                            <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
+                            <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
+                            <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
                         </tr>
                     </thead>
                     <tbody>
-
                        @foreach ($faultrecords as $faultr)
 
 
@@ -44,27 +43,26 @@
                                     echo $cont;
                                 ?>
                             </td>
-
                             <td>{{ $faultr->faultdate }}</td> 
                             <td>{{ $faultr->faulthour }}</td>
                             <td>{{ $faultr->fault }}</td> 
+                            <td>{{ $faultr->name }} {{ $faultr->lastname }}</td>  
                             <td>{{ $faultr->enddate }}</td>
                             <td>{{ $faultr->endhour }}</td>
                             <td>{{ $faultr->solution }}</td>
-                            <td>{{ $faultr->name }} {{ $faultr->lastname }}</td>  
                         </tr>
                     @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Fecha de Inicio</th>
-                            <th class="text-center">Hora de Inicio</th>
-                            <th class="text-center">Falla</th>
-                            <th class="text-center">Fecha Fin</th>
-                            <th class="text-center">Hora Fin</th>
-                            <th class="text-center">Solución</th>
-                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA</th>
+                            <th class="text-center">FALLA QUE PRESENTA</th>
+                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
+                            <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
+                            <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
+                            <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
                         </tr> 
                     </tfoot>
                 </table>
@@ -72,4 +70,4 @@
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          {{ $faultrecords->links() }}
+{{ $faultrecords->links() }}

@@ -2,7 +2,7 @@
     <div class="box-header">
         <h3 class="box-title">
             <b>
-                Búsqueda Avanzada
+                BÚSQUEDA AVANZADA EN PLANTAS DE PROCESOS
             </b>
         </h3>
     </div>
@@ -40,7 +40,7 @@
                 <div class="box-header">
                     <h3 class="box-title">
                         <b>
-                            Eventualidades Registradas en las Plantas de Procesos
+                            RESULTADOS DE LA BÚSQUEDA - EVENTUALIDADES REGISTRADAS EN LA PLANTA DE PROCESOS
                         </b>
                     </h3>
             </div>
@@ -52,14 +52,14 @@
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">Título</th>
-                            <th class="text-center">Fecha</th>
-                            <th class="text-center">Hora</th>
-                            <th class="text-center">Eventualidad</th>
-                            <th class="text-center">Acciones Efectuadas</th>
-                            <th class="text-center">Nombre de la Planta</th>
-                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">N° DE FOLIO</th>
+                            <th class="text-center">TÍTULO DEL SUCESO</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA</th>
+                            <th class="text-center">QUIÉN REPORTA</th>
+                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
+                            <th class="text-center">ACCIONES ADOPTADAS</th>
+                            <th class="text-center">PLANTA DE PROCESOS</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -96,6 +96,9 @@
                                     {{$plantr->planthour?$plantr->planthour:''}}
                                 </td>
                                 <td>
+                                    {{$plantr->name?$plantr->name:''}} {{$plantr->name?$plantr->lastname:''}}
+                                </td>
+                                <td>
                                     {{$plantr->plantevente?$plantr->plantevente:''}}
                                 </td>
                                 <td>
@@ -104,22 +107,19 @@
                                 <td>
                                     {{$plantr->nameplant?$plantr->nameplant:''}}
                                 </td>
-                                <td>
-                                    {{$plantr->name?$plantr->name:''}} {{$plantr->name?$plantr->lastname:''}}
-                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">Título</th>
-                            <th class="text-center">Fecha</th>
-                            <th class="text-center">Hora</th>
-                            <th class="text-center">Eventualidad</th>
-                            <th class="text-center">Acciones Efectuadas</th>
-                            <th class="text-center">Nombre de la Planta</th>
-                            <th class="text-center">Nombre del Usuario</th>
+                            <th class="text-center">N° DE FOLIO</th>
+                            <th class="text-center">TÍTULO DEL SUCESO</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA</th>
+                            <th class="text-center">QUIÉN REPORTA</th>
+                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
+                            <th class="text-center">ACCIONES ADOPTADAS</th>
+                            <th class="text-center">PLANTA DE PROCESOS</th>
                         </tr> 
                     </tfoot>
                 </table>

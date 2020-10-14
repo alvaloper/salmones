@@ -10,7 +10,7 @@
     <table class="table table-bordered" id="MyTable">
 <tr>
             <td>
-                {!! Form::label('titlerecord', 'Titulo de la Eventualidad', ['for' => 'titlerecord'] ) !!}
+                {!! Form::label('titlerecord', 'Título del Suceso', ['for' => 'titlerecord'] ) !!}
                 {!! Form::text('titlerecord', null , ['class' => 'form-control',
                  'id' => 'titlerecord',
                  'placeholder' => 'Ingrese el título' ]  ) !!}
@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('plantevente', 'Evento en la Planta', ['for' => 'plantevente'] ) !!}
+                {!! Form::label('plantevente', 'Novedades Encontradas', ['for' => 'plantevente'] ) !!}
                 {!! Form::text('plantevente', null , ['class' => 'form-control',
                  'id' => 'plantevente',
                  'placeholder' => 'Ingrese la eventualidad en planta' ]  ) !!}
@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('actionsevent', 'Acciones', ['for' => 'actionsevent'] ) !!}
+                {!! Form::label('actionsevent', 'Acciones Adoptadas', ['for' => 'actionsevent'] ) !!}
                 {!! Form::text('actionsevent', null , ['class' => 'form-control',
                  'id' => 'actionsevent',
                  'placeholder' => 'Ingrese las acciones' ]  ) !!}
@@ -56,7 +56,7 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('user_id', 'Usuario que modifica la Eventualidad', ['for' => 'user_id'] ) !!}
+                {!! Form::label('user_id', 'Quien Reporta', ['for' => 'user_id'] ) !!}
                 {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
                  'id' => 'user_id', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}

@@ -44,7 +44,7 @@
 
         <tr>
             <td>
-                {!! Form::label('marineevent', 'Evento ', ['for' => 'marineevent'] ) !!}
+                {!! Form::label('marineevent', 'Novedades Encontradas ', ['for' => 'marineevent'] ) !!}
                 {!! Form::text('marineevent', null , ['class' => 'form-control',
                  'id' => 'marineevent',
                  'placeholder' => 'Ingrese el evento' ]  ) !!}
@@ -60,7 +60,7 @@
 
         <tr>
             <td>
-                {!! Form::label('user_id', 'Usuario que registra la Eventualidad', ['for' => 'user_id'] ) !!}
+                {!! Form::label('user_id', 'Quien Entrega la Información', ['for' => 'user_id'] ) !!}
                 {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
                  'id' => 'user_id', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}

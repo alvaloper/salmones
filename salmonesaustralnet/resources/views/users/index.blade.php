@@ -1,7 +1,7 @@
 @extends('users.app')
 
 @section('htmlheader_title')
-    Permisos
+    Gestión de Usuarios
 @endsection
 
 

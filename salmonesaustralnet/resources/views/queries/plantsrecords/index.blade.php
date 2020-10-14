@@ -1,7 +1,7 @@
 @extends('queries.plantsrecords.app')
 
 @section('htmlheader_title')
-    Consulta de Eventualidades de Planta
+    Consulta de Eventualidades en Plantas de Procesos
 @endsection
 
 @section('main-content')

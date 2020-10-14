@@ -4,7 +4,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>Registro de Eventualidades en Centro de Cultivos</b></h3>
+              <h3 class="box-title"><b>REGISTRO DE EVENTUALIDADES EN CENTROS DE CULTIVOS</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -15,14 +15,14 @@
                     <thead>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Turno</th>
-                            <th class="text-center">Fecha</th>
-                            <th class="text-center">Hora Recalado</th>
-                            <th class="text-center">Hora de Zarpe</th>
-                            <th class="text-center">Evento</th>
-                            <th class="text-center">Centro de Cultivo</th>
-                            <th class="text-center">Nombre del Usuario</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">TURNO</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
+                            <th class="text-center">HORA DE ZARPE</th>
+                            <th class="text-center">CENTRO DE CULTIVO</th>
+                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
+                            <th class="text-center">ACCIONES</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,17 +52,13 @@
                                     echo $cont;
                                 ?>
                             </td>
-
                             <td>{{ $maritimex->turn }}</td> 
                             <td>{{ $maritimex->datemarine }}</td>
                             <td>{{ $maritimex->landfallhour }}</td> 
-                            <td>{{ $maritimex->sailhour }}</td>
                             <td>{{ $maritimex->marineevent }}</td>
+                            <td>{{ $maritimex->sailhour }}</td>
                             <td>{{ $maritimex->namecenter }}</td>
-                            <td>{{ $maritimex->name }} {{ $maritimex->lastname }}</td>  
-
-                               
-
+                            <td>{{ $maritimex->name }} {{ $maritimex->lastname }}</td>
                             @if(Auth::check() && Auth::user()->isRole('root'))
 
                                 {!! Form::open(['route' => ['maritimerecords.destroy', $maritimex->idmarinerecord], 'method' => 'DELETE'] ) !!}
@@ -80,9 +76,6 @@
                                         'data-container'=>'body',
                                         'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $maritimex->idmarinerecord, Nombre: $maritimex->marineevent ?')"
                                     ]) !!}
-                                
-                                
-
                                 </td> 
                                 {!! Form::close() !!}
 
@@ -93,14 +86,14 @@
                     <tfoot>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">Turno</th>
-                            <th class="text-center">Fecha</th>
-                            <th class="text-center">Hora Recalado</th>
-                            <th class="text-center">Hora de Zarpe</th>
-                            <th class="text-center">Evento</th>
-                            <th class="text-center">Centro de Cultivo</th>
-                            <th class="text-center">Nombre del Usuario</th>
-                            <th class="text-center">Acciones</th>
+                            <th class="text-center">TURNO</th>
+                            <th class="text-center">FECHA</th>
+                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
+                            <th class="text-center">HORA DE ZARPE</th>
+                            <th class="text-center">CENTRO DE CULTIVO</th>
+                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
+                            <th class="text-center">ACCIONES</th>
                         </tr> 
                     </tfoot>
                 </table>
