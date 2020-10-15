@@ -51,7 +51,6 @@
                                     echo $cont;
                                 ?>
                             </td>
-
                             <td>{{ $plantr->titlerecord }}</td> 
                             <td>{{ $plantr->dateplant }}</td>
                             <td>{{ $plantr->planthour }}</td> 
@@ -74,7 +73,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plantr->idplantrecord, Nombre: $plantr->titlerecord ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro: $plantr->titlerecord ?')"
                                     ]) !!}
                                 </td> 
                                 {!! Form::close() !!}

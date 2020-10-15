@@ -73,7 +73,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $maritimex->idmarinerecord, Nombre: $maritimex->marineevent ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro: $maritimex->marineevent ?')"
                                     ]) !!}
                                 </td> 
                                 {!! Form::close() !!}

@@ -60,14 +60,13 @@
                                 <a href="{{ url('admin/faultrecords/'.$faultr->idfault.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
-                                
                                     {!! Form::button('<i class="fa fa-trash"></i>', [
                                         'type' => 'submit',
                                         'class' => 'btn btn-danger btn-xs',
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $faultr->idfault, Nombre: $faultr->fault ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro: $faultr->fault ?')"
                                     ]) !!}
                                 </td> 
                                 {!! Form::close() !!}

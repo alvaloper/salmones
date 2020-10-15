@@ -7,6 +7,9 @@
               <h3 class="box-title"><b>CENTROS DE CULTIVOS</b></h3>
             </div>
             <!-- /.box-header -->
+            <?php         
+                $cont=0;
+            ?>
             <div class="box-body">
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
@@ -22,7 +25,12 @@
                     <tbody>
                        @foreach ($centers as $center)
                         <tr>
-                            <td>{{ $center->idcenter }}</td>
+                            <td>
+                                <?php
+                                    $cont=$cont+1;                              
+                                    echo $cont;
+                                ?>
+                            </td>
                             <td>{{ $center->namecenter }}</td> 
                             <td>{{ $center->emergencyphone}}</td>
                             <td>{{ $center->boss}}</td>
@@ -40,11 +48,8 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $center->idcenter, Nombre: $center->namecenter ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el centro de cultivo: $center->namecenter ?')"
                                     ]) !!}
-                                
-                                
-
                                 </td> 
                                 {!! Form::close() !!}
                         </tr>

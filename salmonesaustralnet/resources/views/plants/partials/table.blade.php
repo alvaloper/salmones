@@ -7,6 +7,9 @@
               <h3 class="box-title"><b>PLANTAS DE PROCESOS</b></h3>
             </div>
             <!-- /.box-header -->
+            <?php         
+                $cont=0;
+            ?>
             <div class="box-body">
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
@@ -20,7 +23,12 @@
                        @foreach ($plants as $plant)
 
                         <tr>
-                            <td>{{ $plant->idplant }}</td>
+                            <td>
+                                <?php
+                                    $cont=$cont+1;                              
+                                    echo $cont;
+                                ?>
+                            </td>
                             <td>{{ $plant->nameplant }}</td> 
                                 {!! Form::open(['route' => ['plants.destroy', $plant->idplant], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
@@ -34,7 +42,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $plant->idplant, Nombre: $plant->nameplant ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro de la planta: $plant->nameplant ?')"
                                     ]) !!}
                                 </td> 
                                 {!! Form::close() !!}
