@@ -8,10 +8,10 @@
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root'))
         @include('errors.mensajes')
-        <h4 class="text-center">Editar Centro de Cultivo: {{ $centers->namecenter  }}</h4>
+        <h3 class="text-center"><b>Editar Centro de Cultivo</b></h3>
         {!! Form::model($centers, [ 'route' => ['centers.update', $centers], 'method' => 'PUT', 'files' => true, 'enctype'=>'multipart/form-data']) !!}
         @include('centers.partials.fieldsedit')
-        <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar cambios de: {{ $centers->namecenter  }}</button>
+        <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar cambios</button>
         {!! Form::close() !!}
     @else
         <div class="panel-body">
