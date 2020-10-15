@@ -47,10 +47,9 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro ID: $user->id, Nombre: $user->name ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el usuario: $user->name $user->lastname ?')"
                                     ]) !!}
                                 @endif
-                                <!-- Boton para modificar al usuario seleccionado-->
                                 <a href="{{ url('admin/users/'.$user->id.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
