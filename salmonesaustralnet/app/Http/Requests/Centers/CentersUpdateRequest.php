@@ -25,7 +25,10 @@ class CentersUpdateRequest extends FormRequest
     public function rules()
     {
         return[
-          'namecenter' => 'min:5|max:50|required|string',
-            ];
+            'namecenter'       => 'min:5|max:70|required|string',
+            'emergencyphone'   => 'min:5|max:20|required|string',
+            'boss'             => 'min:5|max:50|required|string',
+            'assistant'        => 'min:5|max:70|required|string',
+        ];
     }
 }

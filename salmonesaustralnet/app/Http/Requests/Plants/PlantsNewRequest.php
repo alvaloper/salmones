@@ -24,7 +24,7 @@ class PlantsNewRequest extends FormRequest
     public function rules()
     {
         return [
-            'nameplant' => 'min:5|max:50|required|string',
+            'nameplant' => 'min:5|max:70|required|string',
         ];
     }
 }
