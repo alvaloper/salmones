@@ -1,6 +1,5 @@
                     <?php 
                         $userx =Auth::user()->id;
-
                         $userx0 =Auth::user()->name;
                         $userx1 =Auth::user()->lastname;
                         $userx2 =$userx0.' '.$userx1;
@@ -13,7 +12,7 @@
                 {!! Form::label('titlerecord', 'Título del Suceso', ['for' => 'titlerecord'] ) !!}
                 {!! Form::text('titlerecord', null , ['class' => 'form-control',
                  'id' => 'titlerecord',
-                 'placeholder' => 'Ingrese el título' ]  ) !!}
+                 'placeholder' => 'Ingrese el título del suceso' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -38,7 +37,7 @@
                 {!! Form::label('plantevente', 'Novedades Encontradas', ['for' => 'plantevente'] ) !!}
                 {!! Form::text('plantevente', null , ['class' => 'form-control',
                  'id' => 'plantevente',
-                 'placeholder' => 'Ingrese la eventualidad en planta' ]  ) !!}
+                 'placeholder' => 'Ingrese las novedades encontradas' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -46,7 +45,7 @@
                 {!! Form::label('actionsevent', 'Acciones Adoptadas', ['for' => 'actionsevent'] ) !!}
                 {!! Form::text('actionsevent', null , ['class' => 'form-control',
                  'id' => 'actionsevent',
-                 'placeholder' => 'Ingrese las acciones' ]  ) !!}
+                 'placeholder' => 'Ingrese las acciones adoptadas' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -65,8 +64,6 @@
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
                  'id' => 'userx2', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
-
-                
             </td>
         </tr>
     </table>

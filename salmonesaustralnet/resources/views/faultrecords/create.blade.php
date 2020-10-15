@@ -7,7 +7,7 @@
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
-        <h2 class="text-center">Nueva Falla en el Área de Control de Monitoreo </h2>
+        <h3 class="text-center"><b>Nueva Falla en el Área de Control de Monitoreo</b></h3>
         {!! Form::open(['route' => 'faultrecords.store', 'method' => 'POST', 'files' => true]) !!}
         @include('faultrecords.partials.fields')
         <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar</button>

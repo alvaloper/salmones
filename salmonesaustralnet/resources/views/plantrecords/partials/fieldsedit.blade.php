@@ -1,6 +1,5 @@
                     <?php 
                         $userx =Auth::user()->id;
-
                         $userx0 =Auth::user()->name;
                         $userx1 =Auth::user()->lastname;
                         $userx2 =$userx0.' '.$userx1;
@@ -13,13 +12,13 @@
                 {!! Form::label('titlerecord', 'Título del Suceso', ['for' => 'titlerecord'] ) !!}
                 {!! Form::text('titlerecord', null , ['class' => 'form-control',
                  'id' => 'titlerecord',
-                 'placeholder' => 'Ingrese el título' ]  ) !!}
+                 'placeholder' => 'Ingrese el título del suceso' ]  ) !!}
             </td>
         </tr>
         <tr>
             <td>
                 {!! Form::label('dateplant', 'Fecha', ['for' => 'dateplant'] ) !!}
-                {!! Form::text('dateplant', null , ['class' => 'form-control',
+                {!! Form::date('dateplant', null , ['class' => 'form-control',
                  'id' => 'dateplant',
                  'placeholder' => 'Ingrese la fecha' ]  ) !!}
             </td>
@@ -27,7 +26,7 @@
         <tr>
             <td>
                 {!! Form::label('planthour', 'Hora', ['for' => 'planthour'] ) !!}
-                {!! Form::text('planthour', null , ['class' => 'form-control',
+                {!! Form::time('planthour', null , ['class' => 'form-control',
                  'id' => 'planthour',
                  'placeholder' => 'Ingrese la hora' ]  ) !!}
             </td>
@@ -37,7 +36,7 @@
                 {!! Form::label('plantevente', 'Novedades Encontradas', ['for' => 'plantevente'] ) !!}
                 {!! Form::text('plantevente', null , ['class' => 'form-control',
                  'id' => 'plantevente',
-                 'placeholder' => 'Ingrese la eventualidad en planta' ]  ) !!}
+                 'placeholder' => 'Ingrese las novedades encontradas' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -45,7 +44,7 @@
                 {!! Form::label('actionsevent', 'Acciones Adoptadas', ['for' => 'actionsevent'] ) !!}
                 {!! Form::text('actionsevent', null , ['class' => 'form-control',
                  'id' => 'actionsevent',
-                 'placeholder' => 'Ingrese las acciones' ]  ) !!}
+                 'placeholder' => 'Ingrese las acciones adoptadas' ]  ) !!}
             </td>
         </tr>
         <tr>

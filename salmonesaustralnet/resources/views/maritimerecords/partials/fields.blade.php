@@ -47,7 +47,7 @@
                 {!! Form::label('marineevent', 'Novedades Encontradas ', ['for' => 'marineevent'] ) !!}
                 {!! Form::text('marineevent', null , ['class' => 'form-control',
                  'id' => 'marineevent',
-                 'placeholder' => 'Ingrese el evento' ]  ) !!}
+                 'placeholder' => 'Ingrese las novedades encontradas' ]  ) !!}
             </td>
         </tr>
 

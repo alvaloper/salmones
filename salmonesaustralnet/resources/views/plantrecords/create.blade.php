@@ -8,7 +8,7 @@
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
-        <h2 class="text-center">Nueva Eventualidad en la Planta de Procesos</h2>
+        <h3 class="text-center"><b>Nueva Eventualidad en la Planta de Procesos</b></h3>
         {!! Form::open(['route' => 'plantrecords.store', 'method' => 'POST', 'files' => true]) !!}
         @include('plantrecords.partials.fields')
         <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar</button>

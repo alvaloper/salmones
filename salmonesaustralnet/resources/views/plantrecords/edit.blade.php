@@ -8,10 +8,10 @@
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root'))
         @include('errors.mensajes')
-        <h4 class="text-center">Editar Eventualidad: {{ $plantrecords->titlerecord  }}</h4>
+        <h3 class="text-center"><b>Editar Eventualidad en la Planta de Procesos</b></h3>
         {!! Form::model($plantrecords, [ 'route' => ['plantrecords.update', $plantrecords], 'method' => 'PUT', 'files' => true, 'enctype'=>'multipart/form-data']) !!}
         @include('plantrecords.partials.fieldsedit')
-        <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar cambios de: {{ $plantrecords->titlerecord  }}</button>
+        <button type="submit" class="btn btn-primary btn-block btn-flat">Guardar cambios</button>
         {!! Form::close() !!}
     @else
         <div class="panel-body">

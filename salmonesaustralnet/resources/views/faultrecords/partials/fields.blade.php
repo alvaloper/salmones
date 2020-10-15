@@ -1,6 +1,5 @@
                     <?php 
                         $userx =Auth::user()->id;
-
                         $userx0 =Auth::user()->name;
                         $userx1 =Auth::user()->lastname;
                         $userx2 =$userx0.' '.$userx1;
@@ -31,7 +30,7 @@
                 {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
                 {!! Form::text('fault', null , ['class' => 'form-control',
                  'id' => 'fault',
-                 'placeholder' => 'Ingrese la Falla' ]  ) !!}
+                 'placeholder' => 'Ingrese la falla presentada' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -56,7 +55,7 @@
                 {!! Form::label('solution', 'Solución al Problema', ['for' => 'solution'] ) !!}
                 {!! Form::text('solution', null , ['class' => 'form-control',
                  'id' => 'solution',
-                 'placeholder' => 'Ingrese la Solucion' ]  ) !!}
+                 'placeholder' => 'Ingrese la solución al problema' ]  ) !!}
             </td>
         </tr>
         <tr>
