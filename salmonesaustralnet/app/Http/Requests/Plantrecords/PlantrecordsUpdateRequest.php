@@ -26,8 +26,8 @@ class PlantrecordsUpdateRequest extends FormRequest
     {
         return[
             'titlerecord'   => 'min:5|max:200|required|string',
-            'dateplant'     => 'min:5|max:20|required|string',
-            'planthour'     => 'min:5|max:20|required|string',
+            'dateplant'     => 'required|date',
+            'planthour'     => 'required|string',
             'plantevente'   => 'min:5|max:200|required|string',
             'actionsevent'  => 'min:5|max:200|required|string',
             'plant_id'      => 'min:1|max:10|required|string',

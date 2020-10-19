@@ -17,9 +17,8 @@
                             <th class="text-center">N°</th>
                             <th class="text-center">TURNO</th>
                             <th class="text-center">FECHA</th>
-                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">HORA</th>
                             <th class="text-center">NOVEDADES ENCONTRADAS</th>
-                            <th class="text-center">HORA DE ZARPE</th>
                             <th class="text-center">CENTRO DE CULTIVO</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
                             <th class="text-center">ACCIONES</th>
@@ -55,7 +54,6 @@
                             <td>{{ $maritimex->datemarine }}</td>
                             <td>{{ $maritimex->landfallhour }}</td> 
                             <td>{{ $maritimex->marineevent }}</td>
-                            <td>{{ $maritimex->sailhour }}</td>
                             <td>{{ $maritimex->namecenter }}</td>
                             <td>{{ $maritimex->name }} {{ $maritimex->lastname }}</td>
                             @if(Auth::check() && Auth::user()->isRole('root'))
@@ -92,9 +90,8 @@
                             <th class="text-center">N°</th>
                             <th class="text-center">TURNO</th>
                             <th class="text-center">FECHA</th>
-                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">HORA</th>
                             <th class="text-center">NOVEDADES ENCONTRADAS</th>
-                            <th class="text-center">HORA DE ZARPE</th>
                             <th class="text-center">CENTRO DE CULTIVO</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
                             <th class="text-center">ACCIONES</th>

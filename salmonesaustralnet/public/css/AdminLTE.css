@@ -3200,7 +3200,8 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
+  /*background: #d2d6de;*/
+  background-image: url('../img/login_background.jpg');
 }
 .login-box,
 .register-box {

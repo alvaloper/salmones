@@ -24,11 +24,11 @@ class FaultrecordsNewRequest extends FormRequest
     public function rules()
     {
         return [
-            'faultdate' => 'min:5|max:20|required|string',
-            'faulthour' => 'min:5|max:20|required|string',
+            'faultdate' => 'required|date',
+            'faulthour' => 'required|string',
             'fault'     => 'min:5|max:200|required|string',
-            'enddate'   => 'min:5|max:20|required|string',
-            'endhour'   => 'min:5|max:20|required|string',
+            'enddate'   => 'required|date',
+            'endhour'   => 'required|string',
             'solution'  => 'min:5|max:200|required|string',
             'user_id'   => 'min:1|max:10|required|string',
         ];

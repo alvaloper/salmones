@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-10-2020 a las 02:00:03
+-- Tiempo de generación: 14-10-2020 a las 14:37:20
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 7.0.9
 
@@ -41,9 +41,9 @@ CREATE TABLE `centers` (
 --
 
 INSERT INTO `centers` (`idcenter`, `namecenter`, `emergencyphone`, `boss`, `assistant`, `created_at`, `updated_at`) VALUES
-(1, 'Angosta', '976697113', '--', '--', '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(2, 'Errazuriz', '976697113', 'Gastón Díaz', 'David Niñes', '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(3, 'Pichagua', '942057959', 'Ricardo Tielle', '--', '2020-10-14 23:59:46', '2020-10-14 23:59:46');
+(1, 'Angosta', '976697113', '--', '--', '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(2, 'Errazuriz', '976697113', 'Gastón Díaz', 'David Niñes', '2020-10-14 12:33:53', '2020-10-14 12:33:53'),
+(3, 'Pichagua', '942057959', 'Ricardo Tielle', '--', '2020-10-14 12:33:53', '2020-10-14 12:33:53');
 
 -- --------------------------------------------------------
 
@@ -69,12 +69,12 @@ CREATE TABLE `faultrecords` (
 --
 
 INSERT INTO `faultrecords` (`idfault`, `faultdate`, `faulthour`, `fault`, `enddate`, `endhour`, `solution`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, '2020-10-14', '19:59:48', 'Centro de Cultivo Errazuriz no emite señal de vídeo', '2020-10-14', '19:59:48', 'No se detalla', 1, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(2, '2020-10-14', '19:59:48', 'Centro de Cultivo Errazuriz no emite señal de vídeo', '2020-10-14', '19:59:48', 'No se detalla', 2, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(3, '2020-10-14', '19:59:48', 'Caída de señal del DVR Exterior', '2020-10-14', '19:59:48', 'No se detalla', 3, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(4, '2020-10-14', '19:59:48', 'Señal intermitente Planta Quellón', '2020-10-14', '19:59:48', 'No se detalla', 1, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(5, '2020-10-14', '19:59:48', 'Se pierde visualización de las cámaras exterior planta', '2020-10-14', '19:59:48', 'No se detalla', 2, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(6, '2020-10-14', '19:59:48', 'Se pierde visualización del DVR de Bodega de Operaciones', '2020-10-14', '19:59:48', 'No se detalla', 3, '2020-10-14 23:59:48', '2020-10-14 23:59:48');
+(1, '2020-10-14', '08:33:55', 'Centro de Cultivo Errazuriz no emite señal de vídeo', '2020-10-14', '08:33:55', 'No se detalla', 1, '2020-10-14 12:33:55', '2020-10-14 12:33:55'),
+(2, '2020-10-14', '08:33:55', 'Centro de Cultivo Errazuriz no emite señal de vídeo', '2020-10-14', '08:33:55', 'No se detalla', 2, '2020-10-14 12:33:55', '2020-10-14 12:33:55'),
+(3, '2020-10-14', '08:33:55', 'Caída de señal del DVR Exterior', '2020-10-14', '08:33:55', 'No se detalla', 3, '2020-10-14 12:33:55', '2020-10-14 12:33:55'),
+(4, '2020-10-14', '08:33:55', 'Señal intermitente Planta Quellón', '2020-10-14', '08:33:55', 'No se detalla', 1, '2020-10-14 12:33:55', '2020-10-14 12:33:55'),
+(5, '2020-10-14', '08:33:55', 'Se pierde visualización de las cámaras exterior planta', '2020-10-14', '08:33:55', 'No se detalla', 2, '2020-10-14 12:33:55', '2020-10-14 12:33:55'),
+(6, '2020-10-14', '08:33:55', 'Se pierde visualización del DVR de Bodega de Operaciones', '2020-10-14', '08:33:55', 'No se detalla', 3, '2020-10-14 12:33:55', '2020-10-14 12:33:55');
 
 -- --------------------------------------------------------
 
@@ -100,19 +100,19 @@ CREATE TABLE `maritimerecords` (
 --
 
 INSERT INTO `maritimerecords` (`idmarinerecord`, `turn`, `datemarine`, `landfallhour`, `sailhour`, `marineevent`, `center_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Diurno', '2020-10-14', '19:59:46', '19:59:46', 'Panga Queullin I, inicia salida  con personal  desde el Pontón', 3, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(2, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Panga Queullin I, ingreso de personal al módulo', 3, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(3, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Panga Queullin I, se ubica en la plataforma para proceder al retiro de materiales dirigiéndose al módulo', 3, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(4, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Se visualiza cuatro personas realizando recorrido por el módulo', 3, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(5, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Panga Queullin I, ingreso de una persona al Pontón', 3, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(6, 'Nocturno', '2020-10-14', '19:59:47', '19:59:47', 'Panga Queullin I se dirige a Pontón con personal de seguridad.', 3, 3, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(7, 'Nocturno', '2020-10-14', '19:59:47', '19:59:47', 'Se detecta Foco Perko en movimiento y fotoperiodo encendido.', 3, 3, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(8, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Embarcacion Viento Sur (lancha Blanca) se ubica con  ingreso de materiales "soporte pajarero"', 2, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(9, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Lancha Cagua con traslado de personal a la base el rosario', 2, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(10, 'Diurno', '2020-10-14', '19:59:47', '19:59:47', 'Se visualiza el bote Trauco en Ensilaje', 2, 2, '2020-10-14 23:59:47', '2020-10-14 23:59:47'),
-(11, 'Diurno', '2020-10-14', '19:59:48', '19:59:48', 'Embarcacion Viento Sur', 2, 2, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(12, 'Diurno', '2020-10-14', '19:59:48', '19:59:48', 'Panga Queullin I, ingreso de una persona al Pontón', 2, 2, '2020-10-14 23:59:48', '2020-10-14 23:59:48'),
-(13, 'Nocturno', '2020-10-14', '19:59:48', '19:59:48', 'Puerto cerrado, Inicio de jornada con muy mal clima, limitando la operatividad de la misma.', 2, 3, '2020-10-14 23:59:48', '2020-10-14 23:59:48');
+(1, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Panga Queullin I, inicia salida  con personal  desde el Pontón', 3, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(2, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Panga Queullin I, ingreso de personal al módulo', 3, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(3, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Panga Queullin I, se ubica en la plataforma para proceder al retiro de materiales dirigiéndose al módulo', 3, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(4, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Se visualiza cuatro personas realizando recorrido por el módulo', 3, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(5, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Panga Queullin I, ingreso de una persona al Pontón', 3, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(6, 'Nocturno', '2020-10-14', '08:33:54', '08:33:54', 'Panga Queullin I se dirige a Pontón con personal de seguridad.', 3, 3, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(7, 'Nocturno', '2020-10-14', '08:33:54', '08:33:54', 'Se detecta Foco Perko en movimiento y fotoperiodo encendido.', 3, 3, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(8, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Embarcacion Viento Sur (lancha Blanca) se ubica con  ingreso de materiales "soporte pajarero"', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(9, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Lancha Cagua con traslado de personal a la base el rosario', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(10, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Se visualiza el bote Trauco en Ensilaje', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(11, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Embarcacion Viento Sur', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(12, 'Diurno', '2020-10-14', '08:33:54', '08:33:54', 'Panga Queullin I, ingreso de una persona al Pontón', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(13, 'Nocturno', '2020-10-14', '08:33:55', '08:33:55', 'Puerto cerrado, Inicio de jornada con muy mal clima, limitando la operatividad de la misma.', 2, 3, '2020-10-14 12:33:55', '2020-10-14 12:33:55');
 
 -- --------------------------------------------------------
 
@@ -174,18 +174,18 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `slug`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'crear.usuarios', 'Permiso Para Crear Usuario', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(2, 'eliminar.usuarios', 'Permiso Para Eliminar Usuario', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(3, 'ver.usuarios', 'Permiso Para Ver Usuario', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(4, 'modificar.usuarios', 'Permiso Para Modificar Usuario', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(5, 'crear.perfiles', 'Permiso Para Crear Perfiles', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(6, 'eliminar.perfiles', 'Permiso Para Eliminar Perfiles', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(7, 'ver.perfiles', 'Permiso Para Ver perfiles', '2020-10-14 23:59:42', '2020-10-14 23:59:42'),
-(8, 'modificar.perfiles', 'Permiso para Modificar perfiles', '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(9, 'crear.permisos', 'Para Crear perfiles', '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(10, 'eliminar.permisos', 'Para Eliminar Perfiles', '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(11, 'ver.permisos', 'Para Ver Perfiles', '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(12, 'modificar.permisos', 'Para Modificar Perfiles', '2020-10-14 23:59:43', '2020-10-14 23:59:43');
+(1, 'crear.usuarios', 'Permiso Para Crear Usuario', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(2, 'eliminar.usuarios', 'Permiso Para Eliminar Usuario', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(3, 'ver.usuarios', 'Permiso Para Ver Usuario', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(4, 'modificar.usuarios', 'Permiso Para Modificar Usuario', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(5, 'crear.perfiles', 'Permiso Para Crear Perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(6, 'eliminar.perfiles', 'Permiso Para Eliminar Perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(7, 'ver.perfiles', 'Permiso Para Ver perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(8, 'modificar.perfiles', 'Permiso para Modificar perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(9, 'crear.permisos', 'Para Crear perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(10, 'eliminar.permisos', 'Para Eliminar Perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(11, 'ver.permisos', 'Para Ver Perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(12, 'modificar.permisos', 'Para Modificar Perfiles', '2020-10-14 12:33:49', '2020-10-14 12:33:49');
 
 -- --------------------------------------------------------
 
@@ -206,18 +206,18 @@ CREATE TABLE `permission_role` (
 --
 
 INSERT INTO `permission_role` (`id`, `permission_id`, `role_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(2, 2, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(3, 3, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(4, 4, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(5, 5, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(6, 6, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(7, 7, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(8, 8, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(9, 9, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(10, 10, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(11, 11, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(12, 12, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45');
+(1, 1, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(2, 2, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(3, 3, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(4, 4, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(5, 5, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(6, 6, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(7, 7, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(8, 8, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(9, 9, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(10, 10, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(11, 11, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(12, 12, 1, '2020-10-14 12:33:51', '2020-10-14 12:33:51');
 
 -- --------------------------------------------------------
 
@@ -239,18 +239,18 @@ CREATE TABLE `permission_user` (
 --
 
 INSERT INTO `permission_user` (`id`, `permission_id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(2, 2, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(3, 3, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(4, 4, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(5, 5, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(6, 6, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(7, 7, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(8, 8, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(9, 9, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(10, 10, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(11, 11, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(12, 12, 1, 1, '2020-10-14 23:59:45', '2020-10-14 23:59:45');
+(1, 1, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(2, 2, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(3, 3, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(4, 4, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(5, 5, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(6, 6, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(7, 7, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(8, 8, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(9, 9, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(10, 10, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(11, 11, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(12, 12, 1, 1, '2020-10-14 12:33:52', '2020-10-14 12:33:52');
 
 -- --------------------------------------------------------
 
@@ -276,14 +276,14 @@ CREATE TABLE `plantrecords` (
 --
 
 INSERT INTO `plantrecords` (`idplantrecord`, `titlerecord`, `dateplant`, `planthour`, `plantevente`, `actionsevent`, `plant_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Carga en Anden 3', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(2, 'Descarga de materia Prima (1ra. Batea)', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(3, 'Carga en Andenes (Anden 2)', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(4, 'Personal realiza lavado de piso de  patio', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(5, 'Inicio de carga en Andenes (Anden 2 y Anden 3)', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(6, 'Descarga de materia Prima (1ra. Batea)', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(7, 'Descarga  de Bins en Patio', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46'),
-(8, 'Descarga de materia Prima (3ra. Batea)', '2020-10-14', '19:59:46', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 23:59:46', '2020-10-14 23:59:46');
+(1, 'Carga en Anden 3', '2020-10-14', '08:33:53', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 12:33:53', '2020-10-14 12:33:53'),
+(2, 'Descarga de materia Prima (1ra. Batea)', '2020-10-14', '08:33:53', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 12:33:53', '2020-10-14 12:33:53'),
+(3, 'Carga en Andenes (Anden 2)', '2020-10-14', '08:33:53', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 12:33:53', '2020-10-14 12:33:53'),
+(4, 'Personal realiza lavado de piso de  patio', '2020-10-14', '08:33:54', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 1, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(5, 'Inicio de carga en Andenes (Anden 2 y Anden 3)', '2020-10-14', '08:33:54', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(6, 'Descarga de materia Prima (1ra. Batea)', '2020-10-14', '08:33:54', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(7, 'Descarga  de Bins en Patio', '2020-10-14', '08:33:54', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54'),
+(8, 'Descarga de materia Prima (3ra. Batea)', '2020-10-14', '08:33:54', 'Se mantuvo visualizada dicha maniobra no encontrando observaciones', 'No se detallan', 2, 2, '2020-10-14 12:33:54', '2020-10-14 12:33:54');
 
 -- --------------------------------------------------------
 
@@ -303,8 +303,8 @@ CREATE TABLE `plants` (
 --
 
 INSERT INTO `plants` (`idplant`, `nameplant`, `created_at`, `updated_at`) VALUES
-(1, 'Chamiza', '2020-10-14 23:59:45', '2020-10-14 23:59:45'),
-(2, 'Quellón', '2020-10-14 23:59:46', '2020-10-14 23:59:46');
+(1, 'Chamiza', '2020-10-14 12:33:52', '2020-10-14 12:33:52'),
+(2, 'Quellón', '2020-10-14 12:33:52', '2020-10-14 12:33:52');
 
 -- --------------------------------------------------------
 
@@ -326,8 +326,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `slug`, `description`, `level`, `created_at`, `updated_at`) VALUES
-(1, 'root', 'Usuario Super Administrador', 1, '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(2, 'admin', 'Usuario Administrador', 2, '2020-10-14 23:59:43', '2020-10-14 23:59:43');
+(1, 'root', 'Usuario Super Administrador', 1, '2020-10-14 12:33:49', '2020-10-14 12:33:49'),
+(2, 'admin', 'Usuario Administrador', 2, '2020-10-14 12:33:50', '2020-10-14 12:33:50');
 
 -- --------------------------------------------------------
 
@@ -348,9 +348,9 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(2, 2, 2, '2020-10-14 23:59:44', '2020-10-14 23:59:44'),
-(3, 2, 3, '2020-10-14 23:59:44', '2020-10-14 23:59:44');
+(1, 1, 1, '2020-10-14 12:33:50', '2020-10-14 12:33:50'),
+(2, 2, 2, '2020-10-14 12:33:51', '2020-10-14 12:33:51'),
+(3, 2, 3, '2020-10-14 12:33:51', '2020-10-14 12:33:51');
 
 -- --------------------------------------------------------
 
@@ -374,9 +374,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Administrador', 'SalmonesAustral', 'administrador@salmonesaustral.net', '$2y$10$MDfEdNarURLOOMMiaf.hoOyvp4Ymf2BruQJWK4Uq1/r9UlvK5ZkEC', 'YQxaBUOHquBoN2unXk2Hfv6tSAH3QA7BpYrCIgCvfWcWA1C6ousL8hd1wqiiU2RDwy0vV72Bsql26qHOWUxu66lijhuGaPUd2zbK', '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(2, 'María', 'Vásquez', 'mvasquez@salmonesaustral.net', '$2y$10$Q.Vj3FoqFeLCfg8jCBu/KOZoKvQA/XmWh6dhdwrhsacjxLSc3pnAe', 'smklTgCcIKo4P6ZDngEh6pPQq5Y6zMyA3E6nMTuEhRSi3xUbFqdEc07WOu5WlaFIkdB3T0PPbj5wmeAGGxOgnHAXKaAS92LbMlaw', '2020-10-14 23:59:43', '2020-10-14 23:59:43'),
-(3, 'David', 'Cárdenas', 'dcardenas@salmonesaustral.net', '$2y$10$/yycUZU5yKVYZOSnKp07Ge2gSORq/Vo4FW2Oc1YoRD/P3PBsFezRi', 'UMKyTVbZVLVHqoYcGFnyyNp9MUXdQ1B3M1c47eeV02iUmZdtpCP7Nb41JwQTGKaiuSwNhlTecnaPWdf2LOfppL6mrOIE96YU76kp', '2020-10-14 23:59:44', '2020-10-14 23:59:44');
+(1, 'Administrador', 'SalmonesAustral', 'administrador@salmonesaustral.net', '$2y$10$eiBLPVijW/ABWjmSe/YL/eVw0Vp.oyg0zOEATSTLqZDK6xObdNbrq', 'Ta8IgH4E0AkpRnLMuSnzYCyD2dhrUr43oyNg1PPNjCFi9CHNipbLlxXcjfbF', '2020-10-14 12:33:50', '2020-10-14 12:36:30'),
+(2, 'María', 'Vásquez', 'mvasquez@salmonesaustral.net', '$2y$10$mJY84tzlnAtzpRz9TWgtkObp0TPKYJJcTksD0e.QIDrNpiHWOm.2O', 'Iamx0xn0m9mbzVejmDGARHDtaltxMQGH1EDpij5Y6PeRCcTAsCHMosega7ekCxif5EbALWl4w4PlCGKNajj92gadmQ6DxrYVUiFQ', '2020-10-14 12:33:50', '2020-10-14 12:33:50'),
+(3, 'David', 'Cárdenas', 'dcardenas@salmonesaustral.net', '$2y$10$kdLtVvng0F/IW3T8VVEzaeCN/A07LPoSW1wRFqN1mUSpL3wcUJ1.O', '7P2LaDJtQFzycEZoLbeuXpgWKiai7JFRUFnnBLmS9vHwS17ygmbT6HcWV4INE2tRN2vRglsGd4DkTZvYiR8weng3ILHwiSKKcu6U', '2020-10-14 12:33:50', '2020-10-14 12:33:50');
 
 --
 -- Índices para tablas volcadas
@@ -488,7 +488,7 @@ ALTER TABLE `faultrecords`
 -- AUTO_INCREMENT de la tabla `maritimerecords`
 --
 ALTER TABLE `maritimerecords`
-  MODIFY `idmarinerecord` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idmarinerecord` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `permissions`
 --

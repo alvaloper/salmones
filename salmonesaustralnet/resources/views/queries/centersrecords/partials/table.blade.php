@@ -52,9 +52,8 @@
                             <th class="text-center">N°</th>
                             <th class="text-center">TURNO</th>
                             <th class="text-center">FECHA</th>
-                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">HORA</th>
                             <th class="text-center">NOVEDADES ENCONTRADAS</th>
-                            <th class="text-center">HORA DE ZARPE</th>
                             <th class="text-center">CENTRO DE CULTIVO</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
                         </tr>
@@ -91,7 +90,6 @@
                             <td>{{$maritimex->datemarine?$maritimex->datemarine:''}}</td>
                             <td>{{$maritimex->landfallhour?$maritimex->landfallhour:''}}</td> 
                             <td>{{$maritimex->marineevent?$maritimex->marineevent:''}}</td> 
-                            <td>{{$maritimex->sailhour?$maritimex->sailhour:''}}</td> 
                             <td>{{$maritimex->namecenter?$maritimex->namecenter:''}}</td> 
                             <td>{{$maritimex->name?$maritimex->name:''}} {{$maritimex->lastname?$maritimex->lastname:''}}</td> 
                         </tr>
@@ -102,9 +100,8 @@
                             <th class="text-center">N°</th>
                             <th class="text-center">TURNO</th>
                             <th class="text-center">FECHA</th>
-                            <th class="text-center">HORA RECALADA</th>
+                            <th class="text-center">HORA</th>
                             <th class="text-center">NOVEDADES ENCONTRADAS</th>
-                            <th class="text-center">HORA DE ZARPE</th>
                             <th class="text-center">CENTRO DE CULTIVO</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
                         </tr> 

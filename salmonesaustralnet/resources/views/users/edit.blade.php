@@ -4,7 +4,6 @@
     Gestión de Usuarios - Editar
 @endsection
 
-
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root'))
         @include('errors.mensajes')

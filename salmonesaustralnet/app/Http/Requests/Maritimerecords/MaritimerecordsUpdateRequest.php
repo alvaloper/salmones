@@ -26,9 +26,8 @@ class MaritimerecordsUpdateRequest extends FormRequest
     {
         return[
             'turn'          => 'min:5|max:20|required|string',
-            'datemarine'    => 'min:5|max:20|required|string',
-            'landfallhour'  => 'min:5|max:20|required|string',
-            'sailhour'      => 'min:5|max:20|required|string',
+            'datemarine'    => 'required|date',
+            'landfallhour'  => 'required|string',
             'marineevent'   => 'min:5|max:200|required|string',
             'center_id'     => 'min:1|max:10|required|string',
             'user_id'       => 'min:1|max:10|required|string',

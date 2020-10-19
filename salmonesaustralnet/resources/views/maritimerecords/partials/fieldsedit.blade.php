@@ -25,22 +25,12 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('landfallhour', 'Hora de recalada', ['for' => 'landfallhour'] ) !!}
+                {!! Form::label('landfallhour', 'Hora', ['for' => 'landfallhour'] ) !!}
                 {!! Form::time('landfallhour', null , ['class' => 'form-control',
                  'id' => 'landfallhour',
-                 'placeholder' => 'Ingrese la hora recalada' ]  ) !!}
+                 'placeholder' => 'Ingrese la hora' ]  ) !!}
             </td>
         </tr>
-        <tr>
-            <td>
-                {!! Form::label('sailhour', 'Hora de zarpe', ['for' => 'sailhour'] ) !!}
-                {!! Form::time('sailhour', null , ['class' => 'form-control',
-                 'id' => 'sailhour',
-                 'placeholder' => 'Ingrese la hora zarpe' ]  ) !!}
-            </td>
-        </tr>
-
-
         <tr>
             <td>
                 {!! Form::label('marineevent', 'Novedades Encontradas ', ['for' => 'marineevent'] ) !!}

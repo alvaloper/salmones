@@ -18,7 +18,6 @@ class CreateMaritimerecordsTable extends Migration
             $table->string('turn');
             $table->date('datemarine');
             $table->time('landfallhour');
-            $table->time('sailhour');
             $table->string('marineevent');
             $table->integer('center_id')->unsigned()->index();
             $table->foreign('center_id')->references('idcenter')->on('centers')->onDelete('cascade');

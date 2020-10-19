@@ -52,10 +52,7 @@ class MaritimerecordsController extends Controller
     {
 
         $roles = Role::all()->pluck('slug','id');
-
         $centersx = centers::pluck('namecenter','idcenter');
-
-        //SIRVE  return view('plantrecords.create', ['plantx', $plantx])->with('roles', $roles);
         return view('maritimerecords.create', compact('centersx'))->with('roles', $roles);
 
     }
@@ -74,7 +71,6 @@ class MaritimerecordsController extends Controller
         $maritimerecords->turn = $request->input('turn');
         $maritimerecords->datemarine = $request->input('datemarine');
         $maritimerecords->landfallhour = $request->input('landfallhour');
-        $maritimerecords->sailhour = $request->input('sailhour');
         $maritimerecords->marineevent = $request->input('marineevent');
         $maritimerecords->center_id = $request->input('center_id');
         $maritimerecords->user_id = $request->input('user_id');
@@ -128,7 +124,6 @@ class MaritimerecordsController extends Controller
         $maritimerecords->turn = $request->input('turn');
         $maritimerecords->datemarine = $request->input('datemarine');
         $maritimerecords->landfallhour = $request->input('landfallhour');
-        $maritimerecords->sailhour = $request->input('sailhour');
         $maritimerecords->marineevent = $request->input('marineevent');
         $maritimerecords->center_id = $request->input('center_id');
         $maritimerecords->user_id = $request->input('user_id');
