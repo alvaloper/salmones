@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <title> SalmonesAustral.Net - @yield('htmlheader_title', 'Your title here') </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link rel="icon" href="img/logocolor_transparent.png" type="image/png" sizes="16x16">
     <!-- Bootstrap 3.3.4 -->
     {{--<link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />--}}
     <link href="{{ asset('ajax/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
