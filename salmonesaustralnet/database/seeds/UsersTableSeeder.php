@@ -14,25 +14,25 @@ class UsersTableSeeder extends Seeder
     {
         User::create(array(
             'name'           => 'Administrador',
-            'lastname'       => 'SalmonesAustral',
-            'email'          => 'administrador@salmonesaustral.net',
-            'password'       => Hash::make('uVdW7-X40s'),
+            'lastname'       => 'De Seguridad',
+            'email'          => 'mv2020@salmonesaustral.cl',
+            'password'       => Hash::make('Ma0781$%'),
             'remember_token' => str_random(100)
         ));
 
         User::create(array(
             'name'           => 'María',
             'lastname'       => 'Vásquez',
-            'email'          => 'mvasquez@salmonesaustral.net',
-            'password'       => Hash::make('MVACltbimv'),
+            'email'          => 'mvasquez@salmonesaustral.cl',
+            'password'       => Hash::make('MAVAmv$$'),
             'remember_token' => str_random(100)
         ));
 
         User::create(array(
             'name'           => 'David',
             'lastname'       => 'Cárdenas',
-            'email'          => 'dcardenas@salmonesaustral.net',
-            'password'       => Hash::make('DCClHK1pdc'),
+            'email'          => 'dcardenas@salmonesaustral.cl',
+            'password'       => Hash::make('$DCCldc$'),
             'remember_token' => str_random(100)
         ));        
     }

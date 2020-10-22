@@ -15,11 +15,11 @@
                     <thead>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">FECHA</th>
+                            <th class="text-center">INICIO DE LA FALLA</th>
                             <th class="text-center">HORA</th>
                             <th class="text-center">FALLA QUE PRESENTA</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
-                            <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
+                            <th class="text-center">REPARACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
                             <th class="text-center">ACCIONES</th>
@@ -83,11 +83,11 @@
                     <tfoot>
                         <tr>
                             <th class="text-center">N°</th>
-                            <th class="text-center">FECHA</th>
+                            <th class="text-center">INICIO DE LA FALLA</th>
                             <th class="text-center">HORA</th>
                             <th class="text-center">FALLA QUE PRESENTA</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
-                            <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
+                            <th class="text-center">REPARACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
                             <th class="text-center">ACCIONES</th>
