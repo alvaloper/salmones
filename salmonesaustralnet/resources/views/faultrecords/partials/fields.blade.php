@@ -10,7 +10,7 @@
         
         <tr>
             <td>
-                {!! Form::label('faultdate', 'Fecha', ['for' => 'faultdate'] ) !!}
+                {!! Form::label('faultdate', 'Inicio de la Falla', ['for' => 'faultdate'] ) !!}
                 {!! Form::date('faultdate', null , ['class' => 'form-control',
                  'id' => 'faultdate',
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
@@ -35,7 +35,7 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('enddate', 'Fecha De Culminación de la Falla', ['for' => 'enddate'] ) !!}
+                {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
                 {!! Form::date('enddate', null , ['class' => 'form-control',
                  'id' => 'enddate',
                  'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
@@ -44,7 +44,7 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('endhour', 'Hora De Culminación de la Falla', ['for' => 'endhour'] ) !!}
+                {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
                 {!! Form::time('endhour', null , ['class' => 'form-control',
                  'id' => 'endhour',
                  'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
