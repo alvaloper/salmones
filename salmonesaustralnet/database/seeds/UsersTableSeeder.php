@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
             'name'           => 'Administrador',
             'lastname'       => 'SalmonesAustral',
             'email'          => 'administrador@salmonesaustral.net',
-            'password'       => Hash::make('DZgqp1k2D'),
+            'password'       => Hash::make('uVdW7-X40s'),
             'remember_token' => str_random(100)
         ));
 
@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
             'name'           => 'María',
             'lastname'       => 'Vásquez',
             'email'          => 'mvasquez@salmonesaustral.net',
-            'password'       => Hash::make('HSDLAVT4q'),
+            'password'       => Hash::make('MVACltbimv'),
             'remember_token' => str_random(100)
         ));
 
@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
             'name'           => 'David',
             'lastname'       => 'Cárdenas',
             'email'          => 'dcardenas@salmonesaustral.net',
-            'password'       => Hash::make('fhYsJNg9F'),
+            'password'       => Hash::make('DCClHK1pdc'),
             'remember_token' => str_random(100)
         ));        
     }

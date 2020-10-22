@@ -6,7 +6,7 @@
 
 
 @section('main-content')
-    @if(Auth::check() && Auth::user()->isRole('root'))
+    @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
         <h3 class="text-center"><b>Editar Eventualidad en la Planta de Procesos</b></h3>
         {!! Form::model($plantrecords, [ 'route' => ['plantrecords.update', $plantrecords], 'method' => 'PUT', 'files' => true, 'enctype'=>'multipart/form-data']) !!}

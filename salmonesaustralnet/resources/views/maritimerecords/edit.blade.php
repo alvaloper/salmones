@@ -5,7 +5,7 @@
 @endsection
 
 @section('main-content')
-    @if(Auth::check() && Auth::user()->isRole('root'))
+    @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
         <h3 class="text-center"><b>Editar Eventualidad en Centros de Cultivos</b></h3>
         {!! Form::model($maritimerecords, [ 'route' => ['maritimerecords.update', $maritimerecords], 'method' => 'PUT', 'files' => true, 'enctype'=>'multipart/form-data']) !!}

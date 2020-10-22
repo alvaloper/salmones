@@ -5,7 +5,7 @@
 @endsection
 
 @section('main-content')
-    @if(Auth::check() && Auth::user()->isRole('root'))
+    @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
         <h3 class="text-center"><b>Editar Falla Presentada en el Área de Control de Monitoreo</b></h3>
         {!! Form::model($faultrecords, [ 'route' => ['faultrecords.update', $faultrecords], 'method' => 'PUT', 'files' => true, 'enctype'=>'multipart/form-data']) !!}
