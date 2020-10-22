@@ -1,6 +1,5 @@
 <!-- Main Header -->
 <header class="main-header">
-
     <!-- Logo -->
     <a href="{{ url('/home') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -8,7 +7,6 @@
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><img src="{{asset('/img/logowhite_transparent.png')}}"  height="50" width="180" alt="SalmonesAustral.Net"/></span>
     </a>
-
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
@@ -18,7 +16,6 @@
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-  
                 @if (Auth::guest())
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
                     <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
@@ -40,7 +37,6 @@
                                     {{ Auth::user()->name }} {{ Auth::user()->lastname }}
                                 </p>
                             </li>
-
                             <!-- Menu Footer-->
                             <li class="user-footer">
    
