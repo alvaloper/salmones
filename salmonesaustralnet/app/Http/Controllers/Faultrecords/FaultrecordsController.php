@@ -8,6 +8,7 @@ use App\Models\Seguridad\Role;
 use App\User;
 use App\faultrecords;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
@@ -68,6 +69,47 @@ class FaultrecordsController extends Controller
     public function store(FaultrecordsNewRequest $request)
     {
 
+        //IMAGEN1
+        if ($request->hasfile('file1')){
+            $file1 = $request->file('file1');
+            $fname1 = time().$file1->getClientOriginalName();
+            $file1->move(public_path().'/images',$fname1);
+        }
+
+        //IMAGEN2
+        if ($request->hasfile('file2')){
+            $file2 = $request->file('file2');
+            $fname2 = time().$file2->getClientOriginalName();
+            $file2->move(public_path().'/images',$fname2);
+        } 
+        else
+        {
+        $fname2 = 'nonpicture.jpg';
+        }
+
+        //IMAGEN3
+        if ($request->hasfile('file3')){
+            $file3 = $request->file('file3');
+            $fname3 = time().$file3->getClientOriginalName();
+            $file3->move(public_path().'/images',$fname3);
+        } 
+        else
+        {
+        $fname3 = 'nonpicture.jpg';
+        }
+
+        //IMAGEN4
+        if ($request->hasfile('file4')){
+            $file4 = $request->file('file4');
+            $fname4 = time().$file4->getClientOriginalName();
+            $file4->move(public_path().'/images',$fname4);
+        } 
+        else
+        {
+        $fname4 = 'nonpicture.jpg';
+        }
+
+
         $faultrecords = new Faultrecords();
         $faultrecords->faultdate = $request->input('faultdate');
         $faultrecords->faulthour = $request->input('faulthour');
@@ -76,6 +118,12 @@ class FaultrecordsController extends Controller
         $faultrecords->endhour = $request->input('endhour');
         $faultrecords->solution = $request->input('solution');
         $faultrecords->user_id = $request->input('user_id');
+
+        $faultrecords->file1 = $fname1;
+        $faultrecords->file2 = $fname2;
+        $faultrecords->file3 = $fname3;
+        $faultrecords->file4 = $fname4;
+        
         $faultrecords->save(); 
         flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('faultrecords.index');
@@ -88,9 +136,12 @@ class FaultrecordsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idfault)
     {
-        //
+        
+        $faultrecords = Faultrecords::find($idfault);
+
+        return view('faultrecords.show', array('faultrecords' => $faultrecords )); 
     }
 
     /**
@@ -109,6 +160,8 @@ class FaultrecordsController extends Controller
         return view('faultrecords.edit', array('faultrecords' => $faultrecords ));
 
     }
+
+
 
     /**
      * Update the specified resource in storage.

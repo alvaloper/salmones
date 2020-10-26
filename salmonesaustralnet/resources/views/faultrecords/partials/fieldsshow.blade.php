@@ -3,16 +3,16 @@
                         $userx0 =Auth::user()->name;
                         $userx1 =Auth::user()->lastname;
                         $userx2 =$userx0.' '.$userx1;
+
                     ?>
 
 <div class="form-group">
     <table class="table table-bordered" id="MyTable">
-        
         <tr>
             <td>
                 {!! Form::label('faultdate', 'Inicio de la Falla', ['for' => 'faultdate'] ) !!}
                 {!! Form::date('faultdate', null , ['class' => 'form-control',
-                 'id' => 'faultdate',
+                 'id' => 'faultdate', 'readonly',
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
             </td>
             
@@ -21,7 +21,7 @@
             <td>
                 {!! Form::label('faulthour', 'Hora', ['for' => 'faulthour'] ) !!}
                 {!! Form::time('faulthour', null , ['class' => 'form-control',
-                 'id' => 'faulthour',
+                 'id' => 'faulthour', 'readonly',
                  'placeholder' => 'Ingrese la Hora de Inicio' ]  ) !!}
             </td>
         </tr>
@@ -29,15 +29,15 @@
             <td>
                 {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
                 {!! Form::text('fault', null , ['class' => 'form-control',
-                 'id' => 'fault',
-                 'placeholder' => 'Ingrese la falla presentada' ]  ) !!}
+                 'id' => 'fault', 'readonly',
+                 'placeholder' => 'Ingrese la Falla' ]  ) !!}
             </td>
         </tr>
         <tr>
             <td>
                 {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
                 {!! Form::date('enddate', null , ['class' => 'form-control',
-                 'id' => 'enddate',
+                 'id' => 'enddate', 'readonly',
                  'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
             </td>
             
@@ -46,7 +46,7 @@
             <td>
                 {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
                 {!! Form::time('endhour', null , ['class' => 'form-control',
-                 'id' => 'endhour',
+                 'id' => 'endhour', 'readonly',
                  'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
             </td>
         </tr>
@@ -54,13 +54,13 @@
             <td>
                 {!! Form::label('solution', 'Solución al Problema', ['for' => 'solution'] ) !!}
                 {!! Form::text('solution', null , ['class' => 'form-control',
-                 'id' => 'solution',
-                 'placeholder' => 'Ingrese la solución al problema' ]  ) !!}
+                 'id' => 'solution', 'readonly',
+                 'placeholder' => 'Ingrese la Solucion' ]  ) !!}
             </td>
         </tr>
         <tr>
             <td>
-                {!! Form::label('user_id', 'Quien entrega la Información', ['for' => 'user_id'] ) !!}
+                {!! Form::label('user_id', 'Quien Entrega la Información', ['for' => 'user_id'] ) !!}
                 {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
                  'id' => 'user_id', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
@@ -76,30 +76,18 @@
         <tr>
             <td>
                 {!! Form::label('file1', 'Imagen 1', ['for' => 'file1'] ) !!}
-                {!! Form::file('file1') !!}
-            </td>
-        </tr>
+                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="100" height="100">
 
-        <tr>
-            <td>
-                {!! Form::label('file2', 'Imagen 2', ['for' => 'file2'] ) !!}
-                {!! Form::file('file2') !!}
-            </td>
-        </tr>
+                {!! Form::label('file1', 'Imagen 2', ['for' => 'file2'] ) !!}
+                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="100" height="100">
 
-        <tr>
-            <td>
                 {!! Form::label('file3', 'Imagen 3', ['for' => 'file3'] ) !!}
-                {!! Form::file('file3') !!}
-            </td>
-        </tr>
+                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="100" height="100">
 
-        <tr>
-            <td>
                 {!! Form::label('file4', 'Imagen 4', ['for' => 'file4'] ) !!}
-                {!! Form::file('file4') !!}
+                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="100" height="100">
+
             </td>
         </tr>
-
     </table>
 </div>

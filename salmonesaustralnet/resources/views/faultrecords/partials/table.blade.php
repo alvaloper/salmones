@@ -57,6 +57,12 @@
                                 {!! Form::open(['route' => ['faultrecords.destroy', $faultr->idfault], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
                                     <!-- Boton para modificar al usuario seleccionado-->
+                                
+                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Ver">
+                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
+                                </a>
+
+
                                 <a href="{{ url('admin/faultrecords/'.$faultr->idfault.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
@@ -76,6 +82,7 @@
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
                                 </td>
+
                             @endif
                         </tr>
                     @endforeach
