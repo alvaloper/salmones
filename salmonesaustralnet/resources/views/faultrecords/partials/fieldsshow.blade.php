@@ -1,11 +1,9 @@
-                    <?php 
-                        $userx =Auth::user()->id;
-                        $userx0 =Auth::user()->name;
-                        $userx1 =Auth::user()->lastname;
-                        $userx2 =$userx0.' '.$userx1;
-
-                    ?>
-
+<?php 
+    $userx =Auth::user()->id;
+    $userx0 =Auth::user()->name;
+    $userx1 =Auth::user()->lastname;
+    $userx2 =$userx0.' '.$userx1;
+?>
 <div class="form-group">
     <table class="table table-bordered" id="MyTable">
         <tr>
@@ -15,7 +13,6 @@
                  'id' => 'faultdate', 'readonly',
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
             </td>
-            
         </tr>
         <tr>
             <td>
@@ -40,7 +37,6 @@
                  'id' => 'enddate', 'readonly',
                  'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
             </td>
-            
         </tr>
         <tr>
             <td>
@@ -70,7 +66,6 @@
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
             </td>
         </tr>
-
         <tr>
             <td>
                 {!! Form::label(null, 'Archivos Adjuntos', ['for' => 'files'] ) !!}
@@ -87,7 +82,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ asset('images/'.$faultrecords->file1) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                <a href="{{ asset('images/'.$faultrecords->file1) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -100,7 +95,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ asset('images/'.$faultrecords->file2) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                <a href="{{ asset('images/'.$faultrecords->file2) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -113,7 +108,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ asset('images/'.$faultrecords->file3) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                <a href="{{ asset('images/'.$faultrecords->file3) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -126,7 +121,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ asset('images/'.$faultrecords->file4) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                <a href="{{ asset('images/'.$faultrecords->file4) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
                 </a>                              
             </td>
