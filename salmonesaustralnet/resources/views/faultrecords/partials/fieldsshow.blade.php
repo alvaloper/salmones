@@ -66,61 +66,44 @@
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
             </td>
         </tr>
+    </table>
+    <table class="table table-bordered" id="MyTable">
         <tr>
-            <td>
-                {!! Form::label(null, 'Archivos Adjuntos', ['for' => 'files'] ) !!}
-                <br>
-                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <th colspan="4">
+                Archivos Adjuntos
+            </th>
+        </tr>
+        <tr>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150">
+            </td>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150">
+            </td>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150">
+            </td>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150">
             </td>
         </tr>
         <tr>
-            <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
+            <td class="text-center">
                 <a href="{{ asset('images/'.$faultrecords->file1) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>                   
+            </td>
+            <td class="text-center">
                 <a href="{{ asset('images/'.$faultrecords->file2) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>                      
+            </td>
+            <td class="text-center">
                 <a href="{{ asset('images/'.$faultrecords->file3) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                </a>                     
+            </td>
+            <td class="text-center">
                 <a href="{{ asset('images/'.$faultrecords->file4) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
                 </a>                              

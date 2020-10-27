@@ -7,10 +7,9 @@
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')
-        <h3 class="text-center"><b>Ver Falla Presentada en el Área de Control de Monitoreo</b></h3>
+        <h3 class="text-center"><b>Visualizar Detalles de la Falla Presentada en el Área de Control de Monitoreo</b></h3>
         {!! Form::model($faultrecords, [ 'route' => ['faultrecords.update', $faultrecords], 'method' => 'PUT', 'files' => true, 'enctype'=>'multipart/form-data']) !!}
         @include('faultrecords.partials.fieldsshow')
-
         {!! Form::close() !!}
     @else
         <div class="panel-body">
