@@ -5,7 +5,7 @@
     $userx2 =$userx0.' '.$userx1;
 ?>
 <div class="form-group">
-    <table class="table table-bordered" id="MyTable">
+    <table class="table table-bordered" id="MyTableHeader">
         <tr>
             <td>
                 {!! Form::label('faultdate', 'Inicio de la Falla', ['for' => 'faultdate'] ) !!}
@@ -13,37 +13,21 @@
                  'id' => 'faultdate', 'readonly',
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
             </td>
-        </tr>
-        <tr>
             <td>
-                {!! Form::label('faulthour', 'Hora', ['for' => 'faulthour'] ) !!}
+                {!! Form::label('faulthour', 'Hora de Inicio de la Falla', ['for' => 'faulthour'] ) !!}
                 {!! Form::time('faulthour', null , ['class' => 'form-control',
                  'id' => 'faulthour', 'readonly',
                  'placeholder' => 'Ingrese la Hora de Inicio' ]  ) !!}
             </td>
         </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableContent">
         <tr>
             <td>
                 {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
                 {!! Form::text('fault', null , ['class' => 'form-control',
                  'id' => 'fault', 'readonly',
                  'placeholder' => 'Ingrese la Falla' ]  ) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
-                {!! Form::date('enddate', null , ['class' => 'form-control',
-                 'id' => 'enddate', 'readonly',
-                 'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
-                {!! Form::time('endhour', null , ['class' => 'form-control',
-                 'id' => 'endhour', 'readonly',
-                 'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
             </td>
         </tr>
         <tr>
@@ -67,7 +51,23 @@
             </td>
         </tr>
     </table>
-    <table class="table table-bordered" id="MyTable">
+    <table class="table table-bordered" id="MyTableContent1">
+        <tr>
+            <td>
+                {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
+                {!! Form::date('enddate', null , ['class' => 'form-control',
+                 'id' => 'enddate', 'readonly',
+                 'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
+            </td>
+            <td>
+                {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
+                {!! Form::time('endhour', null , ['class' => 'form-control',
+                 'id' => 'endhour', 'readonly',
+                 'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
+            </td>
+        </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableFooter">
         <tr>
             <th colspan="4">
                 Archivos Adjuntos
