@@ -56,6 +56,7 @@
                             <th class="text-center">REPARACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
+                            <th class="text-center">VISUALIZAR DETALLES</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,6 +99,11 @@
                             <td>
                                 {{$faultr->solution?$faultr->solution:''}}
                             </td>
+                            <td class="text-center">
+                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ver">
+                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-camera"></i>
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -111,6 +117,7 @@
                             <th class="text-center">REPARACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
+                            <th class="text-center">VISUALIZAR DETALLES</th>
                         </tr> 
                     </tfoot>
                 </table>
