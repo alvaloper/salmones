@@ -113,7 +113,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="550" height="450">
+                                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -136,7 +136,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="550" height="450">
+                                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -159,7 +159,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="550" height="450">
+                                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -182,7 +182,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="550" height="450">
+                                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
