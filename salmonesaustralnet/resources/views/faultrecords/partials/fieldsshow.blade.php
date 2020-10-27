@@ -73,19 +73,62 @@
 
         <tr>
             <td>
-                {!! Form::label('file1', 'Archivos Adjuntos', ['for' => 'file1'] ) !!}
+                {!! Form::label(null, 'Archivos Adjuntos', ['for' => 'files'] ) !!}
                 <br>
-                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="150" height="150">
-
-                {!! Form::label('file1', 'Imagen 2', ['for' => 'file2'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150">
-
-                {!! Form::label('file3', 'Imagen 3', ['for' => 'file3'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150">
-
-                {!! Form::label('file4', 'Imagen 4', ['for' => 'file4'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150">
-
+                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ asset('images/'.$faultrecords->file1) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ asset('images/'.$faultrecords->file2) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ asset('images/'.$faultrecords->file3) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ asset('images/'.$faultrecords->file4) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen">
+                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
+                </a>                              
             </td>
         </tr>
     </table>

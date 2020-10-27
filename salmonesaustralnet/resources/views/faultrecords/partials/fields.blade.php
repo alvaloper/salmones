@@ -72,7 +72,7 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('file1', 'Adjuntos', ['for' => 'file1'] ) !!}
+                {!! Form::label('file1', 'Archivos Adjuntos', ['for' => 'file1'] ) !!}
                 {!! Form::file('file1') !!}
             </td>
         </tr>

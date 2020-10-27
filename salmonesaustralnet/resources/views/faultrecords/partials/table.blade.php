@@ -53,7 +53,7 @@
                             <td>{{ $faultr->endhour }}</td>
                             <td>{{ $faultr->solution }}</td>
                             <td class="text-center">
-                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-success btn-xs" data-toggle="tooltip" title="Ver">
+                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ver">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-camera"></i>
                                 </a>
                             </td>
