@@ -14,7 +14,7 @@
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
             </td>
             <td>
-                {!! Form::label('faulthour', 'Hora de Inicio de la Falla', ['for' => 'faulthour'] ) !!}
+                {!! Form::label('faulthour', 'Hora', ['for' => 'faulthour'] ) !!}
                 {!! Form::time('faulthour', null , ['class' => 'form-control',
                  'id' => 'faulthour', 'readonly',
                  'placeholder' => 'Ingrese la Hora de Inicio' ]  ) !!}
@@ -89,25 +89,109 @@
         </tr>
         <tr>
             <td class="text-center">
-                <a href="{{ asset('images/'.$faultrecords->file1) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
-                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>                   
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal1" title="Ampliar Imagen"><span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i></button>
             </td>
             <td class="text-center">
-                <a href="{{ asset('images/'.$faultrecords->file2) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
-                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>                      
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal2" title="Ampliar Imagen"><span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i></button>
             </td>
             <td class="text-center">
-                <a href="{{ asset('images/'.$faultrecords->file3) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
-                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>                     
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal3" title="Ampliar Imagen"><span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i></button>
             </td>
             <td class="text-center">
-                <a href="{{ asset('images/'.$faultrecords->file4) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ampliar Imagen" target="_blank">
-                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i>
-                </a>                              
+                  <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal4" title="Ampliar Imagen"><span class="glyphicon" aria-hidden="true"></span><i class="fa fa-search-plus" style="font-size:18px"></i></button>
             </td>
         </tr>
     </table>
+    <div class="container">
+        <!-- Modal 1 -->
+            <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="550" height="450">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>    
+    <div class="container">
+        <!-- Modal 2 -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="550" height="450">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>    
+    <div class="container">
+        <!-- Modal 3 -->
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="550" height="450">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container">
+        <!-- Modal 4 -->
+            <div class="modal fade" id="myModal4" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="550" height="450">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 </div>

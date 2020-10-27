@@ -69,14 +69,14 @@ class FaultrecordsController extends Controller
     public function store(FaultrecordsNewRequest $request)
     {
 
-        //IMAGEN1
+        //File1
         if ($request->hasfile('file1')){
             $file1 = $request->file('file1');
             $fname1 = time().$file1->getClientOriginalName();
             $file1->move(public_path().'/images',$fname1);
         }
 
-        //IMAGEN2
+        //File2
         if ($request->hasfile('file2')){
             $file2 = $request->file('file2');
             $fname2 = time().$file2->getClientOriginalName();
@@ -84,10 +84,10 @@ class FaultrecordsController extends Controller
         } 
         else
         {
-        $fname2 = 'nonpicture.jpg';
+            $fname2 = 'nonpicture.jpg';
         }
 
-        //IMAGEN3
+        //File3
         if ($request->hasfile('file3')){
             $file3 = $request->file('file3');
             $fname3 = time().$file3->getClientOriginalName();
@@ -95,10 +95,10 @@ class FaultrecordsController extends Controller
         } 
         else
         {
-        $fname3 = 'nonpicture.jpg';
+            $fname3 = 'nonpicture.jpg';
         }
 
-        //IMAGEN4
+        //File4
         if ($request->hasfile('file4')){
             $file4 = $request->file('file4');
             $fname4 = time().$file4->getClientOriginalName();
@@ -106,7 +106,7 @@ class FaultrecordsController extends Controller
         } 
         else
         {
-        $fname4 = 'nonpicture.jpg';
+            $fname4 = 'nonpicture.jpg';
         }
 
 
