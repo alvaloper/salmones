@@ -174,6 +174,46 @@ class FaultrecordsController extends Controller
     public function update(FaultrecordsUpdateRequest $request, $idfault)
     {
 
+        //File1
+        if ($request->hasfile('file1')){
+            $file1 = $request->file('file1');
+            $fname1 = time().$file1->getClientOriginalName();
+            $file1->move(public_path().'/images',$fname1);
+        }
+
+        //File2
+        if ($request->hasfile('file2')){
+            $file2 = $request->file('file2');
+            $fname2 = time().$file2->getClientOriginalName();
+            $file2->move(public_path().'/images',$fname2);
+        } 
+        else
+        {
+            $fname2 = 'nonpicture.jpg';
+        }
+
+        //File3
+        if ($request->hasfile('file3')){
+            $file3 = $request->file('file3');
+            $fname3 = time().$file3->getClientOriginalName();
+            $file3->move(public_path().'/images',$fname3);
+        } 
+        else
+        {
+            $fname3 = 'nonpicture.jpg';
+        }
+
+        //File4
+        if ($request->hasfile('file4')){
+            $file4 = $request->file('file4');
+            $fname4 = time().$file4->getClientOriginalName();
+            $file4->move(public_path().'/images',$fname4);
+        } 
+        else
+        {
+            $fname4 = 'nonpicture.jpg';
+        }
+
         $faultrecords = Faultrecords::find($idfault);
         $faultrecords->faultdate = $request->input('faultdate');
         $faultrecords->faulthour = $request->input('faulthour');
@@ -182,6 +222,12 @@ class FaultrecordsController extends Controller
         $faultrecords->endhour = $request->input('endhour');
         $faultrecords->solution = $request->input('solution');
         $faultrecords->user_id = $request->input('user_id');
+
+        $faultrecords->file1 = $fname1;
+        $faultrecords->file2 = $fname2;
+        $faultrecords->file3 = $fname3;
+        $faultrecords->file4 = $fname4;
+
         $faultrecords->save();
         flash('El registro ha sido modificado.')->success()->important();
         return redirect()->route('faultrecords.index');
