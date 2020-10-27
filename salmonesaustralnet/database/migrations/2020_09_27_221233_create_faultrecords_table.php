@@ -21,12 +21,12 @@ class CreateFaultrecordsTable extends Migration
             $table->date('enddate');
             $table->time('endhour');
             $table->string('solution');
-            $table->integer('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('file1');
             $table->string('file2');
             $table->string('file3');
             $table->string('file4');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

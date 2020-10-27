@@ -22,8 +22,8 @@
                             <th class="text-center">REPARACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
+                            <th class="text-center">VISUALIZAR DETALLES</th>
                             <th class="text-center">ACCIONES</th>
-                        </tr>
                     </thead>
                     <tbody>
 
@@ -52,17 +52,15 @@
                             <td>{{ $faultr->enddate }}</td>
                             <td>{{ $faultr->endhour }}</td>
                             <td>{{ $faultr->solution }}</td>
+                            <td class="text-center">
+                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-success btn-xs" data-toggle="tooltip" title="Ver">
+                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-camera"></i>
+                                </a>
+                            </td>
                             @if(Auth::check() && Auth::user()->isRole('root'))
 
                                 {!! Form::open(['route' => ['faultrecords.destroy', $faultr->idfault], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
-                                
-                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Ver">
-                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
-                                </a>
-
-
                                 <a href="{{ url('admin/faultrecords/'.$faultr->idfault.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
@@ -97,6 +95,7 @@
                             <th class="text-center">REPARACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
+                            <th class="text-center">VISUALIZAR DETALLES</th>
                             <th class="text-center">ACCIONES</th>
                         </tr> 
                     </tfoot>

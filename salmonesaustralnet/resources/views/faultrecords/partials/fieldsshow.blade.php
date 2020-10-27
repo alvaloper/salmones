@@ -68,24 +68,23 @@
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
                  'id' => 'userx2', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
-
-                
             </td>
         </tr>
 
         <tr>
             <td>
-                {!! Form::label('file1', 'Imagen 1', ['for' => 'file1'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="100" height="100">
+                {!! Form::label('file1', 'Archivos Adjuntos', ['for' => 'file1'] ) !!}
+                <br>
+                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="150" height="150">
 
                 {!! Form::label('file1', 'Imagen 2', ['for' => 'file2'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="100" height="100">
+                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150">
 
                 {!! Form::label('file3', 'Imagen 3', ['for' => 'file3'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="100" height="100">
+                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150">
 
                 {!! Form::label('file4', 'Imagen 4', ['for' => 'file4'] ) !!}
-                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="100" height="100">
+                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150">
 
             </td>
         </tr>

@@ -67,8 +67,29 @@
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
                  'id' => 'userx2', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
+            </td>
+        </tr>
+        <tr>
+        <td>
+                {!! Form::label('file1', 'Adjuntos', ['for' => 'file1'] ) !!}
+                {!! Form::file('file1') !!}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {!! Form::file('file2') !!}
+            </td>
+        </tr>
 
-                
+        <tr>
+            <td>
+                {!! Form::file('file3') !!}
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                {!! Form::file('file4') !!}
             </td>
         </tr>
     </table>
