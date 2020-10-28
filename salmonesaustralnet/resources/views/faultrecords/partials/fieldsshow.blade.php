@@ -31,7 +31,7 @@
             </td>
         </tr>
     </table>
-    <table class="table table-bordered" id="MyTableContentEnd">
+    <table class="table table-bordered" id="MyTableContentInit">
         <tr>
             <td>
                 {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}

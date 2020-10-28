@@ -6,7 +6,7 @@
                     ?>
 
 <div class="form-group">
-    <table class="table table-bordered" id="MyTable">
+    <table class="table table-bordered" id="MyTableHeader">
         <tr>
             <td>
                 {!! Form::label('faultdate', 'Inicio de la Falla', ['for' => 'faultdate'] ) !!}
@@ -14,9 +14,6 @@
                  'id' => 'faultdate',
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
             </td>
-            
-        </tr>
-        <tr>
             <td>
                 {!! Form::label('faulthour', 'Hora', ['for' => 'faulthour'] ) !!}
                 {!! Form::time('faulthour', null , ['class' => 'form-control',
@@ -24,6 +21,8 @@
                  'placeholder' => 'Ingrese la Hora de Inicio' ]  ) !!}
             </td>
         </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableContentHeader">
         <tr>
             <td>
                 {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
@@ -32,6 +31,8 @@
                  'placeholder' => 'Ingrese la Falla' ]  ) !!}
             </td>
         </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableContentInit">
         <tr>
             <td>
                 {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
@@ -39,9 +40,6 @@
                  'id' => 'enddate',
                  'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
             </td>
-            
-        </tr>
-        <tr>
             <td>
                 {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
                 {!! Form::time('endhour', null , ['class' => 'form-control',
@@ -49,6 +47,8 @@
                  'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
             </td>
         </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableContentEnd">
         <tr>
             <td>
                 {!! Form::label('solution', 'Solución al Problema', ['for' => 'solution'] ) !!}
