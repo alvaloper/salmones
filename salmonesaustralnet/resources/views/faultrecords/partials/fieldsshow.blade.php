@@ -30,6 +30,24 @@
                  'placeholder' => 'Ingrese la Falla' ]  ) !!}
             </td>
         </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableContent1">
+        <tr>
+            <td>
+                {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
+                {!! Form::date('enddate', null , ['class' => 'form-control',
+                 'id' => 'enddate', 'readonly',
+                 'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
+            </td>
+            <td>
+                {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
+                {!! Form::time('endhour', null , ['class' => 'form-control',
+                 'id' => 'endhour', 'readonly',
+                 'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
+            </td>
+        </tr>
+    </table>
+    <table class="table table-bordered" id="MyTableContent2">
         <tr>
             <td>
                 {!! Form::label('solution', 'Solución al Problema', ['for' => 'solution'] ) !!}
@@ -48,22 +66,6 @@
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
                  'id' => 'userx2', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
-            </td>
-        </tr>
-    </table>
-    <table class="table table-bordered" id="MyTableContent1">
-        <tr>
-            <td>
-                {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
-                {!! Form::date('enddate', null , ['class' => 'form-control',
-                 'id' => 'enddate', 'readonly',
-                 'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
-            </td>
-            <td>
-                {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
-                {!! Form::time('endhour', null , ['class' => 'form-control',
-                 'id' => 'endhour', 'readonly',
-                 'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
             </td>
         </tr>
     </table>
