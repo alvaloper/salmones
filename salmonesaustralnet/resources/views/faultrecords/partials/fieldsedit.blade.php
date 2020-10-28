@@ -69,28 +69,137 @@
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
             </td>
         </tr>
+    </table>
+
+    <table class="table table-bordered" id="MyTableFooter">
         <tr>
-        <td>
-                {!! Form::label('file1', 'Archivos Adjuntos', ['for' => 'file1'] ) !!}
-                {!! Form::file('file1') !!}
+            <th colspan="2">
+                Archivos Adjuntos
+            </th>
+        </tr>
+        <tr>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150">
+            </td>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150">
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="text-center">
+                {!! Form::file('file1') !!}
+            </td>
+            <td class="text-center">
                 {!! Form::file('file2') !!}
             </td>
         </tr>
-
         <tr>
-            <td>
-                {!! Form::file('file3') !!}
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150">
+            </td>
+            <td class="text-center">
+                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150">
             </td>
         </tr>
-
         <tr>
-            <td>
+            <td class="text-center">
+                {!! Form::file('file3') !!}
+            </td>
+            <td class="text-center">
                 {!! Form::file('file4') !!}
             </td>
         </tr>
     </table>
+    <div class="container">
+        <!-- Modal 1 -->
+            <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="550" height="550">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>    
+    <div class="container">
+        <!-- Modal 2 -->
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="550" height="550">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>    
+    <div class="container">
+        <!-- Modal 3 -->
+            <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="550" height="550">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container">
+        <!-- Modal 4 -->
+            <div class="modal fade" id="myModal4" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Detalles Fotográficos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="text-align:center">
+                                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="550" height="550">
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cerrar
+                         </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </
 </div>

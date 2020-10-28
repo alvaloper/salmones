@@ -75,8 +75,6 @@ class FaultrecordsController extends Controller
 
             $x1 = $request->input('faultdate');
             $fname1 = time().$x1.$file1->getClientOriginalName();
-
-            //$fname1 = time().$file1->getClientOriginalName();
             
             $file1->move(public_path().'/images',$fname1);
         }
@@ -167,7 +165,6 @@ class FaultrecordsController extends Controller
 
         $faultrecords = Faultrecords::find($idfault);
 
-
         return view('faultrecords.edit', array('faultrecords' => $faultrecords ));
 
     }
@@ -191,7 +188,10 @@ class FaultrecordsController extends Controller
             $fname1 = time().$file1->getClientOriginalName();
             $file1->move(public_path().'/images',$fname1);
         }
-
+        else
+        {
+            $fname1 = 'nonpicture.jpg';
+        }
 
         //File2
         if ($request->hasfile('file2')){
