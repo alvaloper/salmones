@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('faultrecords.app')
 
 @section('htmlheader_title')
     Fallas presentadas en el Área de Control de Monitoreo - Ver
