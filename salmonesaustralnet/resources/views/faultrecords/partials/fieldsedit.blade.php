@@ -70,7 +70,14 @@
             </td>
         </tr>
     </table>
-
+    {!! Form::hidden('file1', null , ['class' => 'form-control',
+                 'id' => 'file1', 'readonly' ]  ) !!}
+    {!! Form::hidden('file2', null , ['class' => 'form-control',
+                 'id' => 'file2', 'readonly' ]  ) !!}
+    {!! Form::hidden('file3', null , ['class' => 'form-control',
+                 'id' => 'file3', 'readonly' ]  ) !!}
+    {!! Form::hidden('file4', null , ['class' => 'form-control',
+                 'id' => 'file4', 'readonly' ]  ) !!}
     <table class="table table-bordered" id="MyTableFooter">
         <tr>
             <th colspan="2">
@@ -87,10 +94,10 @@
         </tr>
         <tr>
             <td class="text-center">
-                {!! Form::file('file1') !!}
+                {!! Form::file('fileNew1') !!}
             </td>
             <td class="text-center">
-                {!! Form::file('file2') !!}
+                {!! Form::file('fileNew2') !!}
             </td>
         </tr>
         <tr>
@@ -103,10 +110,10 @@
         </tr>
         <tr>
             <td class="text-center">
-                {!! Form::file('file3') !!}
+                {!! Form::file('fileNew3') !!}
             </td>
             <td class="text-center">
-                {!! Form::file('file4') !!}
+                {!! Form::file('fileNew4') !!}
             </td>
         </tr>
     </table>

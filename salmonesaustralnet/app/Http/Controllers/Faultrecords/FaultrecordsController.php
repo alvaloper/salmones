@@ -53,8 +53,6 @@ class FaultrecordsController extends Controller
 
         $roles = Role::all()->pluck('slug','id');
 
-
-        //SIRVE  return view('plantrecords.create', ['plantx', $plantx])->with('roles', $roles);
         return view('faultrecords.create')->with('roles', $roles);
 
     }
@@ -97,6 +95,7 @@ class FaultrecordsController extends Controller
 
         //File3
         if ($request->hasfile('file3')){
+            $file3 = $request->file('file3');
             $x3 = $request->input('faultdate');
             $fname3 = time().$x3.$file3->getClientOriginalName();
             $file3->move(public_path().'/images',$fname3);
@@ -169,8 +168,6 @@ class FaultrecordsController extends Controller
 
     }
 
-
-
     /**
      * Update the specified resource in storage.
      *
@@ -183,47 +180,47 @@ class FaultrecordsController extends Controller
     {
 
         //File1
-        if ($request->hasfile('file1')){
-            $file1 = $request->file('file1');
+        if ($request->hasfile('fileNew1')){
+            $file1 = $request->file('fileNew1');
             $fname1 = time().$file1->getClientOriginalName();
             $file1->move(public_path().'/images',$fname1);
         }
         else
         {
-            $fname1 = 'nonpicture.jpg';
+            $fname1 = $request->input('file1');
         }
 
         //File2
-        if ($request->hasfile('file2')){
-            $file2 = $request->file('file2');
+        if ($request->hasfile('fileNew2')){
+            $file2 = $request->file('fileNew2');
             $fname2 = time().$file2->getClientOriginalName();
             $file2->move(public_path().'/images',$fname2);
         } 
         else
         {
-            $fname2 = 'nonpicture.jpg';
+            $fname2 = $request->input('file2');
         }
 
         //File3
-        if ($request->hasfile('file3')){
-            $file3 = $request->file('file3');
+        if ($request->hasfile('fileNew3')){
+            $file3 = $request->file('fileNew3');
             $fname3 = time().$file3->getClientOriginalName();
             $file3->move(public_path().'/images',$fname3);
         } 
         else
         {
-            $fname3 = 'nonpicture.jpg';
+            $fname3 = $request->input('file3');
         }
 
         //File4
-        if ($request->hasfile('file4')){
-            $file4 = $request->file('file4');
+        if ($request->hasfile('fileNew4')){
+            $file4 = $request->file('fileNew4');
             $fname4 = time().$file4->getClientOriginalName();
             $file4->move(public_path().'/images',$fname4);
         } 
         else
         {
-            $fname4 = 'nonpicture.jpg';
+            $fname4 = $request->input('file4');
         }
 
         $faultrecords = Faultrecords::find($idfault);
