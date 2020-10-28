@@ -3,7 +3,7 @@
     <!-- Logo -->
     <a href="{{ url('/home') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>S</b>Au</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><img src="{{asset('/img/logowhite_transparent.png')}}"  height="50" width="180" alt="SalmonesAustral.Net"/></span>
     </a>
