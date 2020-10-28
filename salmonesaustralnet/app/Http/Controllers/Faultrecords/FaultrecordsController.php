@@ -72,14 +72,24 @@ class FaultrecordsController extends Controller
         //File1
         if ($request->hasfile('file1')){
             $file1 = $request->file('file1');
-            $fname1 = time().$file1->getClientOriginalName();
+
+            $x1 = $request->input('faultdate');
+            $fname1 = time().$x1.$file1->getClientOriginalName();
+
+            //$fname1 = time().$file1->getClientOriginalName();
+            
             $file1->move(public_path().'/images',$fname1);
+        }
+        else
+        {
+            $fname1 = 'nonpicture.jpg';
         }
 
         //File2
         if ($request->hasfile('file2')){
             $file2 = $request->file('file2');
-            $fname2 = time().$file2->getClientOriginalName();
+            $x2 = $request->input('faultdate');
+            $fname2 = time().$x2.$file2->getClientOriginalName();
             $file2->move(public_path().'/images',$fname2);
         } 
         else
@@ -89,8 +99,8 @@ class FaultrecordsController extends Controller
 
         //File3
         if ($request->hasfile('file3')){
-            $file3 = $request->file('file3');
-            $fname3 = time().$file3->getClientOriginalName();
+            $x3 = $request->input('faultdate');
+            $fname3 = time().$x3.$file3->getClientOriginalName();
             $file3->move(public_path().'/images',$fname3);
         } 
         else
@@ -101,7 +111,8 @@ class FaultrecordsController extends Controller
         //File4
         if ($request->hasfile('file4')){
             $file4 = $request->file('file4');
-            $fname4 = time().$file4->getClientOriginalName();
+            $x4 = $request->input('faultdate');
+            $fname4 = time().$x4.$file4->getClientOriginalName();
             $file4->move(public_path().'/images',$fname4);
         } 
         else
@@ -180,6 +191,7 @@ class FaultrecordsController extends Controller
             $fname1 = time().$file1->getClientOriginalName();
             $file1->move(public_path().'/images',$fname1);
         }
+
 
         //File2
         if ($request->hasfile('file2')){
