@@ -21,7 +21,7 @@
             </td>
         </tr>
     </table>
-    <table class="table table-bordered" id="MyTableContent">
+    <table class="table table-bordered" id="MyTableContentHeader">
         <tr>
             <td>
                 {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
@@ -31,7 +31,7 @@
             </td>
         </tr>
     </table>
-    <table class="table table-bordered" id="MyTableContent1">
+    <table class="table table-bordered" id="MyTableContentEnd">
         <tr>
             <td>
                 {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
@@ -47,7 +47,7 @@
             </td>
         </tr>
     </table>
-    <table class="table table-bordered" id="MyTableContent2">
+    <table class="table table-bordered" id="MyTableContentEnd">
         <tr>
             <td>
                 {!! Form::label('solution', 'Solución al Problema', ['for' => 'solution'] ) !!}
