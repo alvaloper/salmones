@@ -187,7 +187,8 @@ class FaultrecordsController extends Controller
             $file1->move(public_path().'/images',$fname1);
 
             $y1 = $request->input('file1');
-            unlink(public_path().'/images/'.$y1);
+            if ($y1!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y1);
         }
         else
         {
@@ -202,7 +203,8 @@ class FaultrecordsController extends Controller
             $file2->move(public_path().'/images',$fname2);
 
             $y2 = $request->input('file2');
-            unlink(public_path().'/images/'.$y2);
+            if ($y2!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y2);
         } 
         else
         {
@@ -217,7 +219,8 @@ class FaultrecordsController extends Controller
             $file3->move(public_path().'/images',$fname3);
 
             $y3 = $request->input('file3');
-            unlink(public_path().'/images/'.$y3);
+            if ($y3!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y3);
         } 
         else
         {
@@ -232,7 +235,8 @@ class FaultrecordsController extends Controller
             $file4->move(public_path().'/images',$fname4);
 
             $y4 = $request->input('file4');
-            unlink(public_path().'/images/'.$y4);
+            if ($y4!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y4);
         } 
         else
         {
