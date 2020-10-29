@@ -182,8 +182,12 @@ class FaultrecordsController extends Controller
         //File1
         if ($request->hasfile('fileNew1')){
             $file1 = $request->file('fileNew1');
-            $fname1 = time().$file1->getClientOriginalName();
+            $x1 = $request->input('faultdate');
+            $fname1 = time().$x1.$file1->getClientOriginalName();
             $file1->move(public_path().'/images',$fname1);
+
+            $y1 = $request->input('file1');
+            unlink(public_path().'/images/'.$y1);
         }
         else
         {
@@ -193,8 +197,12 @@ class FaultrecordsController extends Controller
         //File2
         if ($request->hasfile('fileNew2')){
             $file2 = $request->file('fileNew2');
-            $fname2 = time().$file2->getClientOriginalName();
+            $x2 = $request->input('faultdate');
+            $fname2 = time().$x2.$file2->getClientOriginalName();
             $file2->move(public_path().'/images',$fname2);
+
+            $y2 = $request->input('file2');
+            unlink(public_path().'/images/'.$y2);
         } 
         else
         {
@@ -204,8 +212,12 @@ class FaultrecordsController extends Controller
         //File3
         if ($request->hasfile('fileNew3')){
             $file3 = $request->file('fileNew3');
-            $fname3 = time().$file3->getClientOriginalName();
+            $x3 = $request->input('faultdate');
+            $fname3 = time().$x3.$file3->getClientOriginalName();
             $file3->move(public_path().'/images',$fname3);
+
+            $y3 = $request->input('file3');
+            unlink(public_path().'/images/'.$y3);
         } 
         else
         {
@@ -215,8 +227,12 @@ class FaultrecordsController extends Controller
         //File4
         if ($request->hasfile('fileNew4')){
             $file4 = $request->file('fileNew4');
-            $fname4 = time().$file4->getClientOriginalName();
+            $x4 = $request->input('faultdate');
+            $fname4 = time().$x4.$file4->getClientOriginalName();
             $file4->move(public_path().'/images',$fname4);
+
+            $y4 = $request->input('file4');
+            unlink(public_path().'/images/'.$y4);
         } 
         else
         {
@@ -254,8 +270,44 @@ class FaultrecordsController extends Controller
     {
 
         $faultrecords = Faultrecords::find($idfault);
+        //$y1 = 'xyz.jpg';
+        $y1 = $faultrecords->file1;
+        $y2 = $faultrecords->file2;
+        $y3 = $faultrecords->file3;
+        $y4 = $faultrecords->file4;
+
+        if (($y1) <> 'nonpicture.jpg')
+        {
+
+        unlink(public_path().'/images/'.$y1);
+
+        }
+
+        if (($y2) <> 'nonpicture.jpg')
+        {
+
+        unlink(public_path().'/images/'.$y2);
+
+        }
+
+        if (($y3) <> 'nonpicture.jpg')
+        {
+
+        unlink(public_path().'/images/'.$y3);
+
+        }
+        
+        if (($y4) <> 'nonpicture.jpg')
+        {
+
+        unlink(public_path().'/images/'.$y4);
+
+        }
+        
+
         flash('El registro ha sido eliminado')->success()->important();
         Faultrecords::destroy($idfault);
+        
         return redirect()->route('faultrecords.index');
 
     }
