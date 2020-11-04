@@ -58,16 +58,6 @@
                             </tr>
                          @endforeach
                     </tbody>
-                    <tfoot>
-                         <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">NOMBRES</th>
-                            <th class="text-center">APELLIDOS</th>
-                            <th class="text-center">PERFIL</th>
-                            <th class="text-center">EMAIL</th>
-                            <th class="text-center">ACCIONES</th>
-                        </tr>
-                    </tfoot>
                 </table>
                 {!! $users->render() !!}
             </div>

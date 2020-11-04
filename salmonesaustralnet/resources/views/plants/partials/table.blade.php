@@ -49,13 +49,6 @@
                         </tr>
                     @endforeach
                     </tbody>
-                    <tfoot>
-                         <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">NOMBRE DE LA PLANTA DE PROCESOS</th>
-                            <th class="text-center">ACCIONES</th>
-                        </tr>
-                    </tfoot>
                 </table>
                 {{ $plants->links() }}
             </div>

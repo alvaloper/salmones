@@ -55,16 +55,6 @@
                         </tr>
                     @endforeach
                     </tbody>
-                    <tfoot>
-                         <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">NOMBRE DEL CENTRO DE CULTIVO</th>
-                            <th class="text-center">NÚMERO DE EMERGENCIA</th>
-                            <th class="text-center">JEFE DEL CENTRO DE CULTIVO</th>
-                            <th class="text-center">ASISTENTE DEL CENTRO DE CULTIVO</th>
-                            <th class="text-center">ACCIONES</th>
-                        </tr>
-                    </tfoot>
                 </table>
                 {{ $centers->links() }}
             </div>
