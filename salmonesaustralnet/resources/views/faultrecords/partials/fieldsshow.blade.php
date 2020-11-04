@@ -77,16 +77,16 @@
         </tr>
         <tr>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150" class="img-thumbnail">
+                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150" class="img-rounded">
             </td>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150" class="img-thumbnail">
+                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150" class="img-rounded">
             </td>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150" class="img-thumbnail">
+                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150" class="img-rounded">
             </td>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150" class="img-thumbnail">
+                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150" class="img-rounded">
             </td>
         </tr>
         <tr>

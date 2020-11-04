@@ -52,7 +52,7 @@
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">N° DE FOLIO</th>
+                            <th class="text-center">N°</th>
                             <th class="text-center">TÍTULO DEL SUCESO</th>
                             <th class="text-center">FECHA</th>
                             <th class="text-center">HORA</th>
@@ -110,18 +110,6 @@
                             </tr>
                         @endforeach
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="text-center">N° DE FOLIO</th>
-                            <th class="text-center">TÍTULO DEL SUCESO</th>
-                            <th class="text-center">FECHA</th>
-                            <th class="text-center">HORA</th>
-                            <th class="text-center">QUIÉN REPORTA</th>
-                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
-                            <th class="text-center">ACCIONES ADOPTADAS</th>
-                            <th class="text-center">PLANTA DE PROCESOS</th>
-                        </tr> 
-                    </tfoot>
                 </table>
             </div>
             <!-- /.box-body -->

@@ -85,18 +85,6 @@
                         </tr>
                     @endforeach
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">TURNO</th>
-                            <th class="text-center">FECHA</th>
-                            <th class="text-center">HORA</th>
-                            <th class="text-center">NOVEDADES ENCONTRADAS</th>
-                            <th class="text-center">CENTRO DE CULTIVO</th>
-                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
-                            <th class="text-center">ACCIONES</th>
-                        </tr> 
-                    </tfoot>
                 </table>
                 {{ $maritimerecords->links() }}
             </div>

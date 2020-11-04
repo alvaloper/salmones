@@ -14,7 +14,7 @@
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">N°</th>
+                            <th class="text-center">N° DE FOLIO</th>
                             <th class="text-center">INICIO DE LA FALLA</th>
                             <th class="text-center">HORA</th>
                             <th class="text-center">FALLA QUE PRESENTA</th>
@@ -85,20 +85,6 @@
                         </tr>
                     @endforeach
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th class="text-center">N°</th>
-                            <th class="text-center">INICIO DE LA FALLA</th>
-                            <th class="text-center">HORA</th>
-                            <th class="text-center">FALLA QUE PRESENTA</th>
-                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
-                            <th class="text-center">REPARACIÓN DE LA FALLA</th>
-                            <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
-                            <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
-                            <th class="text-center">VISUALIZAR DETALLES</th>
-                            <th class="text-center">ACCIONES</th>
-                        </tr> 
-                    </tfoot>
                 </table>
                 {{ $faultrecords->links() }}
             </div>
