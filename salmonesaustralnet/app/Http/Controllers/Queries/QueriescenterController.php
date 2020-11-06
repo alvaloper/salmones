@@ -60,7 +60,8 @@ class QueriescenterController extends Controller
         $centersx = centers::all();
         $userc = User::all();
         $centers = centers::pluck('namecenter','idcenter');
-        flash('La búsqueda ha sido exitosa')->success()->important();
+        $tempcenter = centers::find($request->get('search1'));
+        flash('La búsqueda ha sido exitosa en el centro de cultivo: '.$tempcenter->namecenter.'.')->success()->important();
         return view('queries.centersrecords.index', compact ('centers'), array('maritimerecords'=> $maritimerecords, 'centersx' => $centersx, 'userc'=> $userc));
 
     }

@@ -62,7 +62,8 @@ class QueriesplantController extends Controller
         $plants = plants::all();
         $userc = User::all();
         $plantx = plants::pluck('nameplant','idplant');
-        flash('La búsqueda ha sido exitosa')->success()->important();
+        $tempplant = plants::find($request->get('search1'));
+        flash('La búsqueda ha sido exitosa en la planta de procesos: '.$tempplant->nameplant.'.')->success()->important();
         return view('queries.plantsrecords.index', compact('plantx'), array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
 
     }

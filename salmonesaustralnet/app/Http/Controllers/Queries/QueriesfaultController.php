@@ -56,7 +56,7 @@ class QueriesfaultController extends Controller
         $faultrecords = faultrecords::where('faultdate', 'LIKE', '%'.$request->get('search').'%')
             ->paginate(15);
         $userc = User::all();
-        flash('La búsqueda ha sido exitosa')->success()->important();
+        flash('La búsqueda ha sido exitosa en la fecha seleccionada.')->success()->important();
         return view('queries.faultsrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
 
     }
