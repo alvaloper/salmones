@@ -23,7 +23,19 @@
 											Es una empresa de capitales chilenos resultado de la fusión de las compañías Trusal S.A., Salmones Pacific Star S.A. y Comsur Ltda., consolidando más de 25 años de experiencia en crianza y proceso de salmones. Del mismo modo, cuenta con cerca de treinta centros divididos en cultivos en agua dulce y agua mar. A su vez, posee dos plantas de procesos ubicadas en la región de Los Lagos, específicamente en las cercanías de la ciudad de Puerto Montt y en la Isla grande de Chiloé, lo que brinda mayor versatilidad en los procesos y en las entregas, agilizando de esta manera la distribución de forma oportuna y eficiente.
 										</p>
 										<p>
-											Por ello, a través de esta plataforma web se puede consultar, registrar y <b>gestionar las eventualidades y fallas operacionales</b> encontradas a lo largo de todas nuestras instalaciones a nivel nacional.
+											Por ello, a través de esta plataforma web se puede consultar, registrar y <b>gestionar las eventualidades y fallas operacionales</b> encontradas a lo largo de todas nuestras instalaciones a nivel nacional. A continuación, se muestran los enlaces necesarios para descargar la aplicación:
+										</p>
+										<p>
+											<br>
+											<b><a href="#"><img src="{{ asset('/img/app.png') }}" alt="Descargar Aplicación Web" width="35" height="35"> Descargar Aplicación Web Salmones Austral</a></b>
+											<br>
+											<br>
+											<br>
+											<b><a href="#"><img src="{{ asset('/img/sql.png') }}" alt="Descargar Estructura de la Base de Datos" width="35" height="35"> Descargar Estructura de la Base de Datos</a></b>
+											<br>
+											<br>
+											<br>
+											<b><a href="{{ asset('images/docs/GuíaRápidaDeInstalaciónConfiguraciónDeLaAplicaciónWeb.pdf') }}"><img src="{{ asset('/img/pdf.png') }}" alt="Descargar Guía Rápida" width="35" height="35"> Descargar Guía Rápida de Instalación y Configuración</a></b>
 										</p>
 									</div>
 								@else
