@@ -35,7 +35,7 @@ class MaritimerecordsController extends Controller
     public function index()
     {
 
-        $maritimerecords = maritimerecords::Paginate(10);
+        $maritimerecords = maritimerecords::Paginate(15);
         $centersx = centers::all();
         $userc = User::all();
         return view('maritimerecords.index', array('maritimerecords'=> $maritimerecords, 'centersx' => $centersx, 'userc'=> $userc));
@@ -78,17 +78,6 @@ class MaritimerecordsController extends Controller
         flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('maritimerecords.index');
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**

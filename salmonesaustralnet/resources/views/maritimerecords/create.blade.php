@@ -4,7 +4,6 @@
     Crear Nueva Eventualidad en Centro de Cultivos
 @endsection
 
-
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')

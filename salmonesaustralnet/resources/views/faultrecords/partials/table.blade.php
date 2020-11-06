@@ -26,10 +26,7 @@
                             <th class="text-center">ACCIONES</th>
                     </thead>
                     <tbody>
-
                        @foreach ($faultrecords as $faultr)
-
-
                          @foreach ($userc as $userx)
                             <?php 
                                 if ($userx->id == $faultr['user_id']){
@@ -88,7 +85,6 @@
                 </table>
                 {{ $faultrecords->links() }}
             </div>
-            
             <!-- /.box-body -->
           </div>
           <!-- /.box -->

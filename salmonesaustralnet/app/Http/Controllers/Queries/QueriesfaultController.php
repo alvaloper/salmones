@@ -37,19 +37,26 @@ class QueriesfaultController extends Controller
     public function index()
     {
 
-        $faultrecords = faultrecords::Paginate(10);
+        $faultrecords = faultrecords::Paginate(15);
 
         $userc = User::all();
         return view('queries.faultsrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
 
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
 
     public function search(Request $request){
 
         $faultrecords = faultrecords::where('faultdate', 'LIKE', '%'.$request->get('search').'%')
-            ->paginate(10);
+            ->paginate(15);
         $userc = User::all();
+        flash('La búsqueda ha sido exitosa')->success()->important();
         return view('queries.faultsrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
 
     }

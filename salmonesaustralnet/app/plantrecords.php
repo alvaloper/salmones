@@ -10,13 +10,13 @@ class plantrecords extends Model
 
     public function plants()
     {
-    return $this->belongsToMany('App\plants');
+    	return $this->belongsToMany('App\plants');
     }
 
 
     public function Users()
     {
-    return $this->belongsToMany('App\User');
+    	return $this->belongsToMany('App\User');
     }
 }
 

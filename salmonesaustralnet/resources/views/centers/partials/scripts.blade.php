@@ -17,18 +17,9 @@
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the
       fixed layout. -->
-<!--  El siguiente script permite asignar los permiso al Rol o Perfil
-      y pinta una pantalla virtual al aire, en la cual podrá ver
-      las opciones de permisos a asignar o quitar-->
 <script type="text/javascript">
       $(document).on('ready',function(){
             rol_id = null;
-            /**
-             * Esta Parte de select_all y deselect_all no esta implementada
-             * Se deja para su implementación, es fácil solo con un ciclo for
-             * por ejemplo llama al metodo de abajo y ejecutar, esta puede ser una
-             * opción, tiene muchas más.
-             */
             $('#select-all').click(function(){
                   $('#select-permisos').multiSelect('select_all');
                   return false;
@@ -53,7 +44,7 @@
                               console.log(data);
                         });
                   },
-                  afterDeselect:function(value){//enviamos al servidor el id del permiso seleccionado
+                  afterDeselect:function(value){
                         $.ajax({
                               url : '{{ URL::to("admin3/permisousuario/desasignar") }}',
                               type : 'GET',

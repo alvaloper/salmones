@@ -4,7 +4,6 @@
     Consulta de Eventualidades en Centros de Cultivos
 @endsection
 
-
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root') || Auth::user()->isRole('admin'))
        @include('flash::message')

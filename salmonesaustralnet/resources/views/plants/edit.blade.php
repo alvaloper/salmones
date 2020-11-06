@@ -4,7 +4,6 @@
     Gestión de Plantas de Procesos - Editar
 @endsection
 
-
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('root'))
         @include('errors.mensajes')

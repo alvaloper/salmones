@@ -25,7 +25,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                        @foreach ($maritimerecords as $maritimex)
                         @foreach ($centersx as $center)
                             <?php 
@@ -34,8 +33,7 @@
                                 }
                             ?>
                         @endforeach
-
-                         @foreach ($userc as $userx)
+                        @foreach ($userc as $userx)
                             <?php 
                                 if ($userx->id == $maritimex['user_id']){
                                     $maritimex['name'] = $userx->name;
@@ -60,7 +58,6 @@
 
                                 {!! Form::open(['route' => ['maritimerecords.destroy', $maritimex->idmarinerecord], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
                                 <a href="{{ url('admin/maritimerecords/'.$maritimex->idmarinerecord.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
@@ -91,4 +88,3 @@
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-          

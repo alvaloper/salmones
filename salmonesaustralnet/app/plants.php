@@ -10,6 +10,6 @@ class plants extends Model
 
     public function plantrecords()
     {
-    return $this->belongsToMany('App\plantrecords');
+    	return $this->belongsToMany('App\plantrecords');
     }
 }

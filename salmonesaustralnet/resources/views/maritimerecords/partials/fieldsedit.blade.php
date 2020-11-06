@@ -1,19 +1,17 @@
-                    <?php 
-                        $userx =Auth::user()->id;
-                        $userx0 =Auth::user()->name;
-                        $userx1 =Auth::user()->lastname;
-                        $userx2 =$userx0.' '.$userx1;
-                    ?>
-
+<?php 
+    $userx =Auth::user()->id;
+    $userx0 =Auth::user()->name;
+    $userx1 =Auth::user()->lastname;
+    $userx2 =$userx0.' '.$userx1;
+?>
 <div class="form-group">
     <table class="table table-bordered" id="MyTable">
-<tr>
+        <tr>
             <td>
                 {!! Form::label('turn', 'Turno', ['for' => 'turn'] ) !!}
                 {!! Form::select('turn', ['Diurno' => 'Diurno', 'Nocturno' => 'Nocturno']) !!}
             </td>
         </tr>
-
         <tr>
             <td>
                 {!! Form::label('datemarine', 'Fecha', ['for' => 'datemarine'] ) !!}
@@ -21,7 +19,6 @@
                  'id' => 'datemarine',
                  'placeholder' => 'Ingrese la fecha' ]  ) !!}
             </td>
-            
         </tr>
         <tr>
             <td>
@@ -39,14 +36,12 @@
                  'placeholder' => 'Ingrese el evento' ]  ) !!}
             </td>
         </tr>
-
         <tr>
             <td>
                 {!! Form::label('center_id', 'Nombre del centro de cultivo', ['for' => 'center_id']) !!}
                 {!! Form::select('center_id', $centersx) !!}
             </td>
         </tr>
-
         <tr>
             <td>
                 {!! Form::label('user_id', 'Quien Entrega la Información', ['for' => 'user_id'] ) !!}
@@ -57,8 +52,6 @@
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
                  'id' => 'userx2', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
-
-                
             </td>
         </tr>
     </table>

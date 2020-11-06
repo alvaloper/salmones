@@ -4,7 +4,6 @@
     Crear Nueva Eventualidad de Planta
 @endsection
 
-
 @section('main-content')
     @if(Auth::check() && Auth::user()->isRole('admin|root'))
         @include('errors.mensajes')

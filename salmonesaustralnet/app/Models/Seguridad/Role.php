@@ -6,7 +6,6 @@ use Bican\Roles\Models;
 
 class Role extends Models\Role
 {
-    //Extiende de la clase Role de Bican y se trae todos los campos de la tabla
     protected $table = 'roles';
     protected $fillable = ['id','slug','description','level'];
 

@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 {{--<section class="content-header">
     <h1>
-        @yield('contentheader_title', 'salmonesaustral.net <a href="https://salmonesaustral.net" target="_blank">salmonesaustral.net</a> ')
+        @yield('contentheader_title', 'Salmones Austral <a href="https://salmonesaustral.cl" target="_blank">Salmones Austral</a> ')
         <small>@yield('contentheader_description')</small>
     </h1>
     <ol class="breadcrumb">

@@ -39,7 +39,7 @@ class QueriesplantController extends Controller
     public function index()
     {
 
-        $plantrecords = plantrecords::Paginate(10);
+        $plantrecords = plantrecords::Paginate(15);
         $plants = plants::all();
         $userc = User::all();
         $plantx = plants::pluck('nameplant','idplant');
@@ -50,7 +50,7 @@ class QueriesplantController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
 
@@ -58,10 +58,11 @@ class QueriesplantController extends Controller
 
         $plantrecords = plantrecords::where('dateplant', 'LIKE', '%'.$request->get('search').'%')
             ->Where('plant_id', 'LIKE', '%'.$request->get('search1').'%')
-            ->paginate(10);
+            ->paginate(15);
         $plants = plants::all();
         $userc = User::all();
         $plantx = plants::pluck('nameplant','idplant');
+        flash('La búsqueda ha sido exitosa')->success()->important();
         return view('queries.plantsrecords.index', compact('plantx'), array('plantrecords'=> $plantrecords, 'plants' => $plants, 'userc'=> $userc));
 
     }

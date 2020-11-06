@@ -10,6 +10,6 @@ class centers extends Model
 
     public function maritimerecords()
     {
-    return $this->belongsToMany('App\maritimerecords');
+    	return $this->belongsToMany('App\maritimerecords');
     }
 }

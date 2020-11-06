@@ -1,10 +1,9 @@
-                    <?php 
-                        $userx =Auth::user()->id;
-                        $userx0 =Auth::user()->name;
-                        $userx1 =Auth::user()->lastname;
-                        $userx2 =$userx0.' '.$userx1;
-                    ?>
-
+<?php 
+    $userx =Auth::user()->id;
+    $userx0 =Auth::user()->name;
+    $userx1 =Auth::user()->lastname;
+    $userx2 =$userx0.' '.$userx1;
+?>
 <div class="form-group">
     <table class="table table-bordered" id="MyTable">
         <tr>
@@ -22,7 +21,6 @@
                  'id' => 'dateplant',
                  'placeholder' => 'Ingrese la fecha' ]  ) !!}
             </td>
-            
         </tr>
         <tr>
             <td>

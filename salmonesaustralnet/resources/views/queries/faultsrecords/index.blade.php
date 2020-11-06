@@ -4,7 +4,6 @@
     Fallas presentadas en el area de Control de Monitoreo
 @endsection
 
-
 @section('main-content')
     @if(Auth::check() && (Auth::user()->isRole('root') || Auth::user()->isRole('admin')))
        @include('flash::message')

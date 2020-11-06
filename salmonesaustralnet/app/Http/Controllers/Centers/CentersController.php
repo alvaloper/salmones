@@ -34,7 +34,7 @@ class CentersController extends Controller
     public function index()
     {
 
-        $centers = centers::Paginate(5);
+        $centers = centers::Paginate(15);
         return view('centers.index', array('centers'=> $centers));
 
     }
@@ -72,17 +72,6 @@ class CentersController extends Controller
         flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('centers.index');
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**

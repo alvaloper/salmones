@@ -73,17 +73,6 @@ class UsersController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -116,17 +105,9 @@ class UsersController extends Controller
         $user->password  =  Hash::make($request->input('password'));
         $user->remember_token = str_random(100);
         $user->save();
-        /**
-         * No es necesario eliminar la relacion con el
-         * antiguo rol ya que la libreria permite tener multiples roles, pero
-         * Para este caso en Particular nos interesa eliminar el rol anterior y
-         * luego colocamos el nuevo Rol, para que solo un usuario tenga un solo rol.
-         * Con el metodo detach eliminarmos el rol que tenga.
-         */
+
         $user->roles()->detach();
-        /**
-         * El Metodo attachRole Guarda el Rol_id en la tabla role_user con el user_id
-         */
+
         $user->attachRole(Role::find(Input::get('rol')));
         flash('El registro ha sido modificado.')->success()->important();
         return redirect()->route('users.index');

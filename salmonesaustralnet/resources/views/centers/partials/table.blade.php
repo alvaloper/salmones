@@ -37,11 +37,9 @@
                             <td>{{ $center->assistant}}</td>
                                 {!! Form::open(['route' => ['centers.destroy', $center->idcenter], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
                                 <a href="{{ url('admin/centers/'.$center->idcenter.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>
-                                
                                     {!! Form::button('<i class="fa fa-trash"></i>', [
                                         'type' => 'submit',
                                         'class' => 'btn btn-danger btn-xs',
@@ -58,7 +56,6 @@
                 </table>
                 {{ $centers->links() }}
             </div>
-
             <!-- /.box-body -->
           </div>
           <!-- /.box -->

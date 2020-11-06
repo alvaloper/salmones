@@ -26,7 +26,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                        @foreach ($plantrecords as $plantr)
                         @foreach ($plants as $plant)
                             <?php 

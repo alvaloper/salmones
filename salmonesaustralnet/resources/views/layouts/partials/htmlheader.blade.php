@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title> SalmonesAustral.Net - @yield('htmlheader_title', 'Your title here') </title>
+    <title> Salmones Austral - @yield('htmlheader_title', 'Your title here') </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link rel="shortcut icon" href="{{{ asset('img/icon_transparent.png') }}}">
     <!-- Bootstrap 3.3.4 -->

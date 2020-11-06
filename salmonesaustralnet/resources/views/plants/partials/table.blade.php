@@ -32,7 +32,6 @@
                             <td>{{ $plant->nameplant }}</td> 
                                 {!! Form::open(['route' => ['plants.destroy', $plant->idplant], 'method' => 'DELETE'] ) !!}
                                 <td class="text-center">
-                                    <!-- Boton para modificar al usuario seleccionado-->
                                 <a href="{{ url('admin/plants/'.$plant->idplant.'/edit') }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Modificar">
                                     <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-pencil"></i>
                                 </a>

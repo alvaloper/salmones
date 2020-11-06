@@ -35,7 +35,7 @@ class FaultrecordsController extends Controller
     public function index()
     {
 
-        $faultrecords = faultrecords::Paginate(10);
+        $faultrecords = faultrecords::Paginate(15);
 
         $userc = User::all();
         return view('faultrecords.index', array('faultrecords'=> $faultrecords, 'userc'=> $userc));
@@ -274,7 +274,6 @@ class FaultrecordsController extends Controller
     {
 
         $faultrecords = Faultrecords::find($idfault);
-        //$y1 = 'xyz.jpg';
         $y1 = $faultrecords->file1;
         $y2 = $faultrecords->file2;
         $y3 = $faultrecords->file3;
@@ -283,28 +282,28 @@ class FaultrecordsController extends Controller
         if (($y1) <> 'nonpicture.jpg')
         {
 
-        unlink(public_path().'/images/'.$y1);
+            unlink(public_path().'/images/'.$y1);
 
         }
 
         if (($y2) <> 'nonpicture.jpg')
         {
 
-        unlink(public_path().'/images/'.$y2);
+            unlink(public_path().'/images/'.$y2);
 
         }
 
         if (($y3) <> 'nonpicture.jpg')
         {
 
-        unlink(public_path().'/images/'.$y3);
+            unlink(public_path().'/images/'.$y3);
 
         }
         
         if (($y4) <> 'nonpicture.jpg')
         {
 
-        unlink(public_path().'/images/'.$y4);
+            unlink(public_path().'/images/'.$y4);
 
         }
         

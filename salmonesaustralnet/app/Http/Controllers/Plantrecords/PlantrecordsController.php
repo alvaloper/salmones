@@ -55,7 +55,6 @@ class PlantrecordsController extends Controller
 
         $plantx = plants::pluck('nameplant','idplant');
 
-        //SIRVE  return view('plantrecords.create', ['plantx', $plantx])->with('roles', $roles);
         return view('plantrecords.create', compact('plantx'))->with('roles', $roles);
 
     }
@@ -82,17 +81,6 @@ class PlantrecordsController extends Controller
         flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('plantrecords.index');
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**

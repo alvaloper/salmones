@@ -1,13 +1,12 @@
-                    <?php 
-                        $userx =Auth::user()->id;
-                        $userx0 =Auth::user()->name;
-                        $userx1 =Auth::user()->lastname;
-                        $userx2 =$userx0.' '.$userx1;
-                    ?>
-
+<?php 
+    $userx =Auth::user()->id;
+    $userx0 =Auth::user()->name;
+    $userx1 =Auth::user()->lastname;
+    $userx2 =$userx0.' '.$userx1;
+?>
 <div class="form-group">
     <table class="table table-bordered" id="MyTable">
-<tr>
+        <tr>
             <td>
                 {!! Form::label('titlerecord', 'Título del Suceso', ['for' => 'titlerecord'] ) !!}
                 {!! Form::text('titlerecord', null , ['class' => 'form-control',

@@ -11,6 +11,6 @@ class faultrecords extends Model
 
     public function Users()
     {
-    return $this->belongsToMany('App\User');
+    	return $this->belongsToMany('App\User');
     }
 }

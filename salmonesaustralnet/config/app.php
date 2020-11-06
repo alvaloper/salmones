@@ -138,7 +138,7 @@ return [
     'providers' => [
 
         /*
-         * Laravel Framework Service Providers...
+         * Framework Service Providers...
          */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -165,15 +165,15 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         
         /**
-         * Biblioteca de Acacha AdminLTE
+         * Acacha AdminLTE
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
         /**
-         * Biblioteca Bican/Roles para crear los Permisos
+         * Bican/Roles
          */
         Bican\Roles\RolesServiceProvider::class,
         /**
-         * Biblioteca para Generar FORM entre otros y Validaciones
+         *  Validates
          */
         Collective\Html\HtmlServiceProvider::class,
 
@@ -182,7 +182,6 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
@@ -235,11 +234,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         /*
-         * Biblioteca para generar Plantilla principal
+         * Template
          */
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         /*
-         * Biblioteca FORM para crear Formularios
+         * Forms
          */
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,

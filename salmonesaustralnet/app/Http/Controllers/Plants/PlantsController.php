@@ -34,9 +34,8 @@ class PlantsController extends Controller
     public function index()
     {
 
-        $plants = plants::Paginate(5);
+        $plants = plants::Paginate(15);
         
-        //return view('plants.index');
         return view('plants.index', array('plants'=> $plants));
 
     }
@@ -71,17 +70,6 @@ class PlantsController extends Controller
         flash('El registro ha sido agregado')->success()->important();
         return redirect()->route('plants.index');
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**

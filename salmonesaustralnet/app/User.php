@@ -37,9 +37,6 @@ class User extends Model implements AuthenticatableContract,
         'password', 'remember_token',
     ];
 
-    /**
-     * Los roles a los que pertenece el usuario
-     */
     public function roles()
     {
         return $this->belongsToMany('App\Models\Seguridad\Role');
@@ -47,11 +44,11 @@ class User extends Model implements AuthenticatableContract,
 
     public function plantrecords()
     {
-    return $this->belongsToMany('App\plantrecords');
+        return $this->belongsToMany('App\plantrecords');
     }
 
     public function maritimerecords()
     {
-    return $this->belongsToMany('App\maritimerecords');
+        return $this->belongsToMany('App\maritimerecords');
     }
 }
