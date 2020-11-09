@@ -23,7 +23,16 @@
 											Es una empresa de capitales chilenos resultado de la fusión de las compañías Trusal S.A., Salmones Pacific Star S.A. y Comsur Ltda., consolidando más de 25 años de experiencia en crianza y proceso de salmones. Del mismo modo, cuenta con cerca de treinta centros divididos en cultivos en agua dulce y agua mar. A su vez, posee dos plantas de procesos ubicadas en la región de Los Lagos, específicamente en las cercanías de la ciudad de Puerto Montt y en la Isla grande de Chiloé, lo que brinda mayor versatilidad en los procesos y en las entregas, agilizando de esta manera la distribución de forma oportuna y eficiente.
 										</p>
 										<p>
-											Por ello, a través de esta plataforma web se puede consultar, registrar y <b>gestionar las eventualidades y fallas operacionales</b> encontradas a lo largo de todas nuestras instalaciones a nivel nacional.
+											Por ello, a través de esta plataforma web se puede consultar, registrar y <b>gestionar las eventualidades y fallas operacionales</b> encontradas a lo largo de todas nuestras instalaciones a nivel nacional. A continuación, los enlaces para descargar lo relacionado a la Aplicación Web Salmones Austral:
+											<br>
+											<br>
+											<a href="https://salmonesaustral.net/download/CentralDeSeguridad.zip"><img src="{{ asset('/img/app.png') }}" alt="Aplicación Web Salmones Austral" width="35" height="35"> Descargar la Aplicación Web</a>
+											<br>
+											<br>
+											<a href="https://salmonesaustral.net/download/SalmonesAustralGuide.pdf" target="_blank"><img src="{{ asset('/img/pdf.png') }}" alt="Guía Rápida de Instalación y Configuración de Salmones Austral" width="35" height="35"> Descargar la Guía Rápida de Instalación y Configuración</a>
+											<br>
+											<br>
+											<a href="https://salmonesaustral.net/download/BDCentralDeSeguridad.zip"><img src="{{ asset('/img/sql.png') }}" alt="Base de Datos de Salmones Austral" width="35" height="35"> Descargar la Estructura de la Base de Datos</a>
 										</p>
 									</div>
 								@else
