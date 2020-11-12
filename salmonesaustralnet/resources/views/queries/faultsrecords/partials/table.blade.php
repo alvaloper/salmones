@@ -2,7 +2,7 @@
     <div class="box-header">
         <h3 class="box-title">
             <b>
-                BÚSQUEDA AVANZADA DE FALLAS EN EL ÁREA DE CONTROL DE MONITOREO
+                BÚSQUEDA AVANZADA POR FECHAS EN EL ÁREA DE CONTROL DE MONITOREO
             </b>
         </h3>
     </div>
@@ -38,7 +38,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>RESULTADOS DE LA BÚSQUEDA - FALLAS PRESENTADAS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
+              <h3 class="box-title"><b>RESULTADOS DE LA BÚSQUEDA - FOLIOS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -48,12 +48,12 @@
                 <table id="TableUser" class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">N° DE FOLIO</th>
-                            <th class="text-center">INICIO DE LA FALLA</th>
+                            <th class="text-center">N°</th>
+                            <th class="text-center">FECHA</th>
                             <th class="text-center">HORA</th>
                             <th class="text-center">FALLA QUE PRESENTA</th>
                             <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
-                            <th class="text-center">REPARACIÓN DE LA FALLA</th>
+                            <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
                             <th class="text-center">VISUALIZAR DETALLES</th>

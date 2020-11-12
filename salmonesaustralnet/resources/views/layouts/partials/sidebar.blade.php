@@ -23,7 +23,7 @@
                 <a href="#"><i class='fa fa-link'></i> <span>Consultas</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('user/queries/centers') }}">Centros de Cultivos</a></li>
-                    <li><a href="{{ url('user/queries/faults') }}">Fallas Operacionales</a></li>
+                    <li><a href="{{ url('user/queries/faults') }}">Folios</a></li>
                     <li><a href="{{ url('user/queries/plants') }}">Plantas de Procesos</a></li>
                 </ul>
             </li>

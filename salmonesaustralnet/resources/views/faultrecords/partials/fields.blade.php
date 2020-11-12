@@ -8,7 +8,7 @@
     <table class="table table-bordered" id="MyTableHeader">
         <tr>
             <td>
-                {!! Form::label('faultdate', 'Inicio de la Falla', ['for' => 'faultdate'] ) !!}
+                {!! Form::label('faultdate', 'Fecha', ['for' => 'faultdate'] ) !!}
                 {!! Form::date('faultdate', null , ['class' => 'form-control',
                  'id' => 'faultdate',
                  'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
@@ -34,7 +34,7 @@
     <table class="table table-bordered" id="MyTableContent">
         <tr>
             <td>
-                {!! Form::label('enddate', 'Reparación de la Falla', ['for' => 'enddate'] ) !!}
+                {!! Form::label('enddate', 'Fecha de Culminación de la Falla', ['for' => 'enddate'] ) !!}
                 {!! Form::date('enddate', null , ['class' => 'form-control',
                  'id' => 'enddate',
                  'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
