@@ -1,7 +1,7 @@
 @extends('faultrecords.app')
 
 @section('htmlheader_title')
-    Fallas presentadas en el area de Control de Monitoreo
+    Fallas Operacionales Registradas
 @endsection
 
 @section('main-content')

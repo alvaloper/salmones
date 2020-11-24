@@ -2,7 +2,7 @@
     <div class="box-header">
         <h3 class="box-title">
             <b>
-                BÚSQUEDA AVANZADA POR FECHAS EN EL ÁREA DE CONTROL DE MONITOREO
+                BÚSQUEDA AVANZADA DE FALLAS OPERACIONALES POR FECHAS
             </b>
         </h3>
     </div>
@@ -38,7 +38,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>RESULTADOS DE LA BÚSQUEDA - FOLIOS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
+              <h3 class="box-title"><b>RESULTADOS DE LA BÚSQUEDA - FALLAS OPERACIONALES</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -52,17 +52,15 @@
                             <th class="text-center">FECHA</th>
                             <th class="text-center">HORA</th>
                             <th class="text-center">FALLA QUE PRESENTA</th>
-                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
+                            <th class="text-center">QUIÉN ENTREGA LA INFORMACIÓN</th>
                             <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
-                            <th class="text-center">VISUALIZAR DETALLES</th>
                         </tr>
                     </thead>
                     <tbody>
                        @foreach ($faultrecords as $faultr)
-
-
+                       
                          @foreach ($userc as $userx)
                             <?php 
                                 if ($userx->id == $faultr['user_id']){
@@ -98,11 +96,6 @@
                             </td>
                             <td>
                                 {{$faultr->solution?$faultr->solution:''}}
-                            </td>
-                            <td class="text-center">
-                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ver">
-                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-camera"></i>
-                                </a>
                             </td>
                         </tr>
                     @endforeach
