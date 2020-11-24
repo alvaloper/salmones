@@ -23,8 +23,9 @@
                 <a href="#"><i class='fa fa-link'></i> <span>Consultas</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('user/queries/centers') }}">Centros de Cultivos</a></li>
-                    <li><a href="{{ url('user/queries/faults') }}">Folios</a></li>
                     <li><a href="{{ url('user/queries/plants') }}">Plantas de Procesos</a></li>
+                    <li><a href="{{ url('user/queries/faults') }}">Fallas Operacionales</a></li>
+                    <li><a href="{{ url('user/queries/epages') }}">Folios</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -35,7 +36,10 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="{{ url('admin/faultrecords') }}"><i class='fa fa-link'></i> <span>Folios</span></a>
+                <a href="{{ url('admin/faultrecords') }}"><i class='fa fa-link'></i> <span>Fallas Operacionales</span></a>
+            </li>
+            <li class="treeview">
+                <a href="{{ url('admin/epagerecords') }}"><i class='fa fa-link'></i> <span>Folios</span></a>
             </li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Configuración</span> <i class="fa fa-angle-left pull-right"></i></a>
