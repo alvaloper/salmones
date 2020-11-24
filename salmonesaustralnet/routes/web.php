@@ -35,6 +35,9 @@ Route::group(['prefix' => 'user', 'namespace' => 'Queries'], function () {
 
     Route::get('/queries/faults/search',['as' => 'queries.faultsrecords.search','uses' => 'QueriesfaultController@search']);
 
+    Route::get('/queries/epages', ['as' => 'queries.epagesrecords.index','uses' => 'QueriesepageController@index']);
+
+    Route::get('/queries/epages/search',['as' => 'queries.epagesrecords.search','uses' => 'QueriesepageController@search']);
 });
 
 
