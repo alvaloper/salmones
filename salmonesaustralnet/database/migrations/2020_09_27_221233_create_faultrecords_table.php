@@ -20,7 +20,7 @@ class CreateFaultrecordsTable extends Migration
             $table->string('fault');
             $table->date('enddate');
             $table->time('endhour');
-            $table->string('solution');
+            $table->text('solution');
             $table->string('file1');
             $table->string('file2');
             $table->string('file3');

@@ -29,7 +29,7 @@ class FaultrecordsNewRequest extends FormRequest
             'fault'     => 'min:5|max:200|required|string',
             'enddate'   => 'required|date',
             'endhour'   => 'required|string',
-            'solution'  => 'min:5|max:200|required|string',
+            'solution'  => 'min:5|max:65000|required|string',
             'user_id'   => 'min:1|max:10|required|string',
         ];
     }

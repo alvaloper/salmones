@@ -24,11 +24,11 @@ class PlantrecordsNewRequest extends FormRequest
     public function rules()
     {
         return [
-            'titlerecord'   => 'min:5|max:200|required|string',
+            'titlerecord'   => 'min:5|max:250|required|string',
             'dateplant'     => 'required|date',
             'planthour'     => 'required|string',
-            'plantevente'   => 'min:5|max:200|required|string',
-            'actionsevent'  => 'min:5|max:200|required|string',
+            'plantevente'   => 'min:5|max:65000|required|string',
+            'actionsevent'  => 'min:5|max:65000|required|string',
             'plant_id'      => 'min:1|max:10|required|string',
             'user_id'       => 'min:1|max:10|required|string',
         ];

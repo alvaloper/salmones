@@ -19,8 +19,8 @@ class CreateEpagerecordsTable extends Migration
             $table->string('epagetitle');
             $table->date('epagedate');
             $table->time('epagehour');
-            $table->string('eventepage');
-            $table->string('actionseventepage');
+            $table->text('eventepage');
+            $table->text('actionseventepage');
             $table->string('file1');
             $table->string('file2');
             $table->string('file3');

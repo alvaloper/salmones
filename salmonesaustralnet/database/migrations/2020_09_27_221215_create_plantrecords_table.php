@@ -18,8 +18,8 @@ class CreatePlantrecordsTable extends Migration
             $table->string('titlerecord');
             $table->date('dateplant');
             $table->time('planthour');
-            $table->string('plantevente');
-            $table->string('actionsevent');
+            $table->text('plantevente');
+            $table->text('actionsevent');
             $table->integer('plant_id')->unsigned()->index();
             $table->foreign('plant_id')->references('idplant')->on('plants')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->index();
