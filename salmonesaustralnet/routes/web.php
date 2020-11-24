@@ -65,6 +65,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Faultrecords'], function () {
 
 });
 
+Route::group(['prefix' => 'admin', 'namespace' => 'Epagerecords'], function () {
+
+    Route::resource('epagerecords', 'EpagerecordsController');
+
+});
+
 Route::group(['prefix' => 'admin', 'namespace' => 'Maritimerecords'], function () {
 
     Route::resource('maritimerecords', 'MaritimerecordsController');
