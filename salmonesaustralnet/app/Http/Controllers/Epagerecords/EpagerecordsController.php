@@ -53,7 +53,7 @@ class EpagerecordsController extends Controller
 
         $roles = Role::all()->pluck('slug','id');
         return view('epagerecords.create')->with('roles', $roles);
-        
+
     }
 
     /**
@@ -66,6 +66,73 @@ class EpagerecordsController extends Controller
     public function store(EpagerecordsNewRequest $request)
     {
 
+        //File1
+        if ($request->hasfile('file1')){
+            $file1 = $request->file('file1');
+
+            $x1 = $request->input('epagedate');
+            $fname1 = time().$x1.$file1->getClientOriginalName();
+            
+            $file1->move(public_path().'/images',$fname1);
+        }
+        else
+        {
+            $fname1 = 'nonpicture.jpg';
+        }
+
+        //File2
+        if ($request->hasfile('file2')){
+            $file2 = $request->file('file2');
+            $x2 = $request->input('epagedate');
+            $fname2 = time().$x2.$file2->getClientOriginalName();
+            $file2->move(public_path().'/images',$fname2);
+        } 
+        else
+        {
+            $fname2 = 'nonpicture.jpg';
+        }
+
+        //File3
+        if ($request->hasfile('file3')){
+            $file3 = $request->file('file3');
+            $x3 = $request->input('epagedate');
+            $fname3 = time().$x3.$file3->getClientOriginalName();
+            $file3->move(public_path().'/images',$fname3);
+        } 
+        else
+        {
+            $fname3 = 'nonpicture.jpg';
+        }
+
+        //File4
+        if ($request->hasfile('file4')){
+            $file4 = $request->file('file4');
+            $x4 = $request->input('epagedate');
+            $fname4 = time().$x4.$file4->getClientOriginalName();
+            $file4->move(public_path().'/images',$fname4);
+        } 
+        else
+        {
+            $fname4 = 'nonpicture.jpg';
+        }
+
+
+        $epagerecords = new Epagerecords();
+        $epagerecords->epagetitle = $request->input('epagetitle');
+        $epagerecords->epagedate = $request->input('epagedate');
+        $epagerecords->epagehour = $request->input('epagehour');
+        $epagerecords->eventepage = $request->input('eventepage');
+        $epagerecords->actionseventepage = $request->input('actionseventepage');
+        $epagerecords->user_id = $request->input('user_id');
+
+        $epagerecords->file1 = $fname1;
+        $epagerecords->file2 = $fname2;
+        $epagerecords->file3 = $fname3;
+        $epagerecords->file4 = $fname4;
+        
+        $epagerecords->save(); 
+        flash('El registro ha sido agregado')->success()->important();
+        return redirect()->route('epagerecords.index');
         
     }
 

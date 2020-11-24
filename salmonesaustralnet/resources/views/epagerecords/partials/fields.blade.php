@@ -8,9 +8,9 @@
     <table class="table table-bordered" id="MyTableHeader">
         <tr>
             <td>
-                {!! Form::label('titlepagerecord', 'Título del Suceso', ['for' => 'titlepagerecord'] ) !!}
-                {!! Form::text('titlepagerecord', null , ['class' => 'form-control',
-                 'id' => 'titlepagerecord',
+                {!! Form::label('epagetitle', 'Título del Suceso', ['for' => 'epagetitle'] ) !!}
+                {!! Form::text('epagetitle', null , ['class' => 'form-control',
+                 'id' => 'epagetitle',
                  'placeholder' => 'Ingrese el título del suceso' ]  ) !!}
             </td>
         </tr>
@@ -18,15 +18,15 @@
     <table class="table table-bordered" id="MyTableContentHeader">
         <tr>
             <td>
-                {!! Form::label('datepageplant', 'Fecha', ['for' => 'datepageplant'] ) !!}
-                {!! Form::date('datepageplant', null , ['class' => 'form-control',
-                 'id' => 'datepageplant',
+                {!! Form::label('epagedate', 'Fecha', ['for' => 'epagedate'] ) !!}
+                {!! Form::date('epagedate', null , ['class' => 'form-control',
+                 'id' => 'epagedate',
                  'placeholder' => 'Ingrese la Fecha' ]  ) !!}
             </td>
             <td>
-                {!! Form::label('plantpagehour', 'Hora', ['for' => 'plantpagehour'] ) !!}
-                {!! Form::time('plantpagehour', null , ['class' => 'form-control',
-                 'id' => 'plantpagehour',
+                {!! Form::label('epagehour', 'Hora', ['for' => 'epagehour'] ) !!}
+                {!! Form::time('epagehour', null , ['class' => 'form-control',
+                 'id' => 'epagehour',
                  'placeholder' => 'Ingrese la Hora' ]  ) !!}
             </td>
         </tr>
@@ -46,17 +46,17 @@
         </tr>
         <tr>
             <td>
-                {!! Form::label('plantpagevent', 'Novedades Encontradas', ['for' => 'plantpagevent'] ) !!}
-                {!! Form::text('plantpagevent', null , ['class' => 'form-control',
-                 'id' => 'plantpagevent',
+                {!! Form::label('eventepage', 'Novedades Encontradas', ['for' => 'eventepage'] ) !!}
+                {!! Form::text('eventepage', null , ['class' => 'form-control',
+                 'id' => 'eventepage',
                  'placeholder' => 'Ingrese las novedades encontradas' ]  ) !!}
             </td>
         </tr>
         <tr>
             <td>
-                {!! Form::label('actionspagevent', 'Acciones Adoptadas', ['for' => 'actionspagevent'] ) !!}
-                {!! Form::text('actionspagevent', null , ['class' => 'form-control',
-                 'id' => 'actionspagevent',
+                {!! Form::label('actionseventepage', 'Acciones Adoptadas', ['for' => 'actionseventepage'] ) !!}
+                {!! Form::text('actionseventepage', null , ['class' => 'form-control',
+                 'id' => 'actionseventepage',
                  'placeholder' => 'Ingrese las acciones adoptadas' ]  ) !!}
             </td>
         </tr>
