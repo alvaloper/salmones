@@ -2,7 +2,7 @@
     <div class="box-header">
         <h3 class="box-title">
             <b>
-                BÚSQUEDA AVANZADA POR FECHAS DE FOLIOS
+                BÚSQUEDA AVANZADA DE FOLIOS - POR FECHAS
             </b>
         </h3>
     </div>

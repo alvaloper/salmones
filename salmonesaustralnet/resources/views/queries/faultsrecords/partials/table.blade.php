@@ -2,7 +2,7 @@
     <div class="box-header">
         <h3 class="box-title">
             <b>
-                BÚSQUEDA AVANZADA DE FALLAS OPERACIONALES POR FECHAS
+                BÚSQUEDA AVANZADA DE FALLAS OPERACIONALES - POR FECHAS
             </b>
         </h3>
     </div>
