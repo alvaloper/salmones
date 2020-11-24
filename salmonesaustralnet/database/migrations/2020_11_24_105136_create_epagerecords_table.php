@@ -14,8 +14,21 @@ class CreateEpagerecordsTable extends Migration
     public function up()
     {
         Schema::create('epagerecords', function (Blueprint $table) {
-            $table->increments('id');
+
+            $table->increments('idpage');
+            $table->string('epagetitle');
+            $table->date('epagedate');
+            $table->time('epagehour');
+            $table->string('eventepage');
+            $table->string('actionseventepage');
+            $table->string('file1');
+            $table->string('file2');
+            $table->string('file3');
+            $table->string('file4');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 
