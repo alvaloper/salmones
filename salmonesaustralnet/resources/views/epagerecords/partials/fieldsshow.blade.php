@@ -3,6 +3,8 @@
     $userx0 =Auth::user()->name;
     $userx1 =Auth::user()->lastname;
     $userx2 =$userx0.' '.$userx1;
+    $eventpage= $epagerecords->eventepage;
+    $actionseventpage= $epagerecords->actionseventepage;
 ?>
 <div class="form-group">
     <table class="table table-bordered" id="MyTableHeader">
@@ -10,8 +12,7 @@
             <td>
                 {!! Form::label('epagetitle', 'Título del Suceso', ['for' => 'epagetitle'] ) !!}
                 {!! Form::text('epagetitle', null , ['class' => 'form-control',
-                 'id' => 'epagetitle','readonly',
-                 'placeholder' => 'Ingrese el título del suceso' ]  ) !!}
+                 'id' => 'epagetitle','readonly' ]  ) !!}
             </td>
         </tr>
     </table>
@@ -20,14 +21,12 @@
             <td>
                 {!! Form::label('epagedate', 'Fecha', ['for' => 'epagedate'] ) !!}
                 {!! Form::date('epagedate', null , ['class' => 'form-control',
-                 'id' => 'epagedate','readonly',
-                 'placeholder' => 'Ingrese la Fecha' ]  ) !!}
+                 'id' => 'epagedate','readonly' ]  ) !!}
             </td>
             <td>
                 {!! Form::label('epagehour', 'Hora', ['for' => 'epagehour'] ) !!}
                 {!! Form::time('epagehour', null , ['class' => 'form-control',
-                 'id' => 'epagehour','readonly',
-                 'placeholder' => 'Ingrese la Hora' ]  ) !!}
+                 'id' => 'epagehour','readonly' ]  ) !!}
             </td>
         </tr>
     </table>
@@ -40,24 +39,25 @@
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
                 
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
-                 'id' => 'userx2', 'readonly',
-                 'placeholder' => 'Ingrese la user_id' ]  ) !!}                
+                 'id' => 'userx2', 'readonly' ]  ) !!}                
             </td>
         </tr>
         <tr>
             <td>
                 {!! Form::label('eventepage', 'Novedades Encontradas', ['for' => 'eventepage'] ) !!}
-                {!! Form::text('eventepage', null , ['class' => 'form-control',
-                 'id' => 'eventepage','readonly',
-                 'placeholder' => 'Ingrese las novedades encontradas' ]  ) !!}
+                <br>
+                <?php
+                    echo $eventpage;
+                ?>
             </td>
         </tr>
         <tr>
             <td>
                 {!! Form::label('actionseventepage', 'Acciones Adoptadas', ['for' => 'actionseventepage'] ) !!}
-                {!! Form::text('actionseventepage', null , ['class' => 'form-control',
-                 'id' => 'actionseventepage','readonly',
-                 'placeholder' => 'Ingrese las acciones adoptadas' ]  ) !!}
+                <br>
+                <?php
+                    echo $actionseventpage;
+                ?>
             </td>
         </tr>
     </table> 

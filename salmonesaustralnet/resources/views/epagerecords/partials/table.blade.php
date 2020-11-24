@@ -65,7 +65,7 @@
                                         'data-toggle'=>'tooltip',
                                         'data-title'=>'Eliminar',
                                         'data-container'=>'body',
-                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro: $epager->idpage ?')"
+                                        'onclick' => "return confirm('¿Está seguro de eliminar el registro: $epager->epagetitle ?')"
                                     ]) !!}
                                 </td> 
                                 {!! Form::close() !!}
