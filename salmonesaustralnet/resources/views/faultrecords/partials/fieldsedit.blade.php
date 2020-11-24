@@ -24,10 +24,22 @@
     <table class="table table-bordered" id="MyTableContentHeader">
         <tr>
             <td>
-                {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
+                {!! Form::label('fault', 'Falla que Presenta', ['for' => 'fault'] ) !!}
                 {!! Form::text('fault', null , ['class' => 'form-control',
                  'id' => 'fault',
                  'placeholder' => 'Ingrese la Falla' ]  ) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {!! Form::label('user_id', 'Quién Entrega la Información', ['for' => 'user_id'] ) !!}
+                {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
+                 'id' => 'user_id', 'readonly',
+                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
+                
+                {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
+                 'id' => 'userx2', 'readonly',
+                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
             </td>
         </tr>
     </table>
@@ -56,156 +68,5 @@
                  'placeholder' => 'Ingrese la Solucion' ]  ) !!}
             </td>
         </tr>
-        <tr>
-            <td>
-                {!! Form::label('user_id', 'Quien Entrega la Información', ['for' => 'user_id'] ) !!}
-                {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
-                 'id' => 'user_id', 'readonly',
-                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
-                
-                {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
-                 'id' => 'userx2', 'readonly',
-                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
-            </td>
-        </tr>
     </table>
-    {!! Form::hidden('file1', null , ['class' => 'form-control',
-                 'id' => 'file1', 'readonly' ]  ) !!}
-    {!! Form::hidden('file2', null , ['class' => 'form-control',
-                 'id' => 'file2', 'readonly' ]  ) !!}
-    {!! Form::hidden('file3', null , ['class' => 'form-control',
-                 'id' => 'file3', 'readonly' ]  ) !!}
-    {!! Form::hidden('file4', null , ['class' => 'form-control',
-                 'id' => 'file4', 'readonly' ]  ) !!}
-    <table class="table table-bordered" id="MyTableFooter">
-        <tr>
-            <th colspan="2">
-                Archivos Adjuntos
-            </th>
-        </tr>
-        <tr>
-            <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150" class="img-rounded">
-            </td>
-            <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150" class="img-rounded">
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center">
-                {!! Form::file('fileNew1') !!}
-            </td>
-            <td class="text-center">
-                {!! Form::file('fileNew2') !!}
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150" class="img-rounded">
-            </td>
-            <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150" class="img-rounded">
-            </td>
-        </tr>
-        <tr>
-            <td class="text-center">
-                {!! Form::file('fileNew3') !!}
-            </td>
-            <td class="text-center">
-                {!! Form::file('fileNew4') !!}
-            </td>
-        </tr>
-    </table>
-    <div class="container">
-        <!-- Modal 1 -->
-            <div class="modal fade" id="myModal1" role="dialog">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Detalles Fotográficos</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="550" height="550">
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">
-                                Cerrar
-                         </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>    
-    <div class="container">
-        <!-- Modal 2 -->
-            <div class="modal fade" id="myModal2" role="dialog">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Detalles Fotográficos</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="550" height="550">
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">
-                                Cerrar
-                         </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>    
-    <div class="container">
-        <!-- Modal 3 -->
-            <div class="modal fade" id="myModal3" role="dialog">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Detalles Fotográficos</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="550" height="550">
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">
-                                Cerrar
-                         </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <div class="container">
-        <!-- Modal 4 -->
-            <div class="modal fade" id="myModal4" role="dialog">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Detalles Fotográficos</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="550" height="550">
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">
-                                Cerrar
-                         </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
 </div>
