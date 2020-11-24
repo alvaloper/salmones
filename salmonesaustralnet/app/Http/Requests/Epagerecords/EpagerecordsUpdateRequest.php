@@ -31,10 +31,10 @@ class EpagerecordsUpdateRequest extends FormRequest
             'eventepage'       => 'min:5|max:200|required|string',
             'actionseventepage'=> 'min:5|max:200|required|string',
             'user_id'          => 'min:1|max:10|required|string',
-            'file1'           => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
-            'file2'           => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
-            'file3'           => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
-            'file4'           => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
+            'fileNew1'        => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
+            'fileNew2'        => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
+            'fileNew3'        => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
+            'fileNew4'        => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
         ];
     }
 }

@@ -116,7 +116,6 @@ class EpagerecordsController extends Controller
             $fname4 = 'nonpicture.jpg';
         }
 
-
         $epagerecords = new Epagerecords();
         $epagerecords->epagetitle = $request->input('epagetitle');
         $epagerecords->epagedate = $request->input('epagedate');
@@ -158,7 +157,9 @@ class EpagerecordsController extends Controller
     public function edit($idfault)
     {
 
+        $epagerecords = Epagerecords::find($idfault);
 
+        return view('epagerecords.edit', array('epagerecords' => $epagerecords ));
     }
 
     /**
@@ -172,6 +173,86 @@ class EpagerecordsController extends Controller
     public function update(EpagerecordsUpdateRequest $request, $idfault)
     {
 
+        //File1
+        if ($request->hasfile('fileNew1')){
+            $file1 = $request->file('fileNew1');
+            $x1 = $request->input('epagedate');
+            $fname1 = time().$x1.$file1->getClientOriginalName();
+            $file1->move(public_path().'/images',$fname1);
+
+            $y1 = $request->input('file1');
+            if ($y1!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y1);
+        }
+        else
+        {
+            $fname1 = $request->input('file1');
+        }
+
+        //File2
+        if ($request->hasfile('fileNew2')){
+            $file2 = $request->file('fileNew2');
+            $x2 = $request->input('epagedate');
+            $fname2 = time().$x2.$file2->getClientOriginalName();
+            $file2->move(public_path().'/images',$fname2);
+
+            $y2 = $request->input('file2');
+            if ($y2!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y2);
+        } 
+        else
+        {
+            $fname2 = $request->input('file2');
+        }
+
+        //File3
+        if ($request->hasfile('fileNew3')){
+            $file3 = $request->file('fileNew3');
+            $x3 = $request->input('epagedate');
+            $fname3 = time().$x3.$file3->getClientOriginalName();
+            $file3->move(public_path().'/images',$fname3);
+
+            $y3 = $request->input('file3');
+            if ($y3!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y3);
+        } 
+        else
+        {
+            $fname3 = $request->input('file3');
+        }
+
+        //File4
+        if ($request->hasfile('fileNew4')){
+            $file4 = $request->file('fileNew4');
+            $x4 = $request->input('epagedate');
+            $fname4 = time().$x4.$file4->getClientOriginalName();
+            $file4->move(public_path().'/images',$fname4);
+
+            $y4 = $request->input('file4');
+            if ($y4!='nonpicture.jpg')
+                unlink(public_path().'/images/'.$y4);
+        } 
+        else
+        {
+            $fname4 = $request->input('file4');
+        }
+
+        $epagerecords = Epagerecords::find($idfault);
+        $epagerecords->epagetitle = $request->input('epagetitle');
+        $epagerecords->epagedate = $request->input('epagedate');
+        $epagerecords->epagehour = $request->input('epagehour');
+        $epagerecords->eventepage = $request->input('eventepage');
+        $epagerecords->actionseventepage = $request->input('actionseventepage');
+        $epagerecords->user_id = $request->input('user_id');
+
+        $epagerecords->file1 = $fname1;
+        $epagerecords->file2 = $fname2;
+        $epagerecords->file3 = $fname3;
+        $epagerecords->file4 = $fname4;
+
+        $epagerecords->save();
+        flash('El registro ha sido modificado.')->success()->important();
+        return redirect()->route('epagerecords.index');
 
     }
 
