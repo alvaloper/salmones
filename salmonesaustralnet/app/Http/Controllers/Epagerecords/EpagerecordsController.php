@@ -34,7 +34,11 @@ class EpagerecordsController extends Controller
 
     public function index()
     {
+        
+        $epagerecords = epagerecords::Paginate(15);
 
+        $userc = User::all();
+        return view('epagerecords.index', array('epagerecords'=> $epagerecords, 'userc'=> $userc));
 
     }
 
@@ -47,7 +51,9 @@ class EpagerecordsController extends Controller
     public function create()
     {
 
-
+        $roles = Role::all()->pluck('slug','id');
+        return view('epagerecords.create')->with('roles', $roles);
+        
     }
 
     /**
