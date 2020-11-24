@@ -306,6 +306,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
     public static $classMap = array (
         'CentersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CentersTableSeeder.php',
         'CreateCentersTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221044_create_centers_table.php',
+        'CreateEpagerecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_11_24_105136_create_epagerecords_table.php',
         'CreateFaultrecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221233_create_faultrecords_table.php',
         'CreateMaritimerecordsTable' => __DIR__ . '/../..' . '/database/migrations/2020_09_27_221154_create_maritimerecords_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
@@ -318,6 +319,7 @@ class ComposerStaticInit1a2a1d8b9574c637362ab60a6aef8317
         'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2015_01_15_105324_create_roles_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
+        'EpagerecordsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/EpagerecordsTableSeeder.php',
         'FaultrecordsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/FaultrecordsTableSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

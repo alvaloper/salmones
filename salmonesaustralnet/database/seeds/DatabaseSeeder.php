@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PlantrecordsTableSeeder::class);
         $this->call(MaritimerecordsTableSeeder::class);
         $this->call(FaultrecordsTableSeeder::class);
+        $this->call(EpagerecordsTableSeeder::class);
     }
 }
