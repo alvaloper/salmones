@@ -24,10 +24,22 @@
     <table class="table table-bordered" id="MyTableContentHeader">
         <tr>
             <td>
-                {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
+                {!! Form::label('fault', 'Falla que Presenta', ['for' => 'fault'] ) !!}
                 {!! Form::text('fault', null , ['class' => 'form-control',
                  'id' => 'fault',
                  'placeholder' => 'Ingrese la falla presentada' ]  ) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {!! Form::label('user_id', 'Quién Entrega la Información', ['for' => 'user_id'] ) !!}
+                {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
+                 'id' => 'user_id', 'readonly',
+                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
+                
+                {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
+                 'id' => 'userx2', 'readonly',
+                 'placeholder' => 'Ingrese la user_id' ]  ) !!}                
             </td>
         </tr>
     </table>
@@ -54,39 +66,6 @@
                 {!! Form::text('solution', null , ['class' => 'form-control',
                  'id' => 'solution',
                  'placeholder' => 'Ingrese la solución al problema' ]  ) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('user_id', 'Quien entrega la Información', ['for' => 'user_id'] ) !!}
-                {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
-                 'id' => 'user_id', 'readonly',
-                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
-                
-                {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
-                 'id' => 'userx2', 'readonly',
-                 'placeholder' => 'Ingrese la user_id' ]  ) !!}                
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('file1', 'Archivos Adjuntos', ['for' => 'file1'] ) !!}
-                {!! Form::file('file1') !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::file('file2') !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::file('file3') !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::file('file4') !!}
             </td>
         </tr>
     </table>

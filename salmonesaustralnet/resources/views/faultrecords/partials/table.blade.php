@@ -4,7 +4,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><b>FOLIOS EN EL ÁREA DE CONTROL DE MONITOREO</b></h3>
+              <h3 class="box-title"><b>REGISTRO DE FALLAS OPERACIONALES</b></h3>
             </div>
             <!-- /.box-header -->
             <?php         
@@ -18,11 +18,10 @@
                             <th class="text-center">FECHA</th>
                             <th class="text-center">HORA</th>
                             <th class="text-center">FALLA QUE PRESENTA</th>
-                            <th class="text-center">QUIEN ENTREGA LA INFORMACIÓN</th>
+                            <th class="text-center">QUIÉN ENTREGA LA INFORMACIÓN</th>
                             <th class="text-center">FECHA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">HORA DE CULMINACIÓN DE LA FALLA</th>
                             <th class="text-center">SOLUCIÓN AL PROBLEMA</th>
-                            <th class="text-center">VISUALIZAR DETALLES</th>
                             <th class="text-center">ACCIONES</th>
                     </thead>
                     <tbody>
@@ -49,11 +48,6 @@
                             <td>{{ $faultr->enddate }}</td>
                             <td>{{ $faultr->endhour }}</td>
                             <td>{{ $faultr->solution }}</td>
-                            <td class="text-center">
-                                <a href="{{ url('admin/faultrecords/'.$faultr->idfault) }}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Ver">
-                                    <span class="glyphicon" aria-hidden="true"></span><i class="fa fa-camera"></i>
-                                </a>
-                            </td>
                             @if(Auth::check() && Auth::user()->isRole('root'))
 
                                 {!! Form::open(['route' => ['faultrecords.destroy', $faultr->idfault], 'method' => 'DELETE'] ) !!}

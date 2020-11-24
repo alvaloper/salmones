@@ -143,7 +143,9 @@ class EpagerecordsController extends Controller
      */
     public function show($idfault)
     {
-        
+
+        $epagerecords = Epagerecords::find($idfault);
+        return view('epagerecords.show', array('epagerecords' => $epagerecords ));
 
     }
 

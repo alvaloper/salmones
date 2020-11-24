@@ -32,10 +32,6 @@ class FaultrecordsUpdateRequest extends FormRequest
             'endhour'   => 'required|string',
             'solution'  => 'min:5|max:200|required|string',
             'user_id'   => 'min:1|max:10|required|string',
-            'fileNew1'  => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
-            'fileNew2'  => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
-            'fileNew3'  => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
-            'fileNew4'  => 'image|mimes:jpeg,png,jpg,gif,svg|max:7168',
         ];
     }
 }

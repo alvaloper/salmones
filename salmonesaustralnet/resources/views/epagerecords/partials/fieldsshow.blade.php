@@ -8,67 +8,59 @@
     <table class="table table-bordered" id="MyTableHeader">
         <tr>
             <td>
-                {!! Form::label('faultdate', 'Fecha', ['for' => 'faultdate'] ) !!}
-                {!! Form::date('faultdate', null , ['class' => 'form-control',
-                 'id' => 'faultdate', 'readonly',
-                 'placeholder' => 'Ingrese la Fecha de Inicio' ]  ) !!}
-            </td>
-            <td>
-                {!! Form::label('faulthour', 'Hora', ['for' => 'faulthour'] ) !!}
-                {!! Form::time('faulthour', null , ['class' => 'form-control',
-                 'id' => 'faulthour', 'readonly',
-                 'placeholder' => 'Ingrese la Hora de Inicio' ]  ) !!}
+                {!! Form::label('epagetitle', 'Título del Suceso', ['for' => 'epagetitle'] ) !!}
+                {!! Form::text('epagetitle', null , ['class' => 'form-control',
+                 'id' => 'epagetitle','readonly',
+                 'placeholder' => 'Ingrese el título del suceso' ]  ) !!}
             </td>
         </tr>
     </table>
     <table class="table table-bordered" id="MyTableContentHeader">
         <tr>
             <td>
-                {!! Form::label('fault', 'Falla que presenta', ['for' => 'fault'] ) !!}
-                {!! Form::text('fault', null , ['class' => 'form-control',
-                 'id' => 'fault', 'readonly',
-                 'placeholder' => 'Ingrese la Falla' ]  ) !!}
+                {!! Form::label('epagedate', 'Fecha', ['for' => 'epagedate'] ) !!}
+                {!! Form::date('epagedate', null , ['class' => 'form-control',
+                 'id' => 'epagedate','readonly',
+                 'placeholder' => 'Ingrese la Fecha' ]  ) !!}
+            </td>
+            <td>
+                {!! Form::label('epagehour', 'Hora', ['for' => 'epagehour'] ) !!}
+                {!! Form::time('epagehour', null , ['class' => 'form-control',
+                 'id' => 'epagehour','readonly',
+                 'placeholder' => 'Ingrese la Hora' ]  ) !!}
             </td>
         </tr>
     </table>
-    <table class="table table-bordered" id="MyTableContentInit">
+ <table class="table table-bordered" id="MyTableFooter">
         <tr>
             <td>
-                {!! Form::label('enddate', 'Fecha de Culminación de la Falla', ['for' => 'enddate'] ) !!}
-                {!! Form::date('enddate', null , ['class' => 'form-control',
-                 'id' => 'enddate', 'readonly',
-                 'placeholder' => 'Ingrese la Fecha Fin' ]  ) !!}
-            </td>
-            <td>
-                {!! Form::label('endhour', 'Hora de Culminación de la Falla', ['for' => 'endhour'] ) !!}
-                {!! Form::time('endhour', null , ['class' => 'form-control',
-                 'id' => 'endhour', 'readonly',
-                 'placeholder' => 'Ingrese la Hora Fin' ]  ) !!}
-            </td>
-        </tr>
-    </table>
-    <table class="table table-bordered" id="MyTableContentEnd">
-        <tr>
-            <td>
-                {!! Form::label('solution', 'Solución al Problema', ['for' => 'solution'] ) !!}
-                {!! Form::text('solution', null , ['class' => 'form-control',
-                 'id' => 'solution', 'readonly',
-                 'placeholder' => 'Ingrese la Solucion' ]  ) !!}
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('user_id', 'Quien Entrega la Información', ['for' => 'user_id'] ) !!}
+                {!! Form::label('user_id', 'Quién Reporta', ['for' => 'user_id'] ) !!}
                 {!! Form::hidden('user_id', $userx  , ['class' => 'form-control',
                  'id' => 'user_id', 'readonly',
                  'placeholder' => 'Ingrese la user_id' ]  ) !!}
                 
                 {!! Form::text('userx2', $userx2  , ['class' => 'form-control',
                  'id' => 'userx2', 'readonly',
-                 'placeholder' => 'Ingrese la user_id' ]  ) !!}
+                 'placeholder' => 'Ingrese la user_id' ]  ) !!}                
             </td>
         </tr>
-    </table>
+        <tr>
+            <td>
+                {!! Form::label('eventepage', 'Novedades Encontradas', ['for' => 'eventepage'] ) !!}
+                {!! Form::text('eventepage', null , ['class' => 'form-control',
+                 'id' => 'eventepage','readonly',
+                 'placeholder' => 'Ingrese las novedades encontradas' ]  ) !!}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {!! Form::label('actionseventepage', 'Acciones Adoptadas', ['for' => 'actionseventepage'] ) !!}
+                {!! Form::text('actionseventepage', null , ['class' => 'form-control',
+                 'id' => 'actionseventepage','readonly',
+                 'placeholder' => 'Ingrese las acciones adoptadas' ]  ) !!}
+            </td>
+        </tr>
+    </table> 
     <table class="table table-bordered" id="MyTableFooter">
         <tr>
             <th colspan="4">
@@ -77,16 +69,16 @@
         </tr>
         <tr>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file1) }}" width="150" height="150" class="img-rounded">
+                <img src="{{ asset('images/'.$epagerecords->file1) }}" width="150" height="150" class="img-rounded">
             </td>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="150" height="150" class="img-rounded">
+                <img src="{{ asset('images/'.$epagerecords->file2)  }}" width="150" height="150" class="img-rounded">
             </td>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="150" height="150" class="img-rounded">
+                <img src="{{ asset('images/'.$epagerecords->file3)  }}" width="150" height="150" class="img-rounded">
             </td>
             <td class="text-center">
-                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="150" height="150" class="img-rounded">
+                <img src="{{ asset('images/'.$epagerecords->file4)  }}" width="150" height="150" class="img-rounded">
             </td>
         </tr>
         <tr>
@@ -115,7 +107,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file1)  }}" width="550" height="550">
+                                <img src="{{ asset('images/'.$epagerecords->file1)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -138,7 +130,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file2)  }}" width="550" height="550">
+                                <img src="{{ asset('images/'.$epagerecords->file2)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -161,7 +153,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file3)  }}" width="550" height="550">
+                                <img src="{{ asset('images/'.$epagerecords->file3)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
@@ -184,7 +176,7 @@
                         </div>
                         <div class="modal-body">
                             <p style="text-align:center">
-                                <img src="{{ asset('images/'.$faultrecords->file4)  }}" width="550" height="550">
+                                <img src="{{ asset('images/'.$epagerecords->file4)  }}" width="550" height="550">
                             </p>
                         </div>
                         <div class="modal-footer">
